@@ -1,0 +1,6 @@
+# Remove Ansible configuration file
+ansible.cfg
+
+# Remove Apple files
+.DS_Store
+*.DS_Store

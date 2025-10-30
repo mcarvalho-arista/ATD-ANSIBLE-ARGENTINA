@@ -1,0 +1,151 @@
+---
+T_NEXTGEN_DESARROLLO:
+  - name: T_NEXTGEN_DESARROLLO
+    mac_vrf_vni_base: 10000
+    l2vlans:
+      - id: 329
+        name: NEXTGEN_DESARROLLO_Vl_329
+        tags: [DESARROLLO]
+    vrfs:
+      - name: VRF-NEXTGEN_DESARROLLO
+        vrf_vni: 1002
+        vtep_diagnostic:
+          loopback: 1002
+          loopback_ip_range: 10.111.7.0/24
+        svis:
+          - id: 301
+            name: NEXTGEN_DESARROLLO_Vl_301
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.0.1/20
+          - id: 302
+            name: NEXTGEN_DESARROLLO_Vl_302
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.16.1/20
+          - id: 303
+            name: NEXTGEN_DESARROLLO_Vl_303
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.32.1/20
+          - id: 304
+            name: NEXTGEN_DESARROLLO_Vl_304
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.48.1/24
+          - id: 305
+            name: NEXTGEN_DESARROLLO_Vl_305
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.49.1/24
+          - id: 306
+            name: NEXTGEN_DESARROLLO_Vl_306
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.50.1/24
+          - id: 307
+            name: NEXTGEN_DESARROLLO_Vl_307
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.51.1/24
+          - id: 308
+            name: NEXTGEN_DESARROLLO_Vl_308
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.53.1/24
+          - id: 309
+            name: NEXTGEN_DESARROLLO_Vl_309
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.54.1/25
+          - id: 310
+            name: NEXTGEN_DESARROLLO_Vl_310
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.55.1/24
+          - id: 311
+            name: NEXTGEN_DESARROLLO_Vl_311
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.56.1/24
+          - id: 312
+            name: NEXTGEN_DESARROLLO_Vl_312
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.57.1/24
+          - id: 313
+            name: NEXTGEN_DESARROLLO_Vl_313
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.58.1/24
+          - id: 314
+            name: NEXTGEN_DESARROLLO_Vl_314
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.59.1/24
+            ip_helpers:
+              - ip_helper: 180.166.34.37
+              - ip_helper: 180.166.34.91
+          - id: 315
+            name: NEXTGEN_DESARROLLO_Vl_315
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.60.1/24
+          - id: 316
+            name: NEXTGEN_DESARROLLO_Vl_316
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.61.1/24
+          - id: 317
+            name: NEXTGEN_DESARROLLO_Vl_317
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.62.1/24
+          - id: 318
+            name: NEXTGEN_DESARROLLO_Vl_318
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.63.1/24
+            ip_helpers:
+              - ip_helper: 180.166.34.37
+              - ip_helper: 180.166.34.91
+          - id: 319
+            name: NEXTGEN_DESARROLLO_Vl_319
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 180.166.89.1/24
+          - id: 320
+            name: NEXTGEN_DESARROLLO_Vl_320
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.64.1/25
+          - id: 321
+            name: NEXTGEN_DESARROLLO_Vl_321
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.64.129/25
+          - id: 322
+            name: NEXTGEN_DESARROLLO_Vl_322
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.65.1/25
+          - id: 323
+            name: NEXTGEN_DESARROLLO_Vl_323
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.66.1/25
+          - id: 324
+            name: NEXTGEN_DESARROLLO_Vl_324
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.66.129/25
+          - id: 325
+            name: NEXTGEN_DESARROLLO_Vl_325
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.67.1/25
+          - id: 326
+            name: NEXTGEN_DESARROLLO_Vl_326
+            enabled: false
+            tags: [DESARROLLO]
+            ip_address_virtual: 10.70.67.129/25

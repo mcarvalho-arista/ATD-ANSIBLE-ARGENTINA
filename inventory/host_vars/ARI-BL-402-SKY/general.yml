@@ -1,0 +1,33 @@
+## Configurations related to Route-Maps, Prefix-lists, etc...
+
+custom_structured_configuration_route_maps:
+  - name: RM-NEXTGEN_VDC-SVI-IN
+    sequence_numbers:
+      - sequence: 10
+        type: permit
+        match:
+          - "ip address prefix-list PL-NEXTGEN_VDC-SVI-IN"
+
+  - name: RM-NEXTGEN_VDC-SVI-OUT
+    sequence_numbers:
+      - sequence: 10
+        type: permit
+        match:
+          - "ip address prefix-list PL-NEXTGEN_VDC-SVI-OUT"
+
+custom_structured_configuration_prefix_lists:
+  - name: PL-NEXTGEN_VDC-SVI-IN
+    sequence_numbers:
+      - sequence: 10
+        action: "permit 10.200.160.247/32"
+      - sequence: 20
+        action: "permit 10.200.161.247/32"
+
+  - name: PL-NEXTGEN_VDC-SVI-OUT
+    sequence_numbers:
+      - sequence: 10
+        action: "permit 10.201.198.0/25"
+      - sequence: 20
+        action: "permit 10.201.202.160/27"  
+
+ 

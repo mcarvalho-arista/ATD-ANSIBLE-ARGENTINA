@@ -1,0 +1,22 @@
+---
+- name: Manage Arista EOS EVPN/VXLAN Configuration
+  hosts: NEXTGEN_ARGENTINA_PRO
+  gather_facts: false
+  tasks:
+
+    - name: Generate AVD Structured Configurations with or without Fabric Documentation
+      tags: [build, generate]
+      ansible.builtin.import_role:
+        name: arista.avd.eos_designs
+      vars:
+        eos_designs_documentation:
+          enable: true
+
+
+    - name: Generate Device Configurations with or without Documentation
+      tags: [build, generate]
+      ansible.builtin.import_role:
+        name: arista.avd.eos_cli_config_gen
+      vars:
+        eos_cli_config_gen_documentation:
+          enable: true

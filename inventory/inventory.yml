@@ -1,0 +1,228 @@
+---
+all:
+  children:
+    CVP:
+      hosts:
+        cv_ztp:
+          ansible_host: "10.0.60.7"
+        cv_servers:
+          ansible_httpapi_host: "10.0.60.7"
+          ansible_host: "10.0.60.7"
+          ansible_connection: httpapi
+          ansible_httpapi_use_ssl: false
+          ansible_httpapi_validate_certs: false
+          ansible_network_os: eos
+          ansible_httpapi_port: 443
+          anta_user: marcelo
+          anta_password: marcelo
+          anta_enable: true
+          fabric_name: "NEXTGEN_ARGENTINA_PRO"
+          # Configuration to get Virtual Env information
+          ansible_python_interpreter: $(which python3)
+
+    GLOBAL:
+      children:
+        NEXTGEN_ARGENTINA_PRO:
+          children:
+            NEXTGEN_ARGENTINA_PRO_DC1:
+              children:
+                NEXTGEN_ARGENTINA_PRO_DC1_SPINES:
+                  hosts:
+                    ARI-SP-301-MTZ:
+                      ansible_host: 10.0.60.31
+                    ARI-SP-302-MTZ:
+                      ansible_host: 10.0.60.32
+                NEXTGEN_ARGENTINA_PRO_DC1_LEAVES:
+                  children:
+                    NEXTGEN_ARGENTINA_PRO_DC1_BL301_302:
+                      hosts:
+                        ARI-BL-301-MTZ:
+                          ansible_host: 10.0.60.33
+                        ARI-BL-302-MTZ:
+                          ansible_host: 10.0.60.34
+                    NEXTGEN_ARGENTINA_PRO_DC1_CL301_302:
+                      hosts:
+                        ARI-CL-301-MTZ:
+                          ansible_host: 10.0.60.35
+                        ARI-CL-302-MTZ:
+                          ansible_host: 10.0.60.36
+                    NEXTGEN_ARGENTINA_PRO_DC1_CL303_304:
+                      hosts:
+                        ARI-CL-303-MTZ:
+                          ansible_host: 10.0.60.37
+                        ARI-CL-304-MTZ:
+                          ansible_host: 10.0.60.38
+                    NEXTGEN_ARGENTINA_PRO_DC1_CL305_306:
+                      hosts:
+                        ARI-CL-305-MTZ:
+                          ansible_host: 10.0.60.39
+                        ARI-CL-306-MTZ:
+                          ansible_host: 10.0.60.40
+                    NEXTGEN_ARGENTINA_PRO_DC1_CL307_308:
+                      hosts:
+                        ARI-CL-307-MTZ:
+                          ansible_host: 10.0.60.41
+                        ARI-CL-308-MTZ:
+                          ansible_host: 10.0.60.42
+                    NEXTGEN_ARGENTINA_PRO_DC1_CL309_310:
+                      hosts:
+                        ARI-CL-309-MTZ:
+                          ansible_host: 10.0.60.43
+                        ARI-CL-310-MTZ:
+                          ansible_host: 10.0.60.44
+
+            NEXTGEN_ARGENTINA_PRO_DC2:
+              children:
+                NEXTGEN_ARGENTINA_PRO_DC2_SPINES:
+                  hosts:
+                    ARI-SP-401-SKY:
+                      ansible_host: 10.0.60.45
+                      is_deployed: true
+                    ARI-SP-402-SKY:
+                      ansible_host: 10.0.60.46
+                      is_deployed: true
+                NEXTGEN_ARGENTINA_PRO_DC2_LEAVES:
+                  children:
+                    NEXTGEN_ARGENTINA_PRO_DC2_BL401_402:
+                      hosts:
+                        ARI-BL-401-SKY:
+                          ansible_host: 10.0.60.47
+                          is_deployed: true
+                        ARI-BL-402-SKY:
+                          ansible_host: 10.0.60.48
+                          is_deployed: true
+                    NEXTGEN_ARGENTINA_PRO_DC2_CL401_402:
+                      hosts:
+                        ARI-CL-401-SKY:
+                          ansible_host: 10.0.60.49
+                          is_deployed: true
+                        ARI-CL-402-SKY:
+                          ansible_host: 10.0.60.50
+                          is_deployed: true
+                    NEXTGEN_ARGENTINA_PRO_DC2_CL403_404:
+                      hosts:
+                        ARI-CL-403-SKY:
+                          ansible_host: 10.0.60.51
+                          is_deployed: true
+                        ARI-CL-404-SKY:
+                          ansible_host: 10.0.60.52
+                          is_deployed: true
+                    NEXTGEN_ARGENTINA_PRO_DC2_CL405_406:
+                      hosts:
+                        ARI-CL-405-SKY:
+                          ansible_host: 10.0.60.53
+                          is_deployed: true
+                        ARI-CL-406-SKY:
+                          ansible_host: 10.0.60.54
+                          is_deployed: true
+                    NEXTGEN_ARGENTINA_PRO_DC2_CL407_408:
+                      hosts:
+                        ARI-CL-407-SKY:
+                          ansible_host: 10.0.60.55
+                          is_deployed: true
+                        ARI-CL-408-SKY:
+                          ansible_host: 10.0.60.56
+                          is_deployed: true
+                    NEXTGEN_ARGENTINA_PRO_DC2_CL409_410:
+                      hosts:
+                        ARI-CL-409-SKY:
+                          ansible_host: 10.0.60.57
+                          is_deployed: true
+                        ARI-CL-410-SKY:
+                          ansible_host: 10.0.60.58
+                          is_deployed: true
+
+        # EXTERNAL_ROUTERS:
+        #   children:
+        #     NEXTGEN_ARGENTINA_EXT_RTR:
+        #       children:
+        #         NEXTGEN_ARGENTINA_EXT_RTR_BL:
+        #           hosts:
+        #             EXT-BL-01-MTZ-SKY:
+        #                   ansible_host: 10.18.132.111
+        #             EXT-BL-02-MTZ-SKY:
+        #                   ansible_host: 10.18.132.88
+        #         NEXTGEN_ARGENTINA_EXT_RTR_CL:
+        #           hosts:
+        #             EXT-CL-01-04-MTZ:
+        #                   ansible_host: 10.18.132.57
+        #             EXT-CL-01-04-SKY:
+        #                   ansible_host: 10.18.132.70
+        #             EXT-CL-05-08-MTZ:
+        #                   ansible_host: 10.18.132.61
+        #             EXT-CL-05-08-SKY:
+        #                   ansible_host: 10.18.130.159
+
+          vars:
+            ansible_connection: httpapi
+            ansible_network_os: eos
+            ansible_become: true
+            ansible_become_method: enable
+            ansible_httpapi_use_ssl: true
+            ansible_httpapi_port: 443
+            ansible_httpapi_validate_certs: false
+        DCI:
+          children:
+            NEXTGEN_ARGENTINA_PRO_DC1_BL301_302:
+            NEXTGEN_ARGENTINA_PRO_DC2_BL401_402:
+
+        Trident3:
+          children:
+            NEXTGEN_ARGENTINA_PRO_DC1_BL301_302:
+            NEXTGEN_ARGENTINA_PRO_DC1_CL301_302:
+            NEXTGEN_ARGENTINA_PRO_DC1_CL303_304:
+            NEXTGEN_ARGENTINA_PRO_DC1_CL305_306:
+            NEXTGEN_ARGENTINA_PRO_DC1_CL307_308:
+            NEXTGEN_ARGENTINA_PRO_DC1_CL309_310:
+            NEXTGEN_ARGENTINA_PRO_DC2_BL401_402:
+            NEXTGEN_ARGENTINA_PRO_DC2_CL401_402:
+            NEXTGEN_ARGENTINA_PRO_DC2_CL403_404:
+            NEXTGEN_ARGENTINA_PRO_DC2_CL405_406:
+            NEXTGEN_ARGENTINA_PRO_DC2_CL407_408:
+            NEXTGEN_ARGENTINA_PRO_DC2_CL409_410:
+
+        DC1_TENANTS:
+          children:
+            NEXTGEN_ARGENTINA_PRO_DC1_LEAVES:
+
+        DC2_TENANTS:
+          children:
+            NEXTGEN_ARGENTINA_PRO_DC2_LEAVES:
+
+        SERVERS:
+          children:
+            SERVERS_DC1_CL301_302:
+              children:
+                NEXTGEN_ARGENTINA_PRO_DC1_CL301_302:
+            SERVERS_DC1_CL303_304:
+              children:
+                NEXTGEN_ARGENTINA_PRO_DC1_CL303_304:
+            SERVERS_DC1_CL305_306:
+              children:
+                NEXTGEN_ARGENTINA_PRO_DC1_CL305_306:
+            SERVERS_DC1_CL307_308:
+              children:
+                NEXTGEN_ARGENTINA_PRO_DC1_CL307_308:
+            SERVERS_DC1_CL309_310:
+              children:
+                NEXTGEN_ARGENTINA_PRO_DC1_CL309_310:
+            SERVERS_DC2_CL401_402:
+              children:
+                NEXTGEN_ARGENTINA_PRO_DC2_CL401_402:
+            SERVERS_DC2_CL403_404:
+              children:
+                NEXTGEN_ARGENTINA_PRO_DC2_CL403_404:
+            SERVERS_DC2_CL405_406:
+              children:
+                NEXTGEN_ARGENTINA_PRO_DC2_CL405_406:
+            SERVERS_DC2_CL407_408:
+              children:
+                NEXTGEN_ARGENTINA_PRO_DC2_CL407_408:
+            SERVERS_DC2_CL409_410:
+              children:
+                NEXTGEN_ARGENTINA_PRO_DC2_CL409_410:
+
+            SERVERS_BL:
+              children:
+                NEXTGEN_ARGENTINA_PRO_DC1_BL301_302:
+                NEXTGEN_ARGENTINA_PRO_DC2_BL401_402:

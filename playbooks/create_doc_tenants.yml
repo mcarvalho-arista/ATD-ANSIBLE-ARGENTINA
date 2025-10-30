@@ -1,0 +1,12 @@
+---
+- name: Creating tenants informations
+  hosts: oh3nuk1swcl0101
+  run_once: true
+  tasks:
+    - name: Check Ansible collections
+      tags: [build, generate]
+      vars:
+        host_dc1: "oh3nuk1swcl0101"
+        host_dc2: "oh3nuk2swcl0101"
+      import_role:
+        name: avd_doc_tenant

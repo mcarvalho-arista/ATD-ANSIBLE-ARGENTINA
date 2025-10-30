@@ -1,0 +1,9 @@
+---
+- name: Run ANTA on EOS devices
+  hosts: NEXTGEN_ARGENTINA_PRO
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Run ANTA on EOS devices
+      ansible.builtin.import_role:
+        name: arista.avd.anta_runner

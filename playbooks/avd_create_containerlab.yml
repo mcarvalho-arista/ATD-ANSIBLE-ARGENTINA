@@ -1,0 +1,23 @@
+---
+- name: Manage Arista EOS EVPN/VXLAN Configuration GRA_USA
+  hosts: localhost
+  connection: local
+  vars:
+    p2p_link_file: "../inventory/documentation/fabric/GRV_UK-p2p-links.csv"
+  tasks:
+
+    - name: Read CSV
+      community.general.read_csv:
+        path: "{{ p2p_link_file }}"
+      register: p2p
+
+    - name: Create new LAB
+      vars:
+        links: "{{ p2p.list }}"
+        lab_ipv4_mgmt: "{{ lab.lab_ipv4_mgmt }}"
+        lab_prefix: "{{ lab.lab_prefix }}"
+        lab_current_gw_lab: "{{ lab.lab_current_gw_lab }}"
+        lab_path: "{{ lab.lab_path }}"
+        lab_cvp: "{{ lab.cvp }}"
+      import_role:
+        name: avd_create_lab

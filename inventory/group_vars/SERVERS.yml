@@ -1,0 +1,141 @@
+---
+port_profiles:
+  - profile: TRUNK_100G_BL_NRFU
+    mode: trunk
+    speed: 100g
+    # spanning_tree_bpdufilter: true
+    # native_vlan: 4001
+    # spanning_tree_portfast: edge
+    # link_tracking:
+    #   enabled: true
+    # vlans: 150, 151, 666, 777, 4001
+    storm_control:
+      broadcast:
+        level: 0.1
+      multicast:
+        level: 0.1
+      unknown_unicast:
+        level: 0.1
+
+  - profile: TRUNK_100G_BL
+    mode: trunk
+    speed: 100g
+    storm_control:
+      broadcast:
+        level: 0.1
+      multicast:
+        level: 0.1
+      unknown_unicast:
+        level: 0.1
+
+  - profile: TRUNK_25G_Compute_NG_PRODUCCION
+    mode: trunk
+    speed: 25g
+    spanning_tree_portfast: edge
+    link_tracking:
+      enabled: true
+    vlans: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
+    qos_profile: santander_trust_dscp
+    storm_control:
+      broadcast:
+        level: 1
+      multicast:
+        level: 1
+      unknown_unicast:
+        level: 1
+
+  - profile: TRUNK_25G_Compute_NG_MGMT-MTZ
+    mode: trunk
+    speed: 25g
+    spanning_tree_portfast: edge
+    link_tracking:
+      enabled: true
+    vlans: 11,12,13,16,18,19,20,21,45,200,205,232,233,600,601,620,641,642,643,252,253,254,255,256,257,1280,1400
+    qos_profile: santander_trust_dscp
+    storm_control:
+      broadcast:
+        level: 1
+      multicast:
+        level: 1
+      unknown_unicast:
+        level: 1
+
+  - profile: TRUNK_25G_Compute_NG_MGMT-SKY
+    mode: trunk
+    speed: 25g
+    spanning_tree_portfast: edge
+    link_tracking:
+      enabled: true
+    vlans: 11,12,13,16,18,19,20,21,45,200,205,232,233,600,601,620,641,642,643,252,253,254,258,259,260,1280,1400
+    qos_profile: santander_trust_dscp
+    storm_control:
+      broadcast:
+        level: 1
+      multicast:
+        level: 1
+      unknown_unicast:
+        level: 1
+
+  - profile: TRUNK_25G_Compute_NG_DMZ
+    mode: trunk
+    speed: 25g
+    spanning_tree_portfast: edge
+    link_tracking:
+      enabled: true
+    vlans: 450,451,452,453,454,455,456,457,458,459,460,461,470,471,472,473,267,268,269,1400
+    qos_profile: santander_trust_dscp
+    storm_control:
+      broadcast:
+        level: 1
+      multicast:
+        level: 1
+      unknown_unicast:
+        level: 1
+
+  # - profile: TRUNK_25G_Compute_MGMT_OHE
+  #   mode: trunk
+  #   speed: 25g
+  #   spanning_tree_portfast: edge
+  #   link_tracking:
+  #     enabled: true
+  #   vlans: 11,12,13,16,18,19,21,45,200,205,232,233
+  #   qos_profile: santander_trust_dscp
+  #   storm_control:
+  #     broadcast:
+  #       level: 1
+  #     multicast:
+  #       level: 1
+  #     unknown_unicast:
+  #       level: 1
+
+  - profile: TRUNK_100G_Edge_DC1
+    mode: trunk
+    # speed: 100g
+    spanning_tree_portfast: edge
+    link_tracking:
+      enabled: true
+    vlans: 301-303,401-403
+    qos_profile: santander_trust_dscp
+    storm_control:
+      broadcast:
+        level: 1
+      multicast:
+        level: 1
+      unknown_unicast:
+        level: 1
+
+  - profile: TRUNK_100G_Edge_DC2
+    mode: trunk
+    # speed: 100g
+    spanning_tree_portfast: edge
+    link_tracking:
+      enabled: true
+    vlans: 301-303,401-403
+    qos_profile: santander_trust_dscp
+    storm_control:
+      broadcast:
+        level: 1
+      multicast:
+        level: 1
+      unknown_unicast:
+        level: 1

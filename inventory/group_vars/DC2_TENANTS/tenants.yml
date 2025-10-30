@@ -1,0 +1,14 @@
+---
+# Tenants Networks
+# Documentation of Tenant specific information - Vlans/VRFs
+# Tenant Util Specific Information - VRFs / VLANs
+
+network_services_keys:
+  - name: T_NEXTGEN_PRODUCCION
+  - name: T_NEXTGEN_DESARROLLO
+  - name: T_NEXTGEN_DMZ_INT
+  - name: T_NEXTGEN_DMZ_FRONT
+  - name: T_NEXTGEN_MGMT
+  # - name: T_NEXTGEN_ARG_VDC_WHITE
+  # - name: T_NEXTGEN_ARG_VDC_WHITE_DMZF
+  # - name: T_<TENANT>_<ENV>

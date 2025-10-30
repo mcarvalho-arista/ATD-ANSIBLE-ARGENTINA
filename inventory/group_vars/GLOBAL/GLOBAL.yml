@@ -1,0 +1,401 @@
+---
+
+mgmt_interface_vrf: MGMT
+# Cloud Vision server information
+# daemon_terminattr:
+#   cvaddrs:
+#     - 10.0.60.7:9910
+#     - 10.0.60.8:9910
+#     - 10.0.60.9:9910
+#   cvauth:
+#     method: "token"
+#     token_file: "/tmp/token"
+#   cvvrf: MGMT
+#   smashexcludes: "ale,flexCounter,hardware,kni,pulse,strata"
+#   ingestexclude: "/Sysdb/cell/1/agent,/Sysdb/cell/2/agent"
+#   disable_aaa: true
+
+cv_settings:
+  onprem_clusters:
+    - name: CVP-ARGENTINA
+      servers:
+        - name: 10.0.60.7
+          port: 9910
+        - name: 10.0.60.8
+          port: 9910
+        - name: 10.0.60.9
+          port: 9910
+      vrf: MGMT
+      token_file: "/tmp/token"
+  terminattr:
+    smashexcludes: "ale,flexCounter,hardware,kni,pulse,strata"
+    ingestexclude: "/Sysdb/cell/1/agent,/Sysdb/cell/2/agent"
+    disable_aaa: true
+
+
+# arista.avd.cv_deploy role parameters
+cv_inventory_hostname: cv_servers
+cv_verify_certs: false
+
+# arista.avd.eos_config_deploy_cvp role parameters
+cv_collection: v3
+execute_tasks: false
+
+custom_structured_configuration_management_console:
+  idle_timeout: 15
+
+custom_structured_configuration_errdisable:
+  recovery:
+    interval: 30
+
+load_interval:
+  default: 5
+
+custom_structured_configuration_terminal:
+  length: 60
+
+queue_monitor_length:
+  enabled: true
+  notifying: true
+
+queue_monitor_streaming:
+  enable: true
+
+custom_structured_configuration_ip_icmp_redirect: false
+
+# ip_tacacs_source_interfaces:
+#   - name: Management1
+#     vrf: MGMT
+
+# aaa_authentication:
+#   login:
+#     default: local group tacacs+
+#     # default: local
+#     console: local
+#   policies:
+#     on_failure_log: true
+#     on_success_log: true
+
+# aaa_authorization:
+#   exec:
+#     default: local group tacacs+
+#     # default: local
+#   commands:
+#     privilege:
+#       - level: 15
+#         default: local group tacacs+
+#         # default: local
+
+# aaa_accounting:
+#   commands:
+#     default:
+#       - commands: 0-15
+#         type: start-stop
+#         group: tacacs+
+
+custom_structured_configuration_interface_defaults:
+  mtu: 9100
+  ethernet:
+    shutdown: true
+
+custom_structured_configuration_switchport_default:
+  mode: routed
+
+custom_structured_configuration_banners:
+  login: |
+    #
+                                       @
+                                      @@
+                                      @@@
+                                      @@@@
+                                  @   @@@@@                      BANCO SANTANDER
+                                 @@@   @@@@@@            Grupo SANTANDER CENTRAL HISPANO
+                                 @@@@    @@@@@
+                                 @@@@@    @@@@@
+                                  @@@@@@   @@@@
+                          @@@@@@    @@@@@@  @@@@@@@
+                       @@@@@@@@@@    @@@@@@ @@@@@@@@@@@
+                    @@@@@@@@@@@@@@@    @@@@@@@@@@@@@@@@@@@
+                   @@@@@@@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@@@
+                  @@@@@@@@@@@@@@@@@@@@ @@@@@@@@@@@@@@@@@@@@@
+                    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                          @@@@@@@@@@@@@@@@@@@@@@@@@@
+    
+    ############################################################
+    #       WARNING: only authorized access is allowed.        #
+    #       AVISO: solo se permite acceso a autorizados.       #
+    #       Actions are monitored and recorded.                #
+    #       Sus acciones son monitoreadas y registradas.       #
+    ############################################################
+    EOF
+
+internal_vlan_order:
+  allocation: ascending
+  range:
+    beginning: 3800
+    ending: 4000
+
+custom_structured_configuration_management_api_http:
+  enable_https: true
+  enable_vrfs:
+    - name: MGMT
+      access_group: CVP-ACL
+
+custom_structured_configuration_standard_access_lists:
+  - name: CVP-ACL
+    sequence_numbers:
+      - sequence: 10
+        action: "permit 0.0.0.0/0"
+  - name: MGMT-ACL
+    sequence_numbers:
+      - sequence: 10
+        action: "permit 0.0.0.0/0"
+
+# NTP Servers IP or DNS name, first NTP server will be prefered, and sourced from Management VRF
+custom_structured_configuration_ntp:
+  local_interface:
+    vrf: MGMT
+    name: Management1
+  servers:
+    - name: 180.166.55.187
+      preferred: true
+      vrf: MGMT
+    - name: 180.166.55.213
+      preferred: true
+      vrf: MGMT
+
+custom_structured_configuration_logging:
+  console: notifications
+  monitor: debugging
+  buffered:
+    size: 8000
+    level: notifications
+  trap: debugging
+  format:
+    timestamp: high-resolution
+  source_interface: Management1
+  vrfs:
+    - name: MGMT
+      source_interface: Management1
+      hosts:
+        - name: 10.200.251.15
+          protocol: udp
+        - name: 10.206.16.75
+          protocol: udp
+
+# Management SSH
+custom_structured_configuration_management_ssh:
+  # access_groups:
+  #   - name: MGMT-ACL
+  #     vrf: MGMT
+  idle_timeout: 15
+  enable: true
+  vrfs:
+    - name: MGMT
+      enable: true
+      ip_access_group_in: MGMT-ACL
+    - name: default
+      enable: false
+    - name: VRF-NEXTGEN_PRODUCCION
+      enable: false
+    - name: VRF-NEXTGEN_DESARROLLO
+      enable: false
+    - name: VRF-NEXTGEN_DMZ_INT
+      enable: false
+    - name: VRF-NEXTGEN_DMZ_FRONT
+      enable: false
+    - name: VRF-NEXTGEN_MGMT
+      enable: false
+    - name: VRF-NEXTGEN_MGMT_DMZ
+      enable: false
+
+custom_structured_configuration_management_security:
+  entropy_sources:
+    hardware: true
+  password:
+    encryption_key_common: true
+
+# aaa_server_groups:
+#   - name: TacServer
+#     type: tacacs+
+#     servers:
+#       - server: 180.250.33.127
+#         vrf: MGMT
+#       - server: 180.250.33.126
+#         vrf: MGMT
+
+
+fabric_sflow:
+  # uplinks: false
+  # downlinks: false
+  # l3_edge: false
+  uplinks: true
+  downlinks: true
+  l3_edge: true
+  # endpoints: false
+  # l3_interfaces: false
+  # mlag_interfaces: false
+  # core_interfaces: false
+
+sflow_settings:
+  sample:
+    rate: 131072
+  destinations:
+    - destination: 127.0.0.1
+      vrf: default
+  vrfs:
+    - name: default
+      source_interface: Loopback0
+
+custom_structured_configuration_sflow:
+  interface:
+    disable:
+      default: true
+
+custom_structured_configuration_arp:
+  aging:
+    timeout_default: 1500
+
+mac_address_table:
+  aging_time: 1800
+
+event_monitor:
+  enabled: true
+
+aaa_settings:
+  tacacs:
+    servers:
+      - host: 180.250.33.126
+        groups:
+          - TacServer
+        vrf: MGMT
+        key: "{{ tacacs.key1 }}"
+      - host: 180.250.33.127
+        groups:
+          - TacServer
+        vrf: MGMT
+        key: "{{ tacacs.key1 }}"
+    vrfs:
+      - name: MGMT
+        source_interface: Management1
+  authentication:
+    login:
+      default: local group tacacs+
+      console: local
+    policies:
+      on_failure_log: true
+      on_success_log: true
+  authorization:
+    exec:
+      default: local group tacacs+
+    commands:
+      privilege:
+        - level: 15
+          default: local group tacacs+
+  local_users:
+    - name: admin
+      privilege: 15
+      role: network-admin
+      sha512_password: "{{ users.admin.password }}"
+  
+    - name: cvpadmin
+      privilege: 15
+      role: network-admin
+      sha512_password: "{{ users.cvpadmin.password }}"
+  
+    - name: ansible
+      privilege: 15
+      role: network-admin
+      sha512_password: "{{ users.ansible.password }}"
+  
+    - name: marcelo
+      privilege: 15
+      role: network-admin
+      sha512_password: "{{ users.marcelo.password }}"
+
+
+# enable_password:
+#   hash_algorithm: sha512
+#   key: "{{ users.enable.password }}"
+
+custom_structured_configuration_snmp_server:
+  local_interfaces:
+    - name: Management1
+      vrf: MGMT
+  groups:
+    - name: "{{ users.snmpv3.group }}"
+      version: v3
+      authentication: priv
+  users:
+    - name: itmetro
+      group: "{{ users.snmpv3.users.user1.group }}"
+      version: v3
+      auth: sha
+      auth_passphrase: "{{ users.snmpv3.users.user1.auth }}"
+      priv: aes
+      priv_passphrase: "{{ users.snmpv3.users.user1.priv }}"
+  hosts:
+    - host: 10.40.3.124
+      vrf: MGMT
+      version: 3
+      users:
+        - username: "{{ users.snmpv3.traps.username1 }}"
+          authentication_level: priv
+    - host: 10.40.3.125
+      vrf: MGMT
+      version: 3
+      users:
+        - username: "{{ users.snmpv3.traps.username1 }}"
+          authentication_level: priv
+    - host: 10.40.3.126
+      vrf: MGMT
+      version: 3
+      users:
+        - username: "{{ users.snmpv3.traps.username1 }}"
+          authentication_level: priv
+    - host: 10.40.3.127
+      vrf: MGMT
+      version: 3
+      users:
+        - username: "{{ users.snmpv3.traps.username1 }}"
+          authentication_level: priv
+  traps:
+    enable: true
+    snmp_traps:
+      - name: bridge arista-mac-age
+        enabled: false
+      - name: bridge arista-mac-learn
+        enabled: false
+      - name: bridge arista-mac-move
+        enabled: false
+      - name: entity arista-ent-sensor-alarm
+        enabled: false
+  vrfs:
+    - name: MGMT
+      enable: true
+
+# tacacs_servers:
+#   hosts:
+#     - host: 180.250.33.126
+#       vrf: MGMT
+#       key: "{{ tacacs.key1 }}"
+#     - host: 180.250.33.127
+#       vrf: MGMT
+#       key: "{{ tacacs.key1 }}"
+
+custom_structured_configuration_service_unsupported_transceiver:
+  license_name: "{{ arista.license.name }}"
+  license_key: "{{ arista.license.key }}"
+
+# Shutdown BGP and Interfaces towards "is_deployed: false" devices
+shutdown_bgp_towards_undeployed_peers: true
+shutdown_interfaces_towards_undeployed_peers: true
+
+galaxy_collection_requirements:
+  - collection: "arista.avd"
+    version: 5.7.0
+# ansible:
+#   doc:
+#     hostdc1: oh3nuk1swcl0101
+#     hostdc2: oh3nuk2swcl0101

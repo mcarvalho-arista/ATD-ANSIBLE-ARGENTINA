@@ -1,0 +1,8 @@
+---
+- name: Upload CVP
+  hosts: NEXTGEN_ARGENTINA_PRO
+  gather_facts: false
+  tasks:
+    - name: Deploy configuration via CVP
+      import_role:
+        name: arista.avd.cv_deploy

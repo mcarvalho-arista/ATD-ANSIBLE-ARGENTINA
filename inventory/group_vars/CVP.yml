@@ -1,0 +1,123 @@
+# ---
+ztp:
+  default:
+    registration: 'http://10.88.160.63/ztp/bootstrap'
+    use_system_mac: true
+# #    gateway:
+# #    nameservers:
+# #      - '10.81.120.60'
+  general:
+    subnets:
+      - name: cvp_az1
+        network: 24
+        netmask: 255.255.255.0
+        start: "172.29.80.1"
+        end: "172.29.80.75"
+        lease_time: 300
+      - name: cvp_az2
+        network: 24
+        netmask: 255.255.255.0
+        start: "172.29.144.1"
+        end: "172.29.144.75"
+        lease_time: 300
+  clients:
+#   # AVD/CVP Integration
+
+    - name: oh3nuk1swsp0001
+      mac: '<TBD>'
+      ip4: 172.29.80.20/24
+      gateway: 24
+    - name: oh3nuk1swsp0002
+      mac: '<TBD>'
+      ip4: 172.29.80.21/24
+      gateway: 24
+    - name: oh3nuk1swsp0003
+      mac: '<TBD>'
+      ip4: 172.29.80.22/24
+      gateway: 24
+
+    - name: oh3nuk1swdg0001
+      mac: '<TBD>'
+      ip4: 172.29.80.23/24
+      gateway: 24
+
+    - name: oh3nuk1swdg0002
+      mac: '<TBD>'
+      ip4: 172.29.80.24/24
+      gateway: 24
+
+
+    - name: oh3nuk1swbl0001
+      mac: '<TBD>'
+      ip4: 172.29.80.25/24
+      gateway: 24
+
+    - name: oh3nuk1swbl0002
+      mac: '<TBD>'
+      ip4: 172.29.80.26/24
+      gateway: 24
+
+    - name: oh3nuk1swcl0101
+      mac: '<TBD>'
+      ip4: 172.29.80.29/24
+    - name: oh3nuk1swcl0102
+      mac: '<TBD>'
+      ip4: 172.29.80.30/24
+      gateway: 24
+    - name: oh3nuk1swcl0201
+      mac: '<TBD>'
+      ip4: 172.29.80.31/24
+    - name: oh3nuk1swcl0202
+      mac: '<TBD>'
+      ip4: 172.29.80.32/24
+      gateway: 24
+    - name: oh3nuk2swsp0001
+      mac: '<TBD>'
+      ip4: 172.29.144.20/25
+      gateway: 24
+    - name: oh3nuk2swsp0002
+      mac: '<TBD>'
+      ip4: 172.29.144.21/25
+      gateway: 24
+    - name: oh3nuk2swsp0003
+      mac: '<TBD>'
+      ip4: 172.29.144.22/25
+      gateway: 24
+
+    - name: oh3nuk2swdg0001
+      mac: '<TBD>'
+      ip4: 172.29.144.23/25
+      gateway: 24
+
+    - name: oh3nuk2swdg0002
+      mac: '<TBD>'
+      ip4: 172.29.144.24/25
+      gateway: 24
+
+
+    - name: oh3nuk2swbl0001
+      mac: '<TBD>'
+      ip4: 172.29.144.25/25
+      gateway: 24
+
+    - name: oh3nuk2swbl0002
+      mac: '<TBD>'
+      ip4: 172.29.144.26/25
+      gateway: 24
+
+    - name: oh3nuk2swcl0101
+      mac: '<TBD>'
+      ip4: 172.29.144.29/25
+      gateway: 24
+    - name: oh3nuk2swcl0102
+      mac: '<TBD>'
+      ip4: 172.29.144.30/25
+      gateway: 24
+    - name: oh3nuk2swcl0201
+      mac: '<TBD>'
+      ip4: 172.29.144.31/25
+      gateway: 24
+    - name: oh3nuk2swcl0202
+      mac: '<TBD>'
+      ip4: 172.29.144.32/25
+      gateway: 24

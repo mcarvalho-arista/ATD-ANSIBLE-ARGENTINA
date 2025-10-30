@@ -1,0 +1,26 @@
+---
+T_NEXTGEN_DMZ_FRONT:
+  - name: T_NEXTGEN_DMZ_FRONT
+    mac_vrf_vni_base: 10000
+    vrfs:
+      - name: VRF-NEXTGEN_DMZ_FRONT
+        vrf_vni: 1004
+        vtep_diagnostic:
+          loopback: 1004
+          loopback_ip_range: 10.110.7.0/24
+        svis:
+          - id: 470
+            name: NEXTGEN_DMZ_FRONT_Vl_470
+            enabled: false
+            tags: [DMZ_FRONT]
+            ip_address_virtual: 10.30.0.1/20
+          - id: 471
+            name: NEXTGEN_DMZ_FRONT_Vl_471
+            enabled: false
+            tags: [DMZ_FRONT]
+            ip_address_virtual: 10.30.32.1/24
+          - id: 472
+            name: NEXTGEN_DMZ_FRONT_Vl_472
+            enabled: false
+            tags: [DMZ_FRONT]
+            ip_address_virtual: 10.30.72.1/24

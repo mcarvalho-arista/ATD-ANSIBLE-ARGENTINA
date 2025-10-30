@@ -1,0 +1,30 @@
+---
+### Configurations related GRT and leaking to VRFs
+###
+###
+### custom_structured_configuration_router_bgp:
+###   peer_groups:
+###     - name: IX-EDGE-PEERS-UNDERLAY
+###       type: ipv4
+###       description: IX EDGE peerings
+###       route_map_out: RM-INFRA-IX-EDGE-PEERS-LOCAL
+###       route_map_in: RM-INFRA-LOOPBACKS-REMOTES
+###       password: "{{ bgp_peerings_password.ARI_BL_301_MTZ.IX_EDGE_PEERS_UNDERLAY.password }}"
+###       bfd: true
+###   neighbors:
+###     - ip_address: 10.200.169.130
+###       remote_as: 64667
+###       peer_group: IX-EDGE-PEERS-UNDERLAY
+###   address_family_ipv4:
+###     peer_groups:
+###       - name: IX-EDGE-PEERS-UNDERLAY
+###         activate: true
+###   vrfs:
+###     - name: VRF-SCG-PRE
+###       redistribute_routes:
+###         - source_protocol: connected
+###           # include: leaked route-map RM-SCG-PRE-SVI-OUT
+### 
+###     # VRF-SCG-DEV:
+###     #   redistribute_routes:
+###     #     - connected include leaked route-map RM-SCG-DEV-SVI-OUT

@@ -1,0 +1,13 @@
+skip_list:
+  - meta-no-info
+  - var-naming
+  - fqcn-builtins
+  - command-instead-of-shell
+  - no-changed-when
+  - experimental
+exclude_paths:
+  - ./inventory/intended/
+  - .github/
+  - .template/.github/
+  - /lab/Readme.md
+  - roles/

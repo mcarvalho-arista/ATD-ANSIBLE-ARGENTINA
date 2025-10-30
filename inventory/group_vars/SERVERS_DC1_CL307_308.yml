@@ -1,0 +1,237 @@
+---
+servers:
+  - name: oh1xar1esxc0401
+    rack: RackS2C3006
+    adapters:
+      - endpoint_ports: [2/1, 2/2]
+        switch_ports: [Ethernet1, Ethernet1]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0401
+        #   mode: active
+        #   short_esi: auto
+      - endpoint_ports: [3/1, 3/2]
+        switch_ports: [Ethernet2, Ethernet2]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0401
+        #   mode: active
+        #   short_esi: auto
+
+  - name: oh1xar1esxc0402
+    rack: RackS2C3006
+    adapters:
+      - endpoint_ports: [2/1, 2/2]
+        switch_ports: [Ethernet3, Ethernet3]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0402
+        #   mode: active
+        #   short_esi: auto
+      - endpoint_ports: [3/1, 3/2]
+        switch_ports: [Ethernet4, Ethernet4]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0402
+        #   mode: active
+        #   short_esi: auto
+
+  - name: oh1xar1esxc0403
+    rack: RackS2C3006
+    adapters:
+      - endpoint_ports: [2/1, 2/2]
+        switch_ports: [Ethernet5, Ethernet5]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0403
+        #   mode: active
+        #   short_esi: auto
+      - endpoint_ports: [3/1, 3/2]
+        switch_ports: [Ethernet6, Ethernet6]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0403
+        #   mode: active
+        #   short_esi: auto
+
+  - name: oh1xar1esxc0404
+    rack: RackS2C3006
+    adapters:
+      - endpoint_ports: [2/1, 2/2]
+        switch_ports: [Ethernet7, Ethernet7]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0404
+        #   mode: active
+        #   short_esi: auto
+      - endpoint_ports: [3/1, 3/2]
+        switch_ports: [Ethernet8, Ethernet8]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0404
+        #   mode: active
+        #   short_esi: auto
+
+  - name: oh1xar1esxc0405
+    rack: RackS2C3006
+    adapters:
+      - endpoint_ports: [2/1, 2/2]
+        switch_ports: [Ethernet9, Ethernet9]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0405
+        #   mode: active
+        #   short_esi: auto
+      - endpoint_ports: [3/1, 3/2]
+        switch_ports: [Ethernet10, Ethernet10]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0405
+        #   mode: active
+        #   short_esi: auto
+
+  - name: oh1xar1esxc0406
+    rack: RackS2C3006
+    adapters:
+      - endpoint_ports: [2/1, 2/2]
+        switch_ports: [Ethernet11, Ethernet11]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0406
+        #   mode: active
+        #   short_esi: auto
+      - endpoint_ports: [3/1, 3/2]
+        switch_ports: [Ethernet12, Ethernet12]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0406
+        #   mode: active
+        #   short_esi: auto
+
+  - name: oh1xar1esxc0407
+    rack: RackS2C3006
+    adapters:
+      - endpoint_ports: [2/1, 2/2]
+        switch_ports: [Ethernet13, Ethernet13]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0407
+        #   mode: active
+        #   short_esi: auto
+      - endpoint_ports: [3/1, 3/2]
+        switch_ports: [Ethernet14, Ethernet14]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0407
+        #   mode: active
+        #   short_esi: auto
+
+  - name: oh1xar1esxc0408
+    rack: RackS2C3006
+    adapters:
+      - endpoint_ports: [2/1, 2/2]
+        switch_ports: [Ethernet15, Ethernet15]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0408
+        #   mode: active
+        #   short_esi: auto
+      - endpoint_ports: [3/1, 3/2]
+        switch_ports: [Ethernet16, Ethernet16]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0408
+        #   mode: active
+        #   short_esi: auto
+  - name: oh1xar1esxc0409
+    rack: RackS2C3006
+    adapters:
+      - endpoint_ports: [2/1, 2/2]
+        switch_ports: [Ethernet17, Ethernet17]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0409
+        #   mode: active
+        #   short_esi: auto
+      - endpoint_ports: [3/1, 3/2]
+        switch_ports: [Ethernet18, Ethernet18]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0409
+        #   mode: active
+        #   short_esi: auto
+  - name: oh1xar1esxc0410
+    rack: RackS2C3006
+    adapters:
+      - endpoint_ports: [2/1, 2/2]
+        switch_ports: [Ethernet19, Ethernet19]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0410
+        #   mode: active
+        #   short_esi: auto
+      - endpoint_ports: [3/1, 3/2]
+        switch_ports: [Ethernet20, Ethernet20]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0410
+        #   mode: active
+        #   short_esi: auto
+  - name: oh1xar1esxc0411
+    rack: RackS2C3006
+    adapters:
+      - endpoint_ports: [2/1, 2/2]
+        switch_ports: [Ethernet21, Ethernet21]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0411
+        #   mode: active
+        #   short_esi: auto
+      - endpoint_ports: [3/1, 3/2]
+        switch_ports: [Ethernet22, Ethernet22]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0411
+        #   mode: active
+        #   short_esi: auto
+  - name: oh1xar1esxc0412
+    rack: RackS2C3006
+    adapters:
+      - endpoint_ports: [2/1, 2/2]
+        switch_ports: [Ethernet23, Ethernet23]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0412
+        #   mode: active
+        #   short_esi: auto
+      - endpoint_ports: [3/1, 3/2]
+        switch_ports: [Ethernet24, Ethernet24]
+        switches: [ARI-CL-307-MTZ, ARI-CL-308-MTZ]
+        profile: TRUNK_25G_Compute_NG_PRODUCCION
+        # port_channel:
+        #   description: PortChannel_oh1xar1esxc0412
+        #   mode: active
+        #   short_esi: auto

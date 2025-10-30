@@ -1,0 +1,93 @@
+## Configurations related to physical interfaces (routed ports)
+
+
+### Configuracion Provisional para VRRP en Port-Channel SubInterface
+###
+custom_structured_configuration_ethernet_interfaces:
+  - name: Port-Channel291.69
+    description: ARI-MG-DL-01-02-MTZ - MLAG51 - Vlan69
+    shutdown: false
+    vrf: VRF-NEXTGEN_MGMT
+    ip_address: 10.0.70.2/29
+    encapsulation_dot1q:
+      vlan: 69
+    vrrp_ids:
+      - id: 69
+        priority_level: 200
+        preempt:
+          enabled: true
+        ipv4:
+          address: 10.0.70.1
+          version: 3
+  - name: Port-Channel291.70
+    description: ARI-MG-DL-01-02-MTZ - MLAG51 - Vlan70
+    shutdown: false
+    vrf: VRF-NEXTGEN_MGMT_DMZ
+    ip_address: 10.0.70.10/29
+    encapsulation_dot1q:
+      vlan: 70
+    vrrp_ids:
+      - id: 70
+        priority_level: 200
+        preempt:
+          enabled: true
+        ipv4:
+          address: 10.0.70.9
+          version: 3
+###
+### FUENTE GENERAR PING TEST NRFU ###
+  - name: Port-Channel291.888
+    description: ARI-MG-DL-01-02-MTZ - MLAG51 - Vlan888 - TEST NRFU
+    shutdown: false
+    vrf:  VRF-NEXTGEN_PRODUCCION
+    ip_address: 100.64.88.1/24
+    encapsulation_dot1q:
+      vlan: 888
+
+
+custom_structured_configuration_static_routes:
+  - vrf: VRF-NEXTGEN_MGMT
+    prefix: 0.0.0.0/0
+    interface: Port-Channel291.69
+    next_hop: 10.0.70.4
+    name: Default_to_FWINT-VIP
+  - vrf: VRF-NEXTGEN_MGMT_DMZ
+    prefix: 0.0.0.0/0
+    interface: Port-Channel291.70
+    next_hop: 10.0.70.12
+    name: Default_to_FWINT-VIP
+
+# l2_protocol:
+#   forwarding_profiles:
+#     - name: STP
+#       protocols:
+#         - name: stp
+#           forward: true
+
+
+# custom_structured_configuration_port_channel_interfaces:
+#   - name: Port-Channel666.68
+#     description: Connection to ARI-MG-DL-01-02-MTZ - MLAG51 - FWINT
+    # ip_address: 10.0.70.2/29
+    # shutdown: false
+    # type: routed
+    # mtu: 9104
+    # encapsulation_dot1q:
+    #   vlan: 68
+    # vrrp_ids:
+    #   - id: 68
+    #     priority_level: 200
+    #     preempt:
+    #       enabled: true
+    #     ipv4:
+    #       address: 10.0.70.1
+    #       version: 3
+
+
+#   - name: Ethernet25/2
+#     # l2_protocol:
+#     #   # forwarding_profile: STP
+#   - name: Ethernet25/3
+#     l2_protocol:
+#       forwarding_profile: STP
+

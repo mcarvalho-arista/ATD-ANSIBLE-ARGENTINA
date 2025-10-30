@@ -1,0 +1,72 @@
+## Configurations related to physical interfaces (routed ports)
+
+
+### Configuracion Provisional para VRRP en Port-Channel SubInterface
+###
+custom_structured_configuration_ethernet_interfaces:
+  - name: Port-Channel291.69
+    description: ARI-MG-DL-01-02-SKY - MLAG51 - Vlan69
+    shutdown: false
+    vrf: VRF-NEXTGEN_MGMT
+    ip_address: 10.0.70.3/29
+    encapsulation_dot1q:
+      vlan: 69
+    vrrp_ids:
+      - id: 69
+        priority_level: 150
+        preempt:
+          enabled: true
+        ipv4:
+          address: 10.0.70.1
+          version: 3
+  - name: Port-Channel291.70
+    description: ARI-MG-DL-01-02-SKY - MLAG51 - Vlan70
+    shutdown: false
+    vrf: VRF-NEXTGEN_MGMT_DMZ
+    ip_address: 10.0.70.11/29
+    encapsulation_dot1q:
+      vlan: 70
+    vrrp_ids:
+      - id: 70
+        priority_level: 150
+        preempt:
+          enabled: true
+        ipv4:
+          address: 10.0.70.9
+          version: 3
+###
+
+custom_structured_configuration_static_routes:
+  - vrf: VRF-NEXTGEN_MGMT
+    prefix: 0.0.0.0/0
+    interface: Port-Channel291.69
+    next_hop: 10.0.70.4
+    name: Default_to_FWINT-VIP
+  - vrf: VRF-NEXTGEN_MGMT_DMZ
+    prefix: 0.0.0.0/0
+    interface: Port-Channel291.70
+    next_hop: 10.0.70.12
+    name: Default_to_FWINT-VIP
+
+# l2_protocol:
+#   forwarding_profiles:
+#     - name: STP
+#       protocols:
+#         - name: stp
+#           forward: true
+
+# custom_structured_configuration_ethernet_interfaces:
+#   - name: Ethernet25/1
+#     description: Connection to IX - DSWIXBE01 - Et2/27 - underlay conn to Cantabria Remotes
+#     ip_address: 10.200.169.129/30
+#     shutdown: false
+#     type: routed
+#     mtu: 9108
+
+#   - name: Ethernet25/2
+#     l2_protocol:
+#       forwarding_profile: STP
+#   - name: Ethernet25/3
+#     l2_protocol:
+#       forwarding_profile: STP
+

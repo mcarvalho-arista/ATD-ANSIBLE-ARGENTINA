@@ -1,0 +1,75 @@
+---
+T_NEXTGEN_DMZ_INT:
+  - name: T_NEXTGEN_DMZ_INT
+    mac_vrf_vni_base: 10000
+    l2vlans:
+      - id: 473
+        name: NEXTGEN_DMZ_INT_Vl_473
+        tags: [DMZ_INT]
+    vrfs:
+      - name: VRF-NEXTGEN_DMZ_INT
+        vrf_vni: 1003
+        vtep_diagnostic:
+          loopback: 1003
+          loopback_ip_range: 10.111.7.0/24
+        svis:
+          - id: 450
+            name: NEXTGEN_DMZ_INT_Vl_450
+            enabled: false
+            tags: [DMZ_INT]
+            ip_address_virtual: 10.30.16.1/20
+          - id: 451
+            name: NEXTGEN_DMZ_INT_Vl_451
+            enabled: false
+            tags: [DMZ_INT]
+            ip_address_virtual: 10.30.36.1/24
+          - id: 452
+            name: NEXTGEN_DMZ_INT_Vl_452
+            enabled: false
+            tags: [DMZ_INT]
+            ip_address_virtual: 10.30.37.1/25
+          - id: 453
+            name: NEXTGEN_DMZ_INT_Vl_453
+            enabled: false
+            tags: [DMZ_INT]
+            ip_address_virtual: 10.30.37.129/25
+          - id: 454
+            name: NEXTGEN_DMZ_INT_Vl_454
+            enabled: false
+            tags: [DMZ_INT]
+            ip_address_virtual: 10.30.38.1/25
+          - id: 455
+            name: NEXTGEN_DMZ_INT_Vl_455
+            enabled: false
+            tags: [DMZ_INT]
+            ip_address_virtual: 10.30.38.129/25
+          - id: 456
+            name: NEXTGEN_DMZ_INT_Vl_456
+            enabled: false
+            tags: [DMZ_INT]
+            ip_address_virtual: 10.30.39.1/24
+          - id: 457
+            name: NEXTGEN_DMZ_INT_Vl_457
+            enabled: false
+            tags: [DMZ_INT]
+            ip_address_virtual: 10.30.40.1/24
+          - id: 458
+            name: NEXTGEN_DMZ_INT_Vl_458
+            enabled: false
+            tags: [DMZ_INT]
+            ip_address_virtual: 10.30.41.1/24
+          - id: 459
+            name: NEXTGEN_DMZ_INT_Vl_459
+            enabled: false
+            tags: [DMZ_INT]
+            ip_address_virtual: 10.30.53.1/24
+          - id: 460
+            name: NEXTGEN_DMZ_INT_Vl_460
+            enabled: false
+            tags: [DMZ_INT]
+            ip_address_virtual: 10.30.54.1/25
+          - id: 461
+            name: NEXTGEN_DMZ_INT_Vl_461
+            enabled: false
+            tags: [DMZ_INT]
+            ip_address_virtual: 10.30.61.1/24

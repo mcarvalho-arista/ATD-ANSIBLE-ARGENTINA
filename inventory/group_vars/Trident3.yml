@@ -1,0 +1,7 @@
+---
+custom_structured_configuration_vxlan_interface:
+  vxlan1:
+    vxlan:
+      qos:
+        dscp_propagation_encapsulation: true
+        map_dscp_to_traffic_class_decapsulation: true

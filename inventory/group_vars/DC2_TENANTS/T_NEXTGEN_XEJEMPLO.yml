@@ -1,0 +1,58 @@
+---
+T_NEXTGEN_EJEMPLO:
+  - name: T_NEXTGEN_EJEMPLO
+    mac_vrf_vni_base: 10000
+    l2vlans:
+      - id: 401
+        name: NEXTGEN_EJEMPLO_Vl_401
+        tags: [EJEMPLO]
+      - id: 402
+        name: NEXTGEN_EJEMPLO_Vl_402
+        tags: [EJEMPLO]
+    vrfs:
+      - name: VRF-NEXTGEN_EJEMPLO
+        vrf_vni: 1035
+        vtep_diagnostic:
+          loopback: 3
+          loopback_ip_range: 10.200.163.64/26
+        svis:
+          - id: 301
+            name: NEXTGEN_EJEMPLO_Vl_301
+            enabled: true
+            tags: [EJEMPLO]
+            ip_address_virtual: 10.70.0.1/20
+          - id: 302
+            name: NEXTGEN_EJEMPLO_Vl_302
+            enabled: true
+            tags: [EJEMPLO]
+            ip_address_virtual: 10.70.16.1/20
+
+        bgp_peer_groups:
+           - name: NEXTGEN_VDC
+             nodes:
+               - ARI-BL-301-MTZ
+               - ARI-BL-302-MTZ
+             type: ipv4
+             remote_as: 64000
+             description: NEXTGEN_PRE
+             shutdown: false
+             bfd: false
+             timers: "2 10"
+             ebgp_multihop: 5
+             next_hop_unchanged: false
+             update_source: vlan301
+             password: "{{ bgp_peerings_password.ARI_BL_301_MTZ.IX_SRV_PEER.password }}"
+             route_map_in: RM-NEXTGEN_VDC-SVI-IN
+             route_map_out: RM-NEXTGEN_VDC-SVI-OUT
+
+        bgp_peers:
+           - ip_address: 107.5.0.17
+             peer_group: NEXTGEN_VDC
+             description: NEXTGENVDCPRE
+             nodes:
+               - ARI-BL-301-MTZ
+           - ip_address: 107.5.0.18
+             peer_group: NEXTGEN_VDC
+             description: NEXTGENVDCPRE
+             nodes:
+               - ARI-BL-302-MTZ

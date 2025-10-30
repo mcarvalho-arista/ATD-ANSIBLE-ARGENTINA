@@ -1,0 +1,54 @@
+---
+l3_edge:
+  p2p_links_ip_pools:
+    - name: dci_links
+      ipv4_pool: 10.110.1.0/25
+  p2p_links:
+    - id: 1
+      speed: 10g
+      ip_pool: dci_links
+      nodes: [ARI-BL-301-MTZ, ARI-BL-401-SKY]
+      interfaces: [Ethernet33, Ethernet33]
+      as: [65062, 65122]
+      include_in_underlay_protocol: true
+      bfd: true
+      # ptp:
+      #   enabled: true
+      qos_profile: santander_trust_dscp
+      # macsec_profile: macsec_santander
+    - id: 2
+      speed: 10g
+      ip_pool: dci_links
+      nodes: [ARI-BL-301-MTZ, ARI-BL-402-SKY]
+      interfaces: [Ethernet34, Ethernet34]
+      as: [65062, 65123]
+      include_in_underlay_protocol: true
+      bfd: true
+      # ptp:
+      #   enabled: true
+      qos_profile: santander_trust_dscp
+      # macsec_profile: macsec_santander
+    - id: 3
+      speed: 10g
+      ip_pool: dci_links
+      nodes: [ARI-BL-302-MTZ, ARI-BL-402-SKY]
+      interfaces: [Ethernet33, Ethernet33]
+      as: [65063, 65123]
+      include_in_underlay_protocol: true
+      bfd: true
+      # ptp:
+      #   enabled: true
+      qos_profile: santander_trust_dscp
+      # macsec_profile: macsec_santander
+    - id: 4
+      speed: 10g
+      ip_pool: dci_links
+      nodes: [ARI-BL-302-MTZ, ARI-BL-401-SKY]
+      interfaces: [Ethernet34, Ethernet34]
+      as: [65063, 65122]
+      include_in_underlay_protocol: true
+      bfd: true
+      # ptp:
+      #   enabled: true
+      qos_profile: santander_trust_dscp
+      # macsec_profile: macsec_santander

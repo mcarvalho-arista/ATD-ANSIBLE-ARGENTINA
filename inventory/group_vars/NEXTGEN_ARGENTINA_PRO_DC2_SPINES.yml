@@ -1,0 +1,61 @@
+---
+type: spine
+
+custom_structured_configuration_spanning_tree:
+  mode: none
+
+custom_structured_configuration_qos_profiles:
+  - name: santander_trust_dscp
+    trust: dscp
+    tx_queues:
+      - id: 0
+        bandwidth_percent: 18
+        priority: 'no priority'
+      - id: 1
+        bandwidth_percent: 14
+        priority: 'no priority'
+      - id: 2
+        bandwidth_percent: 5
+        priority: 'no priority'
+      - id: 3
+        bandwidth_percent: 10
+        priority: 'no priority'
+      - id: 4
+        bandwidth_percent: 6
+        priority: 'no priority'
+      - id: 5
+        bandwidth_percent: 45
+        priority: 'no priority'
+      - id: 6
+        priority: 'priority strict'
+        shape:
+          rate: "2 percent"
+
+
+# ip_tacacs_source_interfaces:
+#   - name: Management0
+#     vrf: mgmt
+
+# ntp:
+#   local_interface:
+#     vrf: mgmt
+#     name: Management1
+#   servers:
+#     - name: 172.28.67.248
+#       preferred: true
+#       vrf: mgmt
+
+# logging:
+#   source_interface: Management1
+#   vrfs:
+#     - name: mgmt
+#       source_interface: Management1
+
+# queue_monitor_length:
+#   enabled: false
+#   notifying: false
+
+# snmp_server:
+#   local_interfaces:
+#     - name: Management1
+#       vrf: mgmt
