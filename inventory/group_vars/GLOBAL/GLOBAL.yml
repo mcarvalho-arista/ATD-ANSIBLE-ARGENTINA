@@ -19,12 +19,12 @@ cv_settings:
   onprem_clusters:
     - name: CVP-ARGENTINA
       servers:
-        - name: 10.0.60.7
+        - name: 192.168.0.5
           port: 9910
-        - name: 10.0.60.8
-          port: 9910
-        - name: 10.0.60.9
-          port: 9910
+        # - name: 10.0.60.8
+        #   port: 9910
+        # - name: 10.0.60.9
+        #   port: 9910
       vrf: MGMT
       token_file: "/tmp/token"
   terminattr:

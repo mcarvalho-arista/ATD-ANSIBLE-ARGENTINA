@@ -47,26 +47,3 @@ custom_structured_configuration_static_routes:
     interface: Port-Channel291.70
     next_hop: 10.0.70.12
     name: Default_to_FWINT-VIP
-
-# l2_protocol:
-#   forwarding_profiles:
-#     - name: STP
-#       protocols:
-#         - name: stp
-#           forward: true
-
-# custom_structured_configuration_ethernet_interfaces:
-#   - name: Ethernet25/1
-#     description: Connection to IX - DSWIXBE01 - Et2/27 - underlay conn to Cantabria Remotes
-#     ip_address: 10.200.169.129/30
-#     shutdown: false
-#     type: routed
-#     mtu: 9108
-
-#   - name: Ethernet25/2
-#     l2_protocol:
-#       forwarding_profile: STP
-#   - name: Ethernet25/3
-#     l2_protocol:
-#       forwarding_profile: STP
-

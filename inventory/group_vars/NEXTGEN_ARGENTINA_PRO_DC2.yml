@@ -5,7 +5,7 @@
 fabric_name: NEXTGEN_ARGENTINA_PRO
 dc_name: NEXTGEN_ARGENTINA_PRO_DC2
 # OOB Management network default gateway.
-mgmt_gateway: 10.0.60.1
+mgmt_gateway: 192.168.0.1
 
 ## Parameters for Validate State
 ansible_user: marcelo
@@ -91,10 +91,10 @@ spine:
   nodes:
     - name: ARI-SP-401-SKY
       id: 1
-      mgmt_ip: 10.0.60.45/23
+      mgmt_ip: 192.168.0.20/24
     - name: ARI-SP-402-SKY
       id: 2
-      mgmt_ip: 10.0.60.46/23
+      mgmt_ip: 192.168.0.21/24
 
 # Leaf switch groups
 # A maximum of two nodes can form a leaf group
@@ -112,7 +112,7 @@ l3leaf:
     loopback_ipv4_offset: 4
     max_uplink_switches: 6
     mlag: false
-    uplink_interfaces: [Ethernet49/1, Ethernet50/1]
+    uplink_interfaces: [Ethernet2, Ethernet3]
     uplink_switches:
       - ARI-SP-401-SKY
       - ARI-SP-402-SKY
@@ -150,12 +150,12 @@ l3leaf:
       nodes:
         - name: ARI-CL-401-SKY
           id: 1
-          mgmt_ip: 10.0.60.49/23
-          uplink_switch_interfaces: [Ethernet1/1, Ethernet1/1]
+          mgmt_ip: 192.168.0.122/24
+          uplink_switch_interfaces: [Ethernet2, Ethernet2]
         - name: ARI-CL-402-SKY
           id: 2
-          mgmt_ip: 10.0.60.50/23
-          uplink_switch_interfaces: [Ethernet2/1, Ethernet2/1]
+          mgmt_ip: 192.168.0.123/24
+          uplink_switch_interfaces: [Ethernet3, Ethernet3]
 
     - group: NEXTGEN_ARGENTINA_PRO_DC2_CL403_404
       filter:
@@ -178,98 +178,12 @@ l3leaf:
       nodes:
         - name: ARI-CL-403-SKY
           id: 3
-          mgmt_ip: 10.0.60.51/23
-          uplink_switch_interfaces: [Ethernet3/1, Ethernet3/1]
+          mgmt_ip: 192.168.0.124/24
+          uplink_switch_interfaces: [Ethernet4, Ethernet4]
         - name: ARI-CL-404-SKY
           id: 4
-          mgmt_ip: 10.0.60.52/23
-          uplink_switch_interfaces: [Ethernet4/1, Ethernet4/1]
-
-    - group: NEXTGEN_ARGENTINA_PRO_DC2_CL405_406
-      filter:
-        tags:
-          - ALL-FABRIC
-          - PRODUCCION
-          - MGMT_PROD
-      link_tracking:
-        enabled: true
-        groups:
-          - name: LT_GROUP1
-            recovery_delay: 300
-      lacp_port_id_range:
-        enabled: true
-        offset: 128
-      structured_config:
-        spanning_tree:
-          edge_port:
-            bpduguard_default: true
-      nodes:
-        - name: ARI-CL-405-SKY
-          id: 5
-          mgmt_ip: 10.0.60.53/23
-          uplink_switch_interfaces: [Ethernet5/1, Ethernet5/1]
-        - name: ARI-CL-406-SKY
-          id: 6
-          mgmt_ip: 10.0.60.54/23
-          uplink_switch_interfaces: [Ethernet6/1, Ethernet6/1]
-
-    - group: NEXTGEN_ARGENTINA_PRO_DC2_CL407_408
-      filter:
-        tags:
-          - ALL-FABRIC
-          - PRODUCCION
-          - MGMT_PROD
-      link_tracking:
-        enabled: true
-        groups:
-          - name: LT_GROUP1
-            recovery_delay: 300
-      lacp_port_id_range:
-        enabled: true
-        offset: 128
-      structured_config:
-        spanning_tree:
-          edge_port:
-            bpduguard_default: true
-      nodes:
-        - name: ARI-CL-407-SKY
-          id: 7
-          mgmt_ip: 10.0.60.55/23
-          uplink_switch_interfaces: [Ethernet7/1, Ethernet7/1]
-        - name: ARI-CL-408-SKY
-          id: 8
-          mgmt_ip: 10.0.60.56/23
-          uplink_switch_interfaces: [Ethernet8/1, Ethernet8/1]
-
-    - group: NEXTGEN_ARGENTINA_PRO_DC2_CL409_410
-      filter:
-        tags:
-          - ALL-FABRIC
-          - MGMT
-          - MGMT_DMZ
-          - DMZ_INT
-          - DMZ_FRONT
-      link_tracking:
-        enabled: true
-        groups:
-          - name: LT_GROUP1
-            recovery_delay: 300
-      lacp_port_id_range:
-        enabled: true
-        offset: 128
-      structured_config:
-        spanning_tree:
-          edge_port:
-            bpduguard_default: true
-      nodes:
-        - name: ARI-CL-409-SKY
-          id: 9
-          mgmt_ip: 10.0.60.57/23
-          uplink_switch_interfaces: [Ethernet9/1, Ethernet9/1]
-        - name: ARI-CL-410-SKY
-          id: 10
-          mgmt_ip: 10.0.60.58/23
-          uplink_switch_interfaces: [Ethernet10/1, Ethernet10/1]
+          mgmt_ip: 192.168.0.125/24
+          uplink_switch_interfaces: [Ethernet5, Ethernet5]
 
     - group: NEXTGEN_ARGENTINA_PRO_DC2_BL401_402
       uplink_switches:
@@ -303,9 +217,9 @@ l3leaf:
           #
           # id 21-30 reserved for border leafs
           id: 21
-          mgmt_ip: 10.0.60.47/23
-          uplink_switch_interfaces: [Ethernet11/1, Ethernet11/1]
-          uplink_interfaces: [Ethernet31/1, Ethernet32/1]
+          mgmt_ip: 192.168.0.200/24
+          uplink_switch_interfaces: [Ethernet7, Ethernet7]
+          uplink_interfaces: [Ethernet2, Ethernet3]
 
         - name: ARI-BL-402-SKY
           filter:
@@ -324,9 +238,9 @@ l3leaf:
           #
           # id 21-30 reserved for border leafs
           id: 22
-          mgmt_ip: 10.0.60.48/23
-          uplink_switch_interfaces: [Ethernet12/1, Ethernet12/1]
-          uplink_interfaces: [Ethernet31/1, Ethernet32/1]
+          mgmt_ip: 192.168.0.201/24
+          uplink_switch_interfaces: [Ethernet8, Ethernet8]
+          uplink_interfaces: [Ethernet2, Ethernet3]
 
 p2p_uplinks_mtu: 9214
 p2p_uplinks_qos_profile: santander_trust_dscp

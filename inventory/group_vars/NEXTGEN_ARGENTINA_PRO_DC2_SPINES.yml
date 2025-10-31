@@ -26,36 +26,7 @@ custom_structured_configuration_qos_profiles:
       - id: 5
         bandwidth_percent: 45
         priority: 'no priority'
-      - id: 6
-        priority: 'priority strict'
-        shape:
-          rate: "2 percent"
-
-
-# ip_tacacs_source_interfaces:
-#   - name: Management0
-#     vrf: mgmt
-
-# ntp:
-#   local_interface:
-#     vrf: mgmt
-#     name: Management1
-#   servers:
-#     - name: 172.28.67.248
-#       preferred: true
-#       vrf: mgmt
-
-# logging:
-#   source_interface: Management1
-#   vrfs:
-#     - name: mgmt
-#       source_interface: Management1
-
-# queue_monitor_length:
-#   enabled: false
-#   notifying: false
-
-# snmp_server:
-#   local_interfaces:
-#     - name: Management1
-#       vrf: mgmt
+      # - id: 6
+      #   priority: 'priority strict'
+      #   shape:
+      #     rate: "2 percent"

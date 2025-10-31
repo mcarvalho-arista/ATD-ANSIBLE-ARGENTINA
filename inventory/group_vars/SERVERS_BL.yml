@@ -3,101 +3,59 @@ routers:
 
 # SIEMPRE habilitar el link tracking!! Pero si el puerto ya esta en utilizacion, supone una perdida del enlace de 1-2 segundos
 
-  - name: NEXTGEN_MH-EVPN_OHE_SERVICIO
-    rack: RackA
-    adapters:
-      - endpoint_ports: [ARI-BL-101-MTZ_Eth51/1, ARI-BL-201-SKY_Eth51/1, ARI-BL-101-MTZ_Eth52/1, ARI-BL-201-SKY_Eth52/1]
-        switches: [ARI-BL-301-MTZ, ARI-BL-401-SKY, ARI-BL-301-MTZ, ARI-BL-401-SKY]
-        switch_ports: [Ethernet11/1, Ethernet11/1, Ethernet12/1, Ethernet12/1]
-        qos_profile: santander_trust_dscp
-        profile: TRUNK_100G_BL
-        vlans: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,179,180,181,182,183,450,451,452,453,454,455,456,457,458,459,460,461,470,471,472,1280,1400
-        enabled: true
-        port_channel:
-          description: NEXTGEN_MH-EVPN_OHE_MTZ_SERVICIO_Port-Channel1010
-          endpoint_port_channel: PortChannel1010
-          mode: active
-          enabled: true
-        ethernet_segment:
-          short_esi: auto
-          redundancy: single-active
-          designated_forwarder_algorithm: preference
-          designated_forwarder_preferences: [100, 0]
-          dont_preempt: true
-        link_tracking:
-          name: LT_GROUP1
-          enabled: true
+  # - name: NEXTGEN_MH-EVPN_OHE_SERVICIO
+  #   rack: RackA
+  #   adapters:
+  #     - endpoint_ports: [ARI-BL-101-MTZ_Eth51/1, ARI-BL-201-SKY_Eth51/1, ARI-BL-101-MTZ_Eth52/1, ARI-BL-201-SKY_Eth52/1]
+  #       switches: [ARI-BL-301-MTZ, ARI-BL-401-SKY, ARI-BL-301-MTZ, ARI-BL-401-SKY]
+  #       switch_ports: [Ethernet11/1, Ethernet11/1, Ethernet12/1, Ethernet12/1]
+  #       qos_profile: santander_trust_dscp
+  #       profile: TRUNK_100G_BL
+  #       vlans: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,179,180,181,182,183,450,451,452,453,454,455,456,457,458,459,460,461,470,471,472,1280,1400
+  #       enabled: true
+  #       port_channel:
+  #         description: NEXTGEN_MH-EVPN_OHE_MTZ_SERVICIO_Port-Channel1010
+  #         endpoint_port_channel: PortChannel1010
+  #         mode: active
+  #         enabled: true
+  #       ethernet_segment:
+  #         short_esi: auto
+  #         redundancy: single-active
+  #         designated_forwarder_algorithm: preference
+  #         designated_forwarder_preferences: [100, 0]
+  #         dont_preempt: true
+  #       link_tracking:
+  #         name: LT_GROUP1
+  #         enabled: true
 
-  - name: NEXTGEN_MH-EVPN_OHE_MGMT
-    rack: RackA
-    adapters:
-      - endpoint_ports: [ARI-BL-102-MTZ_Eth51/1, ARI-BL-202-SKY_Eth51/1, ARI-BL-102-MTZ_Eth52/1, ARI-BL-202-SKY_Eth52/1]
-        switches: [ARI-BL-302-MTZ, ARI-BL-402-SKY, ARI-BL-302-MTZ, ARI-BL-402-SKY]
-        switch_ports: [Ethernet11/1, Ethernet11/1, Ethernet12/1, Ethernet12/1]
-        qos_profile: santander_trust_dscp
-        profile: TRUNK_100G_BL
-        vlans: 20
-        enabled: true
-        port_channel:
-          description: NEXTGEN_MH-EVPN_OHE_MTZ_MGMT_Port-Channel1010
-          endpoint_port_channel: PortChannel1010
-          mode: active
-          enabled: true
-        ethernet_segment:
-          short_esi: auto
-          redundancy: single-active
-          designated_forwarder_algorithm: preference
-          designated_forwarder_preferences: [100, 0]
-          dont_preempt: true
-        link_tracking:
-          name: LT_GROUP1
-          enabled: true
+  # - name: NEXTGEN_MH-EVPN_OHE_MGMT
+  #   rack: RackA
+  #   adapters:
+  #     - endpoint_ports: [ARI-BL-102-MTZ_Eth51/1, ARI-BL-202-SKY_Eth51/1, ARI-BL-102-MTZ_Eth52/1, ARI-BL-202-SKY_Eth52/1]
+  #       switches: [ARI-BL-302-MTZ, ARI-BL-402-SKY, ARI-BL-302-MTZ, ARI-BL-402-SKY]
+  #       switch_ports: [Ethernet11/1, Ethernet11/1, Ethernet12/1, Ethernet12/1]
+  #       qos_profile: santander_trust_dscp
+  #       profile: TRUNK_100G_BL
+  #       vlans: 20
+  #       enabled: true
+  #       port_channel:
+  #         description: NEXTGEN_MH-EVPN_OHE_MTZ_MGMT_Port-Channel1010
+  #         endpoint_port_channel: PortChannel1010
+  #         mode: active
+  #         enabled: true
+  #       ethernet_segment:
+  #         short_esi: auto
+  #         redundancy: single-active
+  #         designated_forwarder_algorithm: preference
+  #         designated_forwarder_preferences: [100, 0]
+  #         dont_preempt: true
+  #       link_tracking:
+  #         name: LT_GROUP1
+  #         enabled: true
 
-  ### Configuracion PROVISIONAL para VRRP en Port-Channel subinterface ###
-  ###
-  - name: DISTRIBUTION_SWITCH_MTZ_PROVISIONAL
-    rack: RackA
-    adapters:
-      - endpoint_ports: [ARI-MG-DL-01-MTZ_Eth49/1, ARI-MG-DL-02-MTZ_Eth49/1]
-        switches: [ARI-BL-302-MTZ, ARI-BL-302-MTZ]
-        switch_ports: [Ethernet29/1,Ethernet30/1]
-        speed: forced 100g
-        enabled: true
-        port_channel:
-          description: ARI-MG-DL-01-02-MTZ_MLAG51
-          endpoint_port_channel: PortChannel51
-          mode: active
-          structured_config:
-            switchport:
-              enabled: false
-        link_tracking:
-          name: LT_GROUP1
-          enabled: true
-  ###
-  - name: DISTRIBUTION_SWITCH_SKY_PROVISIONAL
-    rack: RackA
-    adapters:
-      - endpoint_ports: [ARI-MG-DL-01-SKY_Eth49/1, ARI-MG-DL-02-SKY_Eth49/1]
-        switches: [ARI-BL-402-SKY, ARI-BL-402-SKY]
-        switch_ports: [Ethernet29/1,Ethernet30/1]
-        speed: forced 100g
-        enabled: true
-        port_channel:
-          description: ARI-MG-DL-01-02-SKY_MLAG51
-          endpoint_port_channel: PortChannel51
-          mode: active
-          structured_config:
-            switchport:
-              enabled: false
-        link_tracking:
-          name: LT_GROUP1
-          enabled: true
-  ###
-
-
-  ### Configuracion CASI OK para VRRP en Port-Channel subinterface ###
-  ###
-  # - name: DISTRIBUTION_SWITCH_MTZ
+  # ### Configuracion PROVISIONAL para VRRP en Port-Channel subinterface ###
+  # ###
+  # - name: DISTRIBUTION_SWITCH_MTZ_PROVISIONAL
   #   rack: RackA
   #   adapters:
   #     - endpoint_ports: [ARI-MG-DL-01-MTZ_Eth49/1, ARI-MG-DL-02-MTZ_Eth49/1]
@@ -109,32 +67,14 @@ routers:
   #         description: ARI-MG-DL-01-02-MTZ_MLAG51
   #         endpoint_port_channel: PortChannel51
   #         mode: active
-  #         subinterfaces:
-  #           - number: 69
-  #             structured_config:
-  #               description: ARI-MG-DL-01-02-MTZ - MLAG51 - Vlan69
-  #               shutdown: false
-  #               vrf: VRF-NEXTGEN_MGMT
-  #               ip_address: 10.0.70.2/29
-  #               vlan_id: 3869
-  #               encapsulation_dot1q:
-  #                 vlan: 69
-  #               vrrp_ids:
-  #                - id: 69
-  #                  priority_level: 200
-  #                  preempt:
-  #                    enabled: true
-  #                  ipv4:
-  #                    address: 10.0.70.1
-  #                    version: 3
-  #         # structured_config:
-  #         #   switchport:
-  #         #     enabled: false
-  #      link_tracking:
-  #        name: LT_GROUP1
-  #        enabled: true
-  ###
-  # - name: DISTRIBUTION_SWITCH_SKY
+  #         structured_config:
+  #           switchport:
+  #             enabled: false
+  #       link_tracking:
+  #         name: LT_GROUP1
+  #         enabled: true
+  # ###
+  # - name: DISTRIBUTION_SWITCH_SKY_PROVISIONAL
   #   rack: RackA
   #   adapters:
   #     - endpoint_ports: [ARI-MG-DL-01-SKY_Eth49/1, ARI-MG-DL-02-SKY_Eth49/1]
@@ -146,170 +86,37 @@ routers:
   #         description: ARI-MG-DL-01-02-SKY_MLAG51
   #         endpoint_port_channel: PortChannel51
   #         mode: active
-  #         subinterfaces:
-  #           - number: 69
-  #             structured_config:
-  #               description: ARI-MG-DL-01-02-SKY - MLAG51 - Vlan69
-  #               shutdown: false
-  #               vrf: VRF-NEXTGEN_MGMT
-  #               ip_address: 10.0.70.3/29
-  #               vlan_id: 3869
-  #               encapsulation_dot1q:
-  #                 vlan: 69
-  #               vrrp_ids:
-  #                - id: 69
-  #                  priority_level: 150
-  #                  preempt:
-  #                    enabled: true
-  #                  ipv4:
-  #                    address: 10.0.70.1
-  #                    version: 3
-  #         # structured_config:
-  #         #   switchport:
-  #         #     enabled: false
-  #      link_tracking:
-  #        name: LT_GROUP1
-  #        enabled: true
-
-  - name: NRFU_MH-SA_NEXTGEN_ARGENTINA_PRO
-    rack: RackA
-    adapters:
-      - endpoint_ports: [ARI-MG-DL-01-MTZ_Eth50/1, ARI-MG-DL-01-SKY_Eth50/1, ARI-MG-DL-02-MTZ_Eth50/1, ARI-MG-DL-02-SKY_Eth50/1]
-        switches: [ARI-BL-301-MTZ, ARI-BL-401-SKY, ARI-BL-301-MTZ, ARI-BL-401-SKY]
-        switch_ports: [Ethernet29/1, Ethernet29/1, Ethernet30/1, Ethernet30/1]
-        speed: forced 100g
-        qos_profile: santander_untrusted
-        profile: TRUNK_100G_BL_NRFU
-        vlans: 666, 777, 4001
-        native_vlan: 4001
-        spanning_tree_bpdufilter: false
-        enabled: true
-        port_channel:
-          description: ARI-MG-DL-01-02_MLAG666_PROVISIONAL_NRFU
-          endpoint_port_channel: PortChannel666
-          mode: active
-        ethernet_segment:
-          short_esi: auto
-          redundancy: single-active
-          designated_forwarder_algorithm: preference
-          # designated_forwarder_preferences: [100, 100, 0, 0]
-          designated_forwarder_preferences: [100, 0]
-          dont_preempt: true
-        link_tracking:
-          name: LT_GROUP1
-          enabled: true
-
-  # - name: TEST_SWITCH_MTZ
-  #   rack: RackA
-  #   adapters:
-  #     - endpoint_ports: [ARI-MG-DL-01-MTZ_Eth49/1, ARI-MG-DL-02-MTZ_Eth49/1]
-  #       switches: [ARI-BL-302-MTZ, ARI-BL-302-MTZ]
-  #       switch_ports: [Ethernet26/1,Ethernet27/1]
-  #       speed: forced 100g
-  #       enabled: true
-  #       port_channel:
-  #         description: ARI-MG-DL-01-02-MTZ_MLAG51
-  #         endpoint_port_channel: PortChannel51
-  #         mode: active
-  #         subinterfaces:
-  #           - number: 69
-  #             structured_config:
-  #               description: ARI-MG-DL-01-02-MTZ - MLAG51 - Vlan69
-  #               shutdown: false
-  #               vrf: VRF-NEXTGEN_MGMT
-  #               ip_address: 10.0.69.2/29
-  #               encapsulation_dot1q:
-  #                 vlan: 69
-  #               vrrp_ids:
-  #                - id: 69
-  #                  priority_level: 200
-  #                  preempt:
-  #                    enabled: true
-  #                  ipv4:
-  #                    address: 10.0.70.1
-  #                    version: 3
-  #             # raw_eos_cli: |
-  #             #   vrrp 69 priority-level 200
-  #             #   vrrp 69 ipv4 10.0.70.1
-  #             #   vrrp 69 ipv4 version 3
   #         structured_config:
   #           switchport:
   #             enabled: false
-
-#   - name: ARG_DC1_BL301_401
-#     rack: RackA
-#     adapters:
-#       - endpoint_ports: [EXT-BL-01-MTZ_SKY_Eth1, EXT-BL-01-MTZ_SKY_Eth3]
-#         switches: [ARI-BL-301-MTZ, ARI-BL-401-SKY]
-#         switch_ports: [Ethernet20/1,Ethernet20/1]
-#         profile: TRUNK_100G_BL
-#         qos_profile: santander_untrusted
-#         vlans: 301-303
-#         enabled: true
-#         ethernet_segment:
-#           short_esi: auto
-#           redundancy: single-active
-#           designated_forwarder_algorithm: preference
-#           designated_forwarder_preferences: [100,0]
-#           dont_preempt: true
-#         link_tracking:
-#           name: LT_GROUP1
-#           enabled: true
-#           # Habilitar link tracking supone una perdida del enlace de 1-2 segundos
-#       - endpoint_ports: [EXT-BL-01-MTZ_SKY_Eth2, EXT-BL-01-MTZ_SKY_Eth4]
-#         switches: [ARI-BL-301-MTZ, ARI-BL-401-SKY]
-#         switch_ports: [Ethernet21/1,Ethernet21/1]
-#         profile: TRUNK_100G_BL
-#         vlans: 401-403
-#         speed: forced 100g
-#         enabled: true
-#         port_channel:
-#           description: EXT-BL-01-MTZ_SKY_PortChannel20
-#           endpoint_port_channel: PortChannel20
-#           mode: active
-#         ethernet_segment:
-#           short_esi: auto
-#           redundancy: all-active
-#         link_tracking:
-#           name: LT_GROUP1
-#           enabled: true
-
-  # - name: ARG_DC1_BL302_402
-  #   rack: RackB
-  #   adapters:
-  #     - endpoint_ports: [EXT-BL-02-MTZ_SKY_Eth1, EXT-BL-02-MTZ_SKY_Eth2, EXT-BL-02-MTZ_SKY_Eth3, EXT-BL-02-MTZ_SKY_Eth4]
-  #       switches: [ARI-BL-302-MTZ, ARI-BL-302-MTZ, ARI-BL-402-SKY, ARI-BL-402-SKY]
-  #       switch_ports: [Ethernet20, Ethernet21, Ethernet20, Ethernet21]
-  #       profile: TRUNK_100G_BL
-  #       qos_profile: santander_untrusted
-  #       vlans: 301-303
-  #       enabled: true
-  #       port_channel:
-  #         description: EXT-BL-02-MTZ_SKY_PortChannel20
-  #         endpoint_port_channel: PortChannel20
-  #         mode: active
-  #       ethernet_segment:
-  #         short_esi: auto
-  #         redundancy: all-active
   #       link_tracking:
   #         name: LT_GROUP1
   #         enabled: true
 
-          # Habilitar link tracking supone una perdida del enlace de 1-2 segundos
-      # - endpoint_ports: [EXT-BL-02-MTZ_SKY_Eth2, EXT-BL-02-MTZ_SKY_Eth4]
-      #   switches: [ARI-BL-302-MTZ, ARI-BL-402-SKY]
-      #   switch_ports: [Ethernet21,Ethernet21]
-      #   profile: TRUNK_100G_BL
-      #   vlans: 401-403
-      #   speed: forced 100g
-      #   enabled: true
-      #   port_channel:
-      #     description: EXT-BL-02-MTZ_SKY_PortChannel20
-      #     endpoint_port_channel: PortChannel20
-      #     mode: active
-      #   ethernet_segment:
-      #     short_esi: auto
-      #     redundancy: all-active
-      #   link_tracking:
-      #     name: LT_GROUP1
-      #     enabled: true
+  # - name: NRFU_MH-SA_NEXTGEN_ARGENTINA_PRO
+  #   rack: RackA
+  #   adapters:
+  #     - endpoint_ports: [ARI-MG-DL-01-MTZ_Eth50/1, ARI-MG-DL-01-SKY_Eth50/1, ARI-MG-DL-02-MTZ_Eth50/1, ARI-MG-DL-02-SKY_Eth50/1]
+  #       switches: [ARI-BL-301-MTZ, ARI-BL-401-SKY, ARI-BL-301-MTZ, ARI-BL-401-SKY]
+  #       switch_ports: [Ethernet29/1, Ethernet29/1, Ethernet30/1, Ethernet30/1]
+  #       speed: forced 100g
+  #       qos_profile: santander_untrusted
+  #       profile: TRUNK_100G_BL_NRFU
+  #       vlans: 666, 777, 4001
+  #       native_vlan: 4001
+  #       spanning_tree_bpdufilter: false
+  #       enabled: true
+  #       port_channel:
+  #         description: ARI-MG-DL-01-02_MLAG666_PROVISIONAL_NRFU
+  #         endpoint_port_channel: PortChannel666
+  #         mode: active
+  #       ethernet_segment:
+  #         short_esi: auto
+  #         redundancy: single-active
+  #         designated_forwarder_algorithm: preference
+  #         # designated_forwarder_preferences: [100, 100, 0, 0]
+  #         designated_forwarder_preferences: [100, 0]
+  #         dont_preempt: true
+  #       link_tracking:
+  #         name: LT_GROUP1
+  #         enabled: true

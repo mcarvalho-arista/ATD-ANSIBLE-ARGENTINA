@@ -1,0 +1,533 @@
+aaa_authentication:
+  login:
+    default: local group tacacs+
+    console: local
+  policies:
+    on_failure_log: true
+    on_success_log: true
+aaa_authorization:
+  exec:
+    default: local group tacacs+
+  commands:
+    privilege:
+    - level: '15'
+      default: local group tacacs+
+aaa_root:
+  disabled: true
+aaa_server_groups:
+- name: TacServer
+  type: tacacs+
+  servers:
+  - server: 180.250.33.126
+    vrf: MGMT
+  - server: 180.250.33.127
+    vrf: MGMT
+arp:
+  aging:
+    timeout_default: 1500
+banners:
+  login: "#\n                                   @\n                                  @@\n                                  @@@\n                                  @@@@\n
+    \                             @   @@@@@                      BANCO SANTANDER\n                             @@@   @@@@@@            Grupo
+    SANTANDER CENTRAL HISPANO\n                             @@@@    @@@@@\n                             @@@@@    @@@@@\n                              @@@@@@
+    \  @@@@\n                      @@@@@@    @@@@@@  @@@@@@@\n                   @@@@@@@@@@    @@@@@@ @@@@@@@@@@@\n                @@@@@@@@@@@@@@@
+    \   @@@@@@@@@@@@@@@@@@@\n               @@@@@@@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@@@\n              @@@@@@@@@@@@@@@@@@@@ @@@@@@@@@@@@@@@@@@@@@\n
+    \               @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n                  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n                      @@@@@@@@@@@@@@@@@@@@@@@@@@\n\n############################################################\n#
+    \      WARNING: only authorized access is allowed.        #\n#       AVISO: solo se permite acceso a autorizados.       #\n#       Actions
+    are monitored and recorded.                #\n#       Sus acciones son monitoreadas y registradas.       #\n############################################################\nEOF\n"
+clock:
+  timezone: America/Buenos_Aires
+config_end: true
+daemon_terminattr:
+  cvaddrs:
+  - 192.168.0.5:9910
+  cvauth:
+    method: token
+    token_file: /tmp/token
+  cvvrf: MGMT
+  disable_aaa: true
+  ingestexclude: /Sysdb/cell/1/agent,/Sysdb/cell/2/agent
+  smashexcludes: ale,flexCounter,hardware,kni,pulse,strata
+enable_password:
+  disabled: true
+errdisable:
+  recovery:
+    interval: 30
+ethernet_interfaces:
+- name: Ethernet2
+  description: P2P_ARI-CL-301-MTZ_Ethernet2
+  shutdown: false
+  speed: forced 100g
+  mtu: 9214
+  ip_address: 10.110.8.0/31
+  service_profile: santander_trust_dscp
+  peer: ARI-CL-301-MTZ
+  peer_interface: Ethernet2
+  peer_type: l3leaf
+  sflow:
+    enable: true
+  switchport:
+    enabled: false
+- name: Ethernet3
+  description: P2P_ARI-CL-302-MTZ_Ethernet2
+  shutdown: false
+  speed: forced 100g
+  mtu: 9214
+  ip_address: 10.110.8.12/31
+  service_profile: santander_trust_dscp
+  peer: ARI-CL-302-MTZ
+  peer_interface: Ethernet2
+  peer_type: l3leaf
+  sflow:
+    enable: true
+  switchport:
+    enabled: false
+- name: Ethernet4
+  description: P2P_ARI-CL-303-MTZ_Ethernet2
+  shutdown: false
+  speed: forced 100g
+  mtu: 9214
+  ip_address: 10.110.8.24/31
+  service_profile: santander_trust_dscp
+  peer: ARI-CL-303-MTZ
+  peer_interface: Ethernet2
+  peer_type: l3leaf
+  sflow:
+    enable: true
+  switchport:
+    enabled: false
+- name: Ethernet5
+  description: P2P_ARI-CL-304-MTZ_Ethernet2
+  shutdown: false
+  speed: forced 100g
+  mtu: 9214
+  ip_address: 10.110.8.36/31
+  service_profile: santander_trust_dscp
+  peer: ARI-CL-304-MTZ
+  peer_interface: Ethernet2
+  peer_type: l3leaf
+  sflow:
+    enable: true
+  switchport:
+    enabled: false
+- name: Ethernet7
+  description: P2P_ARI-BL-301-MTZ_Ethernet2
+  shutdown: false
+  speed: forced 100g
+  mtu: 9214
+  ip_address: 10.110.8.240/31
+  service_profile: santander_trust_dscp
+  peer: ARI-BL-301-MTZ
+  peer_interface: Ethernet2
+  peer_type: l3leaf
+  sflow:
+    enable: true
+  switchport:
+    enabled: false
+- name: Ethernet8
+  description: P2P_ARI-BL-302-MTZ_Ethernet2
+  shutdown: false
+  speed: forced 100g
+  mtu: 9214
+  ip_address: 10.110.8.252/31
+  service_profile: santander_trust_dscp
+  peer: ARI-BL-302-MTZ
+  peer_interface: Ethernet2
+  peer_type: l3leaf
+  sflow:
+    enable: true
+  switchport:
+    enabled: false
+event_monitor:
+  enabled: true
+hostname: ARI-SP-301-MTZ
+interface_defaults:
+  ethernet:
+    shutdown: true
+  mtu: 9100
+ip_icmp_redirect: false
+ip_routing: true
+ip_tacacs_source_interfaces:
+- name: Management1
+  vrf: MGMT
+load_interval:
+  default: 5
+local_users:
+- name: admin
+  privilege: 15
+  role: network-admin
+  sha512_password: $6$U3al1DzxMmPfRugU$tkAtrfWNjAKPDS0GNes73ZIChBYBRkVz9juKlLMbE3rYmPnfGoXBJClFPeo92p7Z3L29.FwW11JD82mTyCMaf/
+- name: ansible
+  privilege: 15
+  role: network-admin
+  sha512_password: $6$BLP4ybyxd.MVHa.3$9LRJR4bFFH1aQSXThMevlMPl1APzz8Rszk9VADYlZJSYl0M5Lznbyec4KBDDyaIVNZ7o0V60bVwx1zXmSzybS1
+- name: cvpadmin
+  privilege: 15
+  role: network-admin
+  sha512_password: $6$PyJWbjPrhxpt9MvC$kLSV2naOFChW09CqBcZfVSOBpv.3v0NM7NAbGoQINfoTJlLb/LfoToRkCcGMeSDENrUa193Ba/NeB2pS3J9XP1
+- name: marcelo
+  privilege: 15
+  role: network-admin
+  sha512_password: $6$JOlaFRui.uKQAgcY$F.A6VZCIcIlbRMrk//U2.q9ucyl95ymC1dGz9BLpwl3NkIhLbOkCh.N.nYaiLBIUdz3mXzAAutF/APAAtamUB.
+logging:
+  console: notifications
+  monitor: debugging
+  buffered:
+    size: 8000
+    level: notifications
+  trap: debugging
+  format:
+    timestamp: high-resolution
+  source_interface: Management1
+  vrfs:
+  - name: MGMT
+    source_interface: Management1
+    hosts:
+    - name: 10.200.251.15
+      protocol: udp
+    - name: 10.206.16.75
+      protocol: udp
+loopback_interfaces:
+- name: Loopback0
+  description: ROUTER_ID
+  shutdown: false
+  ip_address: 10.110.5.1/32
+mac_address_table:
+  aging_time: 1800
+management_api_http:
+  enable_https: true
+  enable_vrfs:
+  - name: MGMT
+    access_group: CVP-ACL
+management_console:
+  idle_timeout: 15
+management_interfaces:
+- name: Management1
+  description: OOB_MANAGEMENT
+  shutdown: false
+  vrf: MGMT
+  ip_address: 192.168.0.10/24
+  type: oob
+  gateway: 192.168.0.1
+management_security:
+  entropy_sources:
+    hardware: true
+  password:
+    encryption_key_common: true
+management_ssh:
+  idle_timeout: 15
+  enable: true
+  vrfs:
+  - name: MGMT
+    enable: true
+    ip_access_group_in: MGMT-ACL
+  - name: default
+    enable: false
+  - name: VRF-NEXTGEN_PRODUCCION
+    enable: false
+  - name: VRF-NEXTGEN_DESARROLLO
+    enable: false
+  - name: VRF-NEXTGEN_DMZ_INT
+    enable: false
+  - name: VRF-NEXTGEN_DMZ_FRONT
+    enable: false
+  - name: VRF-NEXTGEN_MGMT
+    enable: false
+  - name: VRF-NEXTGEN_MGMT_DMZ
+    enable: false
+metadata:
+  is_deployed: true
+  platform: 7260CX3
+  dc_name: NEXTGEN_ARGENTINA_PRO_DC1
+  fabric_name: NEXTGEN_ARGENTINA_PRO
+ntp:
+  local_interface:
+    name: Management1
+    vrf: MGMT
+  servers:
+  - name: 180.166.55.187
+    preferred: true
+    vrf: MGMT
+  - name: 180.166.55.213
+    preferred: true
+    vrf: MGMT
+prefix_lists:
+- name: PL-LOOPBACKS-EVPN-OVERLAY
+  sequence_numbers:
+  - sequence: 10
+    action: permit 10.110.5.0/24 eq 32
+qos_profiles:
+- name: santander_trust_dscp
+  trust: dscp
+  tx_queues:
+  - id: 0
+    bandwidth_percent: 18
+    priority: no priority
+  - id: 1
+    bandwidth_percent: 14
+    priority: no priority
+  - id: 2
+    bandwidth_percent: 5
+    priority: no priority
+  - id: 3
+    bandwidth_percent: 10
+    priority: no priority
+  - id: 4
+    bandwidth_percent: 6
+    priority: no priority
+  - id: 5
+    bandwidth_percent: 45
+    priority: no priority
+queue_monitor_length:
+  enabled: true
+queue_monitor_streaming:
+  enable: true
+route_maps:
+- name: RM-CONN-2-BGP
+  sequence_numbers:
+  - sequence: 10
+    type: permit
+    match:
+    - ip address prefix-list PL-LOOPBACKS-EVPN-OVERLAY
+router_bfd:
+  multihop:
+    interval: 300
+    min_rx: 300
+    multiplier: 3
+router_bgp:
+  as: '65041'
+  router_id: 10.110.5.1
+  maximum_paths:
+    paths: 128
+    ecmp: 128
+  updates:
+    wait_install: true
+  bgp_defaults:
+  - update wait-for-convergence
+  - update wait-install
+  - bgp asn notation asplain
+  - no bgp default ipv4-unicast
+  - distance bgp 20 200 200
+  - timers bgp 5 15
+  - graceful-restart
+  - graceful-restart restart-time 300
+  - neighbor default send-community
+  bgp:
+    default:
+      ipv4_unicast: false
+  peer_groups:
+  - name: IPv4-UNDERLAY-PEERS
+    type: ipv4
+    bfd: false
+    password: $1c$caHDPKDBzOjl6ZrDQLicDQ==
+    send_community: all
+    maximum_routes: 12000
+  - name: EVPN-OVERLAY-PEERS
+    type: evpn
+    next_hop_unchanged: true
+    update_source: Loopback0
+    bfd: true
+    ebgp_multihop: 3
+    password: $1c$caHDPKDBzOjl6ZrDQLicDQ==
+    send_community: all
+    maximum_routes: 0
+  - name: EVPN-OVERLAY-SPINES
+    type: evpn
+    remote_as: '65101'
+    description: EVPN to DC2 RR
+    next_hop_unchanged: true
+    update_source: loopback0
+    bfd: true
+    ebgp_multihop: 3
+    send_community: all
+  neighbors:
+  - ip_address: 10.110.8.1
+    peer_group: IPv4-UNDERLAY-PEERS
+    remote_as: '65042'
+    peer: ARI-CL-301-MTZ
+    description: ARI-CL-301-MTZ_Ethernet2
+  - ip_address: 10.110.8.13
+    peer_group: IPv4-UNDERLAY-PEERS
+    remote_as: '65043'
+    peer: ARI-CL-302-MTZ
+    description: ARI-CL-302-MTZ_Ethernet2
+  - ip_address: 10.110.8.25
+    peer_group: IPv4-UNDERLAY-PEERS
+    remote_as: '65044'
+    peer: ARI-CL-303-MTZ
+    description: ARI-CL-303-MTZ_Ethernet2
+  - ip_address: 10.110.8.37
+    peer_group: IPv4-UNDERLAY-PEERS
+    remote_as: '65045'
+    peer: ARI-CL-304-MTZ
+    description: ARI-CL-304-MTZ_Ethernet2
+  - ip_address: 10.110.8.241
+    peer_group: IPv4-UNDERLAY-PEERS
+    remote_as: '65062'
+    peer: ARI-BL-301-MTZ
+    description: ARI-BL-301-MTZ_Ethernet2
+  - ip_address: 10.110.8.253
+    peer_group: IPv4-UNDERLAY-PEERS
+    remote_as: '65063'
+    peer: ARI-BL-302-MTZ
+    description: ARI-BL-302-MTZ_Ethernet2
+  - ip_address: 10.110.5.25
+    peer_group: EVPN-OVERLAY-PEERS
+    remote_as: '65062'
+    peer: ARI-BL-301-MTZ
+    description: ARI-BL-301-MTZ_Loopback0
+  - ip_address: 10.110.5.26
+    peer_group: EVPN-OVERLAY-PEERS
+    remote_as: '65063'
+    peer: ARI-BL-302-MTZ
+    description: ARI-BL-302-MTZ_Loopback0
+  - ip_address: 10.110.5.5
+    peer_group: EVPN-OVERLAY-PEERS
+    remote_as: '65042'
+    peer: ARI-CL-301-MTZ
+    description: ARI-CL-301-MTZ_Loopback0
+  - ip_address: 10.110.5.6
+    peer_group: EVPN-OVERLAY-PEERS
+    remote_as: '65043'
+    peer: ARI-CL-302-MTZ
+    description: ARI-CL-302-MTZ_Loopback0
+  - ip_address: 10.110.5.7
+    peer_group: EVPN-OVERLAY-PEERS
+    remote_as: '65044'
+    peer: ARI-CL-303-MTZ
+    description: ARI-CL-303-MTZ_Loopback0
+  - ip_address: 10.110.5.8
+    peer_group: EVPN-OVERLAY-PEERS
+    remote_as: '65045'
+    peer: ARI-CL-304-MTZ
+    description: ARI-CL-304-MTZ_Loopback0
+  - ip_address: 10.111.5.1
+    peer_group: EVPN-OVERLAY-SPINES
+  - ip_address: 10.111.5.2
+    peer_group: EVPN-OVERLAY-SPINES
+  redistribute:
+    connected:
+      enabled: true
+      route_map: RM-CONN-2-BGP
+  address_family_evpn:
+    peer_groups:
+    - name: EVPN-OVERLAY-PEERS
+      activate: true
+    - name: EVPN-OVERLAY-SPINES
+      activate: true
+  address_family_rtc:
+    peer_groups:
+    - name: EVPN-OVERLAY-PEERS
+      activate: true
+      default_route_target:
+        only: true
+  address_family_ipv4:
+    peer_groups:
+    - name: IPv4-UNDERLAY-PEERS
+      activate: true
+    - name: EVPN-OVERLAY-PEERS
+      activate: false
+service_routing_protocols_model: multi-agent
+service_unsupported_transceiver:
+  license_name: 20182401_Produban_CCC
+  license_key: 9c7e1f34
+sflow:
+  sample: 131072
+  destinations:
+  - destination: 127.0.0.1
+  source_interface: Loopback0
+  interface:
+    disable:
+      default: true
+  run: true
+snmp_server:
+  local_interfaces:
+  - name: Management1
+    vrf: MGMT
+  groups:
+  - name: ROGROUP
+    version: v3
+    authentication: priv
+  users:
+  - name: itmetro
+    group: ROGROUP
+    version: v3
+    auth: sha
+    auth_passphrase: N3CVXEq3q2mE8buU
+    priv: aes
+    priv_passphrase: 6WJp9NFNyLKeMj6n
+  hosts:
+  - host: 10.40.3.124
+    vrf: MGMT
+    version: '3'
+    users:
+    - username: itmetro
+      authentication_level: priv
+  - host: 10.40.3.125
+    vrf: MGMT
+    version: '3'
+    users:
+    - username: itmetro
+      authentication_level: priv
+  - host: 10.40.3.126
+    vrf: MGMT
+    version: '3'
+    users:
+    - username: itmetro
+      authentication_level: priv
+  - host: 10.40.3.127
+    vrf: MGMT
+    version: '3'
+    users:
+    - username: itmetro
+      authentication_level: priv
+  traps:
+    enable: true
+    snmp_traps:
+    - name: bridge arista-mac-age
+      enabled: false
+    - name: bridge arista-mac-learn
+      enabled: false
+    - name: bridge arista-mac-move
+      enabled: false
+    - name: entity arista-ent-sensor-alarm
+      enabled: false
+  vrfs:
+  - name: MGMT
+    enable: true
+spanning_tree:
+  mode: none
+standard_access_lists:
+- name: CVP-ACL
+  sequence_numbers:
+  - sequence: 10
+    action: permit 0.0.0.0/0
+- name: MGMT-ACL
+  sequence_numbers:
+  - sequence: 10
+    action: permit 0.0.0.0/0
+static_routes:
+- vrf: MGMT
+  prefix: 0.0.0.0/0
+  next_hop: 192.168.0.1
+switchport_default:
+  mode: routed
+tacacs_servers:
+  hosts:
+  - host: 180.250.33.126
+    vrf: MGMT
+    key: 00373625367E3F575D72181B
+  - host: 180.250.33.127
+    vrf: MGMT
+    key: 00373625367E3F575D72181B
+  policy_unknown_mandatory_attribute_ignore: false
+terminal:
+  length: 60
+transceiver_qsfp_default_mode_4x10: true
+vlan_internal_order:
+  allocation: ascending
+  range:
+    beginning: 3800
+    ending: 4000
+vrfs:
+- name: MGMT
+  ip_routing: false
