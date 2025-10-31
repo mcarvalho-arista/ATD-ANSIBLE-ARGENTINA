@@ -292,17 +292,6 @@ metadata:
   platform: 7050X3
   dc_name: NEXTGEN_ARGENTINA_PRO_DC2
   fabric_name: NEXTGEN_ARGENTINA_PRO
-ntp:
-  local_interface:
-    name: Management1
-    vrf: MGMT
-  servers:
-  - name: 180.166.55.187
-    preferred: true
-    vrf: MGMT
-  - name: 180.166.55.213
-    preferred: true
-    vrf: MGMT
 prefix_lists:
 - name: PL-LOOPBACKS-EVPN-OVERLAY
   sequence_numbers:

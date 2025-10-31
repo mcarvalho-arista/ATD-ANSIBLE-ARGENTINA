@@ -10,7 +10,6 @@
 - [      Sus acciones son monitoreadas y registradas.       #](#sus-acciones-son-monitoreadas-y-registradas)
     - [Management Interfaces](#management-interfaces)
     - [Clock Settings](#clock-settings)
-    - [NTP](#ntp)
     - [Management SSH](#management-ssh)
     - [Management Console](#management-console)
     - [Management API HTTP](#management-api-http)
@@ -152,32 +151,6 @@ Clock Timezone is set to **America/Buenos_Aires**.
 ```eos
 !
 clock timezone America/Buenos_Aires
-```
-
-### NTP
-
-#### NTP Summary
-
-##### NTP Local Interface
-
-| Interface | VRF |
-| --------- | --- |
-| Management1 | MGMT |
-
-##### NTP Servers
-
-| Server | VRF | Preferred | Burst | iBurst | Version | Min Poll | Max Poll | Local-interface | Key |
-| ------ | --- | --------- | ----- | ------ | ------- | -------- | -------- | --------------- | --- |
-| 180.166.55.187 | MGMT | True | - | - | - | - | - | - | - |
-| 180.166.55.213 | MGMT | True | - | - | - | - | - | - | - |
-
-#### NTP Device Configuration
-
-```eos
-!
-ntp local-interface vrf MGMT Management1
-ntp server vrf MGMT 180.166.55.187 prefer
-ntp server vrf MGMT 180.166.55.213 prefer
 ```
 
 ### Management SSH

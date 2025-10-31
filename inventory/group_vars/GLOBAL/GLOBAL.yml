@@ -123,17 +123,17 @@ custom_structured_configuration_standard_access_lists:
         action: "permit 0.0.0.0/0"
 
 # NTP Servers IP or DNS name, first NTP server will be prefered, and sourced from Management VRF
-custom_structured_configuration_ntp:
-  local_interface:
-    vrf: MGMT
-    name: Management1
-  servers:
-    - name: 180.166.55.187
-      preferred: true
-      vrf: MGMT
-    - name: 180.166.55.213
-      preferred: true
-      vrf: MGMT
+# custom_structured_configuration_ntp:
+#   local_interface:
+#     vrf: MGMT
+#     name: Management1
+#   servers:
+#     - name: 180.166.55.187
+#       preferred: true
+#       vrf: MGMT
+#     - name: 180.166.55.213
+#       preferred: true
+#       vrf: MGMT
 
 custom_structured_configuration_logging:
   console: notifications
