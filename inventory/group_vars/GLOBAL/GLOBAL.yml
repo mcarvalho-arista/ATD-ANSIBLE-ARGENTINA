@@ -314,6 +314,11 @@ aaa_settings:
       role: network-admin
       sha512_password: "{{ users.marcelo.password }}"
 
+    - name: arista
+      privilege: 15
+      role: network-admin
+      sha512_password: "{{ users.arista.password }}"
+
 
 # enable_password:
 #   hash_algorithm: sha512

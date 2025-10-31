@@ -292,6 +292,7 @@ management api http-commands
 | ---- | --------- | ---- | -------- | ----- |
 | admin | 15 | network-admin | False | - |
 | ansible | 15 | network-admin | False | - |
+| arista | 15 | network-admin | False | - |
 | cvpadmin | 15 | network-admin | False | - |
 | marcelo | 15 | network-admin | False | - |
 
@@ -301,6 +302,7 @@ management api http-commands
 !
 username admin privilege 15 role network-admin secret sha512 <removed>
 username ansible privilege 15 role network-admin secret sha512 <removed>
+username arista privilege 15 role network-admin secret sha512 <removed>
 username cvpadmin privilege 15 role network-admin secret sha512 <removed>
 username marcelo privilege 15 role network-admin secret sha512 <removed>
 ```

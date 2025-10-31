@@ -179,6 +179,10 @@ local_users:
   privilege: 15
   role: network-admin
   sha512_password: $6$BLP4ybyxd.MVHa.3$9LRJR4bFFH1aQSXThMevlMPl1APzz8Rszk9VADYlZJSYl0M5Lznbyec4KBDDyaIVNZ7o0V60bVwx1zXmSzybS1
+- name: arista
+  privilege: 15
+  role: network-admin
+  sha512_password: $6$YTqtFEXPeyY/KTfe$3ssGibfbON87.C4Zr7pbZ4.uy8BJDLJUzniLGzTac333KOHbYlgziMldZDKqk55SFQ4DL.SyHK5or5RUFdDVu0
 - name: cvpadmin
   privilege: 15
   role: network-admin
