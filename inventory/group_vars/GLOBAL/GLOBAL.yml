@@ -126,7 +126,7 @@ custom_structured_configuration_standard_access_lists:
 # custom_structured_configuration_ntp:
 #   local_interface:
 #     vrf: MGMT
-#     name: Management1
+#     name: Management0
 #   servers:
 #     - name: 180.166.55.187
 #       preferred: true
@@ -144,10 +144,10 @@ custom_structured_configuration_logging:
   trap: debugging
   format:
     timestamp: high-resolution
-  source_interface: Management1
+  source_interface: Management0
   vrfs:
     - name: MGMT
-      source_interface: Management1
+      source_interface: Management0
       hosts:
         - name: 10.200.251.15
           protocol: udp
@@ -248,7 +248,7 @@ aaa_settings:
         key: "{{ tacacs.key1 }}"
     vrfs:
       - name: MGMT
-        source_interface: Management1
+        source_interface: Management0
   authentication:
     login:
       default: local group tacacs+
@@ -296,7 +296,7 @@ aaa_settings:
 
 custom_structured_configuration_snmp_server:
   local_interfaces:
-    - name: Management1
+    - name: Management0
       vrf: MGMT
   groups:
     - name: "{{ users.snmpv3.group }}"

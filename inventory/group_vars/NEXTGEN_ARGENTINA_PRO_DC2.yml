@@ -6,6 +6,7 @@ fabric_name: NEXTGEN_ARGENTINA_PRO
 dc_name: NEXTGEN_ARGENTINA_PRO_DC2
 # OOB Management network default gateway.
 mgmt_gateway: 192.168.0.1
+mgmt_interface: Management0
 
 ## Parameters for Validate State
 ansible_user: marcelo

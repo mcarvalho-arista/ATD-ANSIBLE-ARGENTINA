@@ -121,19 +121,19 @@ EOF
 
 | Management Interface | Description | Type | VRF | IP Address | Gateway |
 | -------------------- | ----------- | ---- | --- | ---------- | ------- |
-| Management1 | OOB_MANAGEMENT | oob | MGMT | 192.168.0.123/24 | 192.168.0.1 |
+| Management0 | OOB_MANAGEMENT | oob | MGMT | 192.168.0.123/24 | 192.168.0.1 |
 
 ##### IPv6
 
 | Management Interface | Description | Type | VRF | IPv6 Address | IPv6 Gateway |
 | -------------------- | ----------- | ---- | --- | ------------ | ------------ |
-| Management1 | OOB_MANAGEMENT | oob | MGMT | - | - |
+| Management0 | OOB_MANAGEMENT | oob | MGMT | - | - |
 
 #### Management Interfaces Device Configuration
 
 ```eos
 !
-interface Management1
+interface Management0
    description OOB_MANAGEMENT
    no shutdown
    vrf MGMT
@@ -301,13 +301,13 @@ tacacs-server host 180.250.33.127 vrf MGMT key 7 <removed>
 
 | VRF | Source Interface Name |
 | --- | --------------- |
-| MGMT | Management1 |
+| MGMT | Management0 |
 
 #### IP TACACS Source Interfaces Device Configuration
 
 ```eos
 !
-ip tacacs vrf MGMT source-interface Management1
+ip tacacs vrf MGMT source-interface Management0
 ```
 
 ### AAA Server Groups
@@ -430,8 +430,8 @@ daemon TerminAttr
 
 | VRF | Source Interface |
 | --- | ---------------- |
-| - | Management1 |
-| MGMT | Management1 |
+| - | Management0 |
+| MGMT | Management0 |
 
 | VRF | Hosts | Ports | Protocol | SSL-profile |
 | --- | ----- | ----- | -------- | ----------- |
@@ -449,8 +449,8 @@ logging monitor debugging
 logging vrf MGMT host 10.200.251.15
 logging vrf MGMT host 10.206.16.75
 logging format timestamp high-resolution
-logging source-interface Management1
-logging vrf MGMT source-interface Management1
+logging source-interface Management0
+logging vrf MGMT source-interface Management0
 ```
 
 ### SNMP
@@ -467,7 +467,7 @@ logging vrf MGMT source-interface Management1
 
 | Local Interface | VRF |
 | --------------- | --- |
-| Management1 | MGMT |
+| Management0 | MGMT |
 
 #### SNMP VRF Status
 
@@ -500,7 +500,7 @@ logging vrf MGMT source-interface Management1
 
 ```eos
 !
-snmp-server vrf MGMT local-interface Management1
+snmp-server vrf MGMT local-interface Management0
 snmp-server group ROGROUP v3 priv
 snmp-server user itmetro ROGROUP v3 auth sha <removed> priv aes <removed>
 snmp-server host 10.40.3.124 vrf MGMT version 3 priv itmetro

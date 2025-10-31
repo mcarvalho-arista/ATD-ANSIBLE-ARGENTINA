@@ -123,7 +123,7 @@ ip_igmp_snooping:
   globally_enabled: false
 ip_routing: true
 ip_tacacs_source_interfaces:
-- name: Management1
+- name: Management0
   vrf: MGMT
 ip_virtual_router_mac_address: 00:1c:73:ca:fe:66
 lacp:
@@ -166,10 +166,10 @@ logging:
   trap: debugging
   format:
     timestamp: high-resolution
-  source_interface: Management1
+  source_interface: Management0
   vrfs:
   - name: MGMT
-    source_interface: Management1
+    source_interface: Management0
     hosts:
     - name: 10.200.251.15
       protocol: udp
@@ -224,7 +224,7 @@ management_api_http:
 management_console:
   idle_timeout: 15
 management_interfaces:
-- name: Management1
+- name: Management0
   description: OOB_MANAGEMENT
   shutdown: false
   vrf: MGMT
@@ -1406,7 +1406,7 @@ sflow:
   run: true
 snmp_server:
   local_interfaces:
-  - name: Management1
+  - name: Management0
     vrf: MGMT
   groups:
   - name: ROGROUP
