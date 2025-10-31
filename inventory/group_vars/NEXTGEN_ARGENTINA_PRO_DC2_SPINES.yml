@@ -4,28 +4,28 @@ type: spine
 custom_structured_configuration_spanning_tree:
   mode: none
 
-custom_structured_configuration_qos_profiles:
-  - name: santander_trust_dscp
-    trust: dscp
-    tx_queues:
-      - id: 0
-        bandwidth_percent: 18
-        priority: 'no priority'
-      - id: 1
-        bandwidth_percent: 14
-        priority: 'no priority'
-      - id: 2
-        bandwidth_percent: 5
-        priority: 'no priority'
-      - id: 3
-        bandwidth_percent: 10
-        priority: 'no priority'
-      - id: 4
-        bandwidth_percent: 6
-        priority: 'no priority'
-      - id: 5
-        bandwidth_percent: 45
-        priority: 'no priority'
+# custom_structured_configuration_qos_profiles:
+#   - name: santander_trust_dscp
+#     trust: dscp
+#     tx_queues:
+#       - id: 0
+#         bandwidth_percent: 18
+#         priority: 'no priority'
+#       - id: 1
+#         bandwidth_percent: 14
+#         priority: 'no priority'
+#       - id: 2
+#         bandwidth_percent: 5
+#         priority: 'no priority'
+#       - id: 3
+#         bandwidth_percent: 10
+#         priority: 'no priority'
+#       - id: 4
+#         bandwidth_percent: 6
+#         priority: 'no priority'
+#       - id: 5
+#         bandwidth_percent: 45
+#         priority: 'no priority'
       # - id: 6
       #   priority: 'priority strict'
       #   shape:

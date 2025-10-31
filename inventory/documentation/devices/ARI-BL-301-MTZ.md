@@ -63,10 +63,6 @@
     - [Router BGP](#router-bgp)
   - [BFD](#bfd)
     - [Router BFD](#router-bfd)
-  - [Queue Monitor](#queue-monitor)
-    - [Queue Monitor Length](#queue-monitor-length)
-    - [Queue Monitor Streaming](#queue-monitor-streaming)
-    - [Queue Monitor Configuration](#queue-monitor-configuration)
   - [Multicast](#multicast)
     - [IP IGMP Snooping](#ip-igmp-snooping)
   - [Filters](#filters)
@@ -82,8 +78,6 @@
     - [Virtual Source NAT Configuration](#virtual-source-nat-configuration)
   - [Errdisable](#errdisable)
     - [Errdisable Summary](#errdisable-summary)
-  - [Quality Of Service](#quality-of-service)
-    - [QOS Profiles](#qos-profiles)
 
 ## Management
 
@@ -414,7 +408,6 @@ aaa authorization commands 15 default local group tacacs+
 
 | Settings | Value |
 | -------- | ----- |
-| Entropy sources | hardware |
 | Common password encryption key | True |
 
 ### Management Security Device Configuration
@@ -422,7 +415,6 @@ aaa authorization commands 15 default local group tacacs+
 ```eos
 !
 management security
-   entropy source hardware
    password encryption-key common
 ```
 
@@ -1192,7 +1184,6 @@ interface Ethernet2
    speed forced 100g
    no switchport
    ip address 10.110.8.241/31
-   service-profile santander_trust_dscp
    sflow enable
    link tracking group LT_GROUP1 upstream
 !
@@ -1203,7 +1194,6 @@ interface Ethernet3
    speed forced 100g
    no switchport
    ip address 10.110.8.243/31
-   service-profile santander_trust_dscp
    sflow enable
    link tracking group LT_GROUP1 upstream
 !
@@ -3290,30 +3280,6 @@ router bfd
    multihop interval 300 min-rx 300 multiplier 3
 ```
 
-## Queue Monitor
-
-### Queue Monitor Length
-
-| Enabled | Logging Interval | Default Thresholds High | Default Thresholds Low | Notifying | TX Latency | CPU Thresholds High | CPU Thresholds Low | Mirroring Enabled | Mirror destinations |
-| ------- | ---------------- | ----------------------- | ---------------------- | --------- | ---------- | ------------------- | ------------------ | ----------------- | ------------------ |
-| True | - | - | - | disabled | disabled | - | - | - | - |
-
-### Queue Monitor Streaming
-
-| Enabled | IP Access Group | IPv6 Access Group | Max Connections | VRF |
-| ------- | --------------- | ----------------- | --------------- | --- |
-| True | - | - | - | - |
-
-### Queue Monitor Configuration
-
-```eos
-!
-queue-monitor length
-!
-queue-monitor streaming
-   no shutdown
-```
-
 ## Multicast
 
 ### IP IGMP Snooping
@@ -3503,154 +3469,4 @@ Errdisable recovery timer interval: 30 seconds
 ```eos
 !
 errdisable recovery interval 30
-```
-
-## Quality Of Service
-
-### QOS Profiles
-
-#### QOS Profiles Summary
-
-##### QOS Profile: **santander_trust_cos**
-
-###### Settings
-
-| Default COS | Default DSCP | Trust | Shape Rate | QOS Service Policy |
-| ----------- | ------------ | ----- | ---------- | ------------------ |
-| - | - | cos | - | - |
-
-###### TX Queues
-
-| TX queue | Type | Bandwidth | Priority | Shape Rate | Comment |
-| -------- | ---- | --------- | -------- | ---------- | ------- |
-| 0 | All | 18 | no priority | - | - |
-| 1 | All | 14 | no priority | - | - |
-| 2 | All | 5 | no priority | - | - |
-| 3 | All | 10 | no priority | - | - |
-| 4 | All | 6 | no priority | - | - |
-| 5 | All | 45 | no priority | - | - |
-
-##### QOS Profile: **santander_trust_dscp**
-
-###### Settings
-
-| Default COS | Default DSCP | Trust | Shape Rate | QOS Service Policy |
-| ----------- | ------------ | ----- | ---------- | ------------------ |
-| - | - | dscp | - | - |
-
-###### TX Queues
-
-| TX queue | Type | Bandwidth | Priority | Shape Rate | Comment |
-| -------- | ---- | --------- | -------- | ---------- | ------- |
-| 0 | All | 18 | no priority | - | - |
-| 1 | All | 14 | no priority | - | - |
-| 2 | All | 5 | no priority | - | - |
-| 3 | All | 10 | no priority | - | - |
-| 4 | All | 6 | no priority | - | - |
-| 5 | All | 45 | no priority | - | - |
-
-##### QOS Profile: **santander_untrusted**
-
-###### Settings
-
-| Default COS | Default DSCP | Trust | Shape Rate | QOS Service Policy |
-| ----------- | ------------ | ----- | ---------- | ------------------ |
-| 1 | 10 | - | - | - |
-
-###### TX Queues
-
-| TX queue | Type | Bandwidth | Priority | Shape Rate | Comment |
-| -------- | ---- | --------- | -------- | ---------- | ------- |
-| 0 | All | 18 | no priority | - | - |
-| 1 | All | 14 | no priority | - | - |
-| 2 | All | 5 | no priority | - | - |
-| 3 | All | 10 | no priority | - | - |
-| 4 | All | 6 | no priority | - | - |
-| 5 | All | 45 | no priority | - | - |
-
-#### QOS Profile Device Configuration
-
-```eos
-!
-qos profile santander_trust_cos
-   qos trust cos
-   !
-   tx-queue 0
-      no priority
-      bandwidth percent 18
-   !
-   tx-queue 1
-      no priority
-      bandwidth percent 14
-   !
-   tx-queue 2
-      no priority
-      bandwidth percent 5
-   !
-   tx-queue 3
-      no priority
-      bandwidth percent 10
-   !
-   tx-queue 4
-      no priority
-      bandwidth percent 6
-   !
-   tx-queue 5
-      no priority
-      bandwidth percent 45
-!
-qos profile santander_trust_dscp
-   qos trust dscp
-   !
-   tx-queue 0
-      no priority
-      bandwidth percent 18
-   !
-   tx-queue 1
-      no priority
-      bandwidth percent 14
-   !
-   tx-queue 2
-      no priority
-      bandwidth percent 5
-   !
-   tx-queue 3
-      no priority
-      bandwidth percent 10
-   !
-   tx-queue 4
-      no priority
-      bandwidth percent 6
-   !
-   tx-queue 5
-      no priority
-      bandwidth percent 45
-!
-qos profile santander_untrusted
-   qos cos 1
-   qos dscp 10
-   !
-   tx-queue 0
-      no priority
-      bandwidth percent 18
-   !
-   tx-queue 1
-      no priority
-      bandwidth percent 14
-   !
-   tx-queue 2
-      no priority
-      bandwidth percent 5
-   !
-   tx-queue 3
-      no priority
-      bandwidth percent 10
-   !
-   tx-queue 4
-      no priority
-      bandwidth percent 6
-   !
-   tx-queue 5
-      no priority
-      bandwidth percent 45
 ```

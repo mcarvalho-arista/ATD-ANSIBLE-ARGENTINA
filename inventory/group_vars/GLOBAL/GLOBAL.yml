@@ -54,44 +54,14 @@ load_interval:
 custom_structured_configuration_terminal:
   length: 60
 
-queue_monitor_length:
-  enabled: true
-  notifying: true
+# queue_monitor_length:
+#   enabled: true
+#   notifying: true
 
-queue_monitor_streaming:
-  enable: true
+# queue_monitor_streaming:
+#   enable: true
 
 custom_structured_configuration_ip_icmp_redirect: false
-
-# ip_tacacs_source_interfaces:
-#   - name: Management1
-#     vrf: MGMT
-
-# aaa_authentication:
-#   login:
-#     default: local group tacacs+
-#     # default: local
-#     console: local
-#   policies:
-#     on_failure_log: true
-#     on_success_log: true
-
-# aaa_authorization:
-#   exec:
-#     default: local group tacacs+
-#     # default: local
-#   commands:
-#     privilege:
-#       - level: 15
-#         default: local group tacacs+
-#         # default: local
-
-# aaa_accounting:
-#   commands:
-#     default:
-#       - commands: 0-15
-#         type: start-stop
-#         group: tacacs+
 
 custom_structured_configuration_interface_defaults:
   mtu: 9100
@@ -211,8 +181,8 @@ custom_structured_configuration_management_ssh:
       enable: false
 
 custom_structured_configuration_management_security:
-  entropy_sources:
-    hardware: true
+  # entropy_sources:
+  #   hardware: true
   password:
     encryption_key_common: true
 
@@ -260,8 +230,8 @@ custom_structured_configuration_arp:
 mac_address_table:
   aging_time: 1800
 
-event_monitor:
-  enabled: true
+# event_monitor:
+#   enabled: true
 
 aaa_settings:
   tacacs:
@@ -380,18 +350,10 @@ custom_structured_configuration_snmp_server:
     - name: MGMT
       enable: true
 
-# tacacs_servers:
-#   hosts:
-#     - host: 180.250.33.126
-#       vrf: MGMT
-#       key: "{{ tacacs.key1 }}"
-#     - host: 180.250.33.127
-#       vrf: MGMT
-#       key: "{{ tacacs.key1 }}"
 
-custom_structured_configuration_service_unsupported_transceiver:
-  license_name: "{{ arista.license.name }}"
-  license_key: "{{ arista.license.key }}"
+# custom_structured_configuration_service_unsupported_transceiver:
+#   license_name: "{{ arista.license.name }}"
+#   license_key: "{{ arista.license.key }}"
 
 # Shutdown BGP and Interfaces towards "is_deployed: false" devices
 shutdown_bgp_towards_undeployed_peers: true
@@ -400,7 +362,3 @@ shutdown_interfaces_towards_undeployed_peers: true
 galaxy_collection_requirements:
   - collection: "arista.avd"
     version: 5.7.0
-# ansible:
-#   doc:
-#     hostdc1: oh3nuk1swcl0101
-#     hostdc2: oh3nuk2swcl0101

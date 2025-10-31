@@ -137,8 +137,6 @@ ethernet_interfaces:
     enable: true
   switchport:
     enabled: false
-event_monitor:
-  enabled: true
 hostname: ARI-SP-401-SKY
 interface_defaults:
   ethernet:
@@ -213,8 +211,6 @@ management_interfaces:
   type: oob
   gateway: 192.168.0.1
 management_security:
-  entropy_sources:
-    hardware: true
   password:
     encryption_key_common: true
 management_ssh:
@@ -259,32 +255,6 @@ prefix_lists:
   sequence_numbers:
   - sequence: 10
     action: permit 10.111.5.0/24 eq 32
-qos_profiles:
-- name: santander_trust_dscp
-  trust: dscp
-  tx_queues:
-  - id: 0
-    bandwidth_percent: 18
-    priority: no priority
-  - id: 1
-    bandwidth_percent: 14
-    priority: no priority
-  - id: 2
-    bandwidth_percent: 5
-    priority: no priority
-  - id: 3
-    bandwidth_percent: 10
-    priority: no priority
-  - id: 4
-    bandwidth_percent: 6
-    priority: no priority
-  - id: 5
-    bandwidth_percent: 45
-    priority: no priority
-queue_monitor_length:
-  enabled: true
-queue_monitor_streaming:
-  enable: true
 route_maps:
 - name: RM-CONN-2-BGP
   sequence_numbers:
@@ -431,9 +401,6 @@ router_bgp:
     - name: EVPN-OVERLAY-PEERS
       activate: false
 service_routing_protocols_model: multi-agent
-service_unsupported_transceiver:
-  license_name: 20182401_Produban_CCC
-  license_key: 9c7e1f34
 sflow:
   sample: 131072
   destinations:

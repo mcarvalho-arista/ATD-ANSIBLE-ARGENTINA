@@ -243,7 +243,7 @@ l3leaf:
           uplink_interfaces: [Ethernet2, Ethernet3]
 
 p2p_uplinks_mtu: 9214
-p2p_uplinks_qos_profile: santander_trust_dscp
+# p2p_uplinks_qos_profile: santander_trust_dscp
 
 # Adjust default bfd values
 bfd_multihop:
