@@ -2048,8 +2048,6 @@ interface Vlan472
 | ------- | ----- |
 | Source Interface | Loopback1 |
 | UDP port | 4789 |
-| Qos dscp propagation encapsulation | Enabled |
-| Qos map dscp to traffic-class decapsulation | Enabled |
 
 ##### VLAN to VNI, Flood List and Multicast Group Mappings
 
@@ -2303,8 +2301,6 @@ interface Vxlan1
    vxlan vrf VRF-NEXTGEN_MGMT vni 1005
    vxlan vrf VRF-NEXTGEN_MGMT_DMZ vni 1006
    vxlan vrf VRF-NEXTGEN_PRODUCCION vni 1001
-   vxlan qos dscp propagation encapsulation
-   vxlan qos map dscp to traffic-class decapsulation
 ```
 
 ## Routing

@@ -923,10 +923,6 @@ interface Ethernet1
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -938,10 +934,6 @@ interface Ethernet2
    switchport mode trunk
    switchport
    ip address 10.110.8.25/31
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -953,10 +945,6 @@ interface Ethernet3
    switchport mode trunk
    switchport
    ip address 10.110.8.27/31
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -967,10 +955,6 @@ interface Ethernet4
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -981,10 +965,6 @@ interface Ethernet5
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -995,10 +975,6 @@ interface Ethernet6
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -1009,10 +985,6 @@ interface Ethernet7
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -1023,10 +995,6 @@ interface Ethernet8
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -1037,10 +1005,6 @@ interface Ethernet9
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -1051,10 +1015,6 @@ interface Ethernet10
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -1065,10 +1025,6 @@ interface Ethernet11
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -1079,10 +1035,6 @@ interface Ethernet12
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -1093,10 +1045,6 @@ interface Ethernet13
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -1107,10 +1055,6 @@ interface Ethernet14
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -1121,10 +1065,6 @@ interface Ethernet15
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -1135,10 +1075,6 @@ interface Ethernet16
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -1149,10 +1085,6 @@ interface Ethernet17
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -1163,10 +1095,6 @@ interface Ethernet18
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -1177,10 +1105,6 @@ interface Ethernet19
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -1191,10 +1115,6 @@ interface Ethernet20
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -1205,10 +1125,6 @@ interface Ethernet21
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -1219,10 +1135,6 @@ interface Ethernet22
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -1233,10 +1145,6 @@ interface Ethernet23
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 !
@@ -1247,10 +1155,6 @@ interface Ethernet24
    switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
    switchport mode trunk
    switchport
-   service-profile santander_trust_dscp
-   storm-control broadcast level 1
-   storm-control multicast level 1
-   storm-control unknown-unicast level 1
    spanning-tree portfast
    link tracking group LT_GROUP1 downstream
 ```
@@ -1619,8 +1523,6 @@ interface Vlan263
 | ------- | ----- |
 | Source Interface | Loopback1 |
 | UDP port | 4789 |
-| Qos dscp propagation encapsulation | Enabled |
-| Qos map dscp to traffic-class decapsulation | Enabled |
 
 ##### VLAN to VNI, Flood List and Multicast Group Mappings
 
@@ -1720,8 +1622,6 @@ interface Vxlan1
    vxlan vlan 1280 vni 11280
    vxlan vrf VRF-NEXTGEN_MGMT vni 1005
    vxlan vrf VRF-NEXTGEN_PRODUCCION vni 1001
-   vxlan qos dscp propagation encapsulation
-   vxlan qos map dscp to traffic-class decapsulation
 ```
 
 ## Routing

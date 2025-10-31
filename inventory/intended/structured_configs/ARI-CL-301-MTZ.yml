@@ -61,14 +61,6 @@ ethernet_interfaces:
   - name: LT_GROUP1
     direction: downstream
   ip_address: 10.110.8.1/31
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0101
   peer_interface: 3/1
@@ -87,14 +79,6 @@ ethernet_interfaces:
   - name: LT_GROUP1
     direction: downstream
   ip_address: 10.110.8.3/31
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0102
   peer_interface: 2/1
@@ -112,14 +96,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0101
   peer_interface: 2/1
@@ -137,14 +113,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0102
   peer_interface: 3/1
@@ -162,14 +130,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0103
   peer_interface: 2/1
@@ -187,14 +147,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0103
   peer_interface: 3/1
@@ -212,14 +164,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0104
   peer_interface: 2/1
@@ -237,14 +181,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0104
   peer_interface: 3/1
@@ -262,14 +198,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0105
   peer_interface: 2/1
@@ -287,14 +215,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0105
   peer_interface: 3/1
@@ -312,14 +232,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0106
   peer_interface: 2/1
@@ -337,14 +249,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0106
   peer_interface: 3/1
@@ -362,14 +266,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0107
   peer_interface: 2/1
@@ -387,14 +283,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0107
   peer_interface: 3/1
@@ -412,14 +300,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0108
   peer_interface: 2/1
@@ -437,14 +317,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0108
   peer_interface: 3/1
@@ -462,14 +334,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0109
   peer_interface: 2/1
@@ -487,14 +351,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0109
   peer_interface: 3/1
@@ -512,14 +368,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0110
   peer_interface: 2/1
@@ -537,14 +385,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0110
   peer_interface: 3/1
@@ -562,14 +402,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0111
   peer_interface: 2/1
@@ -587,14 +419,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0111
   peer_interface: 3/1
@@ -612,14 +436,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0112
   peer_interface: 2/1
@@ -637,14 +453,6 @@ ethernet_interfaces:
   link_tracking_groups:
   - name: LT_GROUP1
     direction: downstream
-  storm_control:
-    broadcast:
-      level: '1'
-    multicast:
-      level: '1'
-    unknown_unicast:
-      level: '1'
-  service_profile: santander_trust_dscp
   spanning_tree_portfast: edge
   peer: oh1xar1esxc0112
   peer_interface: 3/1
@@ -1752,9 +1560,6 @@ vxlan_interface:
     vxlan:
       source_interface: Loopback1
       udp_port: 4789
-      qos:
-        dscp_propagation_encapsulation: true
-        map_dscp_to_traffic_class_decapsulation: true
       vlans:
       - id: 261
         vni: 10261

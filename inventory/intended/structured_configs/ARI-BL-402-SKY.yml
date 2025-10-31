@@ -2600,9 +2600,6 @@ vxlan_interface:
     vxlan:
       source_interface: Loopback1
       udp_port: 4789
-      qos:
-        dscp_propagation_encapsulation: true
-        map_dscp_to_traffic_class_decapsulation: true
       vlans:
       - id: 301
         vni: 10301
