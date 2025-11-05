@@ -113,43 +113,6 @@ ethernet_interfaces:
     enable: true
   switchport:
     enabled: false
-- name: Port-Channel291.69
-  description: ARI-MG-DL-01-02-MTZ - MLAG51 - Vlan69
-  shutdown: false
-  vrf: VRF-NEXTGEN_MGMT
-  encapsulation_dot1q:
-    vlan: 69
-  ip_address: 10.0.70.2/29
-  vrrp_ids:
-  - id: 69
-    priority_level: 200
-    preempt:
-      enabled: true
-    ipv4:
-      address: 10.0.70.1
-      version: 3
-- name: Port-Channel291.70
-  description: ARI-MG-DL-01-02-MTZ - MLAG51 - Vlan70
-  shutdown: false
-  vrf: VRF-NEXTGEN_MGMT_DMZ
-  encapsulation_dot1q:
-    vlan: 70
-  ip_address: 10.0.70.10/29
-  vrrp_ids:
-  - id: 70
-    priority_level: 200
-    preempt:
-      enabled: true
-    ipv4:
-      address: 10.0.70.9
-      version: 3
-- name: Port-Channel291.888
-  description: ARI-MG-DL-01-02-MTZ - MLAG51 - Vlan888 - TEST NRFU
-  shutdown: false
-  vrf: VRF-NEXTGEN_PRODUCCION
-  encapsulation_dot1q:
-    vlan: 888
-  ip_address: 100.64.88.1/24
 hostname: ARI-BL-302-MTZ
 interface_defaults:
   ethernet:
@@ -304,18 +267,6 @@ prefix_lists:
     action: permit 10.110.5.0/24 eq 32
   - sequence: 20
     action: permit 10.110.6.0/24 eq 32
-- name: PL-NEXTGEN_VDC-SVI-IN
-  sequence_numbers:
-  - sequence: 10
-    action: permit 10.200.160.247/32
-  - sequence: 20
-    action: permit 10.200.161.247/32
-- name: PL-NEXTGEN_VDC-SVI-OUT
-  sequence_numbers:
-  - sequence: 10
-    action: permit 10.201.198.0/25
-  - sequence: 20
-    action: permit 10.201.202.160/27
 route_maps:
 - name: RM-CONN-2-BGP
   sequence_numbers:
@@ -323,18 +274,6 @@ route_maps:
     type: permit
     match:
     - ip address prefix-list PL-LOOPBACKS-EVPN-OVERLAY
-- name: RM-NEXTGEN_VDC-SVI-IN
-  sequence_numbers:
-  - sequence: 10
-    type: permit
-    match:
-    - ip address prefix-list PL-NEXTGEN_VDC-SVI-IN
-- name: RM-NEXTGEN_VDC-SVI-OUT
-  sequence_numbers:
-  - sequence: 10
-    type: permit
-    match:
-    - ip address prefix-list PL-NEXTGEN_VDC-SVI-OUT
 router_bfd:
   multihop:
     interval: 300
@@ -681,16 +620,6 @@ static_routes:
 - vrf: MGMT
   prefix: 0.0.0.0/0
   next_hop: 192.168.0.1
-- vrf: VRF-NEXTGEN_MGMT
-  prefix: 0.0.0.0/0
-  interface: Port-Channel291.69
-  next_hop: 10.0.70.4
-  name: Default_to_FWINT-VIP
-- vrf: VRF-NEXTGEN_MGMT_DMZ
-  prefix: 0.0.0.0/0
-  interface: Port-Channel291.70
-  next_hop: 10.0.70.12
-  name: Default_to_FWINT-VIP
 switchport_default:
   mode: routed
 tacacs_servers:

@@ -3,235 +3,235 @@ servers:
   - name: oh1xar2esxc0201
     rack: PRO_Rack3
     adapters:
-      - endpoint_ports: [2/1, 2/2]
-        switch_ports: [Ethernet1, Ethernet1]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+      - endpoint_ports: [Ethernet1]
+        switch_ports: [Ethernet4]
+        switches: [ARI-CL-403-SKY]
         profile: TRUNK_25G_Compute_NG_PRODUCCION
         # port_channel:
         #   description: PortChannel_oh1xar2esxc0201
         #   mode: active
         #   short_esi: auto
-      - endpoint_ports: [3/1, 3/2]
-        switch_ports: [Ethernet2, Ethernet2]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+      - endpoint_ports: [Ethernet2]
+        switch_ports: [Ethernet4]
+        switches: [ARI-CL-404-SKY]
         profile: TRUNK_25G_Compute_NG_PRODUCCION
         # port_channel:
         #   description: PortChannel_oh1xar2esxc0201
         #   mode: active
         #   short_esi: auto
 
-  - name: oh1xar2esxc0202
-    rack: PRO_Rack3
-    adapters:
-      - endpoint_ports: [2/1, 2/2]
-        switch_ports: [Ethernet3, Ethernet3]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0202
-        #   mode: active
-        #   short_esi: auto
-      - endpoint_ports: [3/1, 3/2]
-        switch_ports: [Ethernet4, Ethernet4]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0202
-        #   mode: active
-        #   short_esi: auto
+  # - name: oh1xar2esxc0202
+  #   rack: PRO_Rack3
+  #   adapters:
+  #     - endpoint_ports: [2/1, 2/2]
+  #       switch_ports: [Ethernet3, Ethernet3]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0202
+  #       #   mode: active
+  #       #   short_esi: auto
+  #     - endpoint_ports: [3/1, 3/2]
+  #       switch_ports: [Ethernet4, Ethernet4]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0202
+  #       #   mode: active
+  #       #   short_esi: auto
 
-  - name: oh1xar2esxc0203
-    rack: PRO_Rack3
-    adapters:
-      - endpoint_ports: [2/1, 2/2]
-        switch_ports: [Ethernet5, Ethernet5]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0203
-        #   mode: active
-        #   short_esi: auto
-      - endpoint_ports: [3/1, 3/2]
-        switch_ports: [Ethernet6, Ethernet6]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0203
-        #   mode: active
-        #   short_esi: auto
+  # - name: oh1xar2esxc0203
+  #   rack: PRO_Rack3
+  #   adapters:
+  #     - endpoint_ports: [2/1, 2/2]
+  #       switch_ports: [Ethernet5, Ethernet5]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0203
+  #       #   mode: active
+  #       #   short_esi: auto
+  #     - endpoint_ports: [3/1, 3/2]
+  #       switch_ports: [Ethernet6, Ethernet6]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0203
+  #       #   mode: active
+  #       #   short_esi: auto
 
-  - name: oh1xar2esxc0204
-    rack: PRO_Rack3
-    adapters:
-      - endpoint_ports: [2/1, 2/2]
-        switch_ports: [Ethernet7, Ethernet7]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0204
-        #   mode: active
-        #   short_esi: auto
-      - endpoint_ports: [3/1, 3/2]
-        switch_ports: [Ethernet8, Ethernet8]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0204
-        #   mode: active
-        #   short_esi: auto
+  # - name: oh1xar2esxc0204
+  #   rack: PRO_Rack3
+  #   adapters:
+  #     - endpoint_ports: [2/1, 2/2]
+  #       switch_ports: [Ethernet7, Ethernet7]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0204
+  #       #   mode: active
+  #       #   short_esi: auto
+  #     - endpoint_ports: [3/1, 3/2]
+  #       switch_ports: [Ethernet8, Ethernet8]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0204
+  #       #   mode: active
+  #       #   short_esi: auto
 
-  - name: oh1xar2esxc0205
-    rack: PRO_Rack3
-    adapters:
-      - endpoint_ports: [2/1, 2/2]
-        switch_ports: [Ethernet9, Ethernet9]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0205
-        #   mode: active
-        #   short_esi: auto
-      - endpoint_ports: [3/1, 3/2]
-        switch_ports: [Ethernet10, Ethernet10]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0205
-        #   mode: active
-        #   short_esi: auto
+  # - name: oh1xar2esxc0205
+  #   rack: PRO_Rack3
+  #   adapters:
+  #     - endpoint_ports: [2/1, 2/2]
+  #       switch_ports: [Ethernet9, Ethernet9]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0205
+  #       #   mode: active
+  #       #   short_esi: auto
+  #     - endpoint_ports: [3/1, 3/2]
+  #       switch_ports: [Ethernet10, Ethernet10]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0205
+  #       #   mode: active
+  #       #   short_esi: auto
 
-  - name: oh1xar2esxc0206
-    rack: PRO_Rack3
-    adapters:
-      - endpoint_ports: [2/1, 2/2]
-        switch_ports: [Ethernet11, Ethernet11]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0206
-        #   mode: active
-        #   short_esi: auto
-      - endpoint_ports: [3/1, 3/2]
-        switch_ports: [Ethernet12, Ethernet12]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0206
-        #   mode: active
-        #   short_esi: auto
+  # - name: oh1xar2esxc0206
+  #   rack: PRO_Rack3
+  #   adapters:
+  #     - endpoint_ports: [2/1, 2/2]
+  #       switch_ports: [Ethernet11, Ethernet11]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0206
+  #       #   mode: active
+  #       #   short_esi: auto
+  #     - endpoint_ports: [3/1, 3/2]
+  #       switch_ports: [Ethernet12, Ethernet12]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0206
+  #       #   mode: active
+  #       #   short_esi: auto
 
-  - name: oh1xar2esxc0207
-    rack: PRO_Rack3
-    adapters:
-      - endpoint_ports: [2/1, 2/2]
-        switch_ports: [Ethernet13, Ethernet13]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0207
-        #   mode: active
-        #   short_esi: auto
-      - endpoint_ports: [3/1, 3/2]
-        switch_ports: [Ethernet14, Ethernet14]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0207
-        #   mode: active
-        #   short_esi: auto
+  # - name: oh1xar2esxc0207
+  #   rack: PRO_Rack3
+  #   adapters:
+  #     - endpoint_ports: [2/1, 2/2]
+  #       switch_ports: [Ethernet13, Ethernet13]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0207
+  #       #   mode: active
+  #       #   short_esi: auto
+  #     - endpoint_ports: [3/1, 3/2]
+  #       switch_ports: [Ethernet14, Ethernet14]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0207
+  #       #   mode: active
+  #       #   short_esi: auto
 
-  - name: oh1xar2esxc0208
-    rack: PRO_Rack3
-    adapters:
-      - endpoint_ports: [2/1, 2/2]
-        switch_ports: [Ethernet15, Ethernet15]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0208
-        #   mode: active
-        #   short_esi: auto
-      - endpoint_ports: [3/1, 3/2]
-        switch_ports: [Ethernet16, Ethernet16]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0208
-        #   mode: active
-        #   short_esi: auto
-  - name: oh1xar2esxc0209
-    rack: PRO_Rack3
-    adapters:
-      - endpoint_ports: [2/1, 2/2]
-        switch_ports: [Ethernet17, Ethernet17]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0209
-        #   mode: active
-        #   short_esi: auto
-      - endpoint_ports: [3/1, 3/2]
-        switch_ports: [Ethernet18, Ethernet18]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0209
-        #   mode: active
-        #   short_esi: auto
-  - name: oh1xar2esxc0210
-    rack: PRO_Rack3
-    adapters:
-      - endpoint_ports: [2/1, 2/2]
-        switch_ports: [Ethernet19, Ethernet19]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0210
-        #   mode: active
-        #   short_esi: auto
-      - endpoint_ports: [3/1, 3/2]
-        switch_ports: [Ethernet20, Ethernet20]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0210
-        #   mode: active
-        #   short_esi: auto
-  - name: oh1xar2esxc0211
-    rack: PRO_Rack3
-    adapters:
-      - endpoint_ports: [2/1, 2/2]
-        switch_ports: [Ethernet21, Ethernet21]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0211
-        #   mode: active
-        #   short_esi: auto
-      - endpoint_ports: [3/1, 3/2]
-        switch_ports: [Ethernet22, Ethernet22]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0211
-        #   mode: active
-        #   short_esi: auto
-  - name: oh1xar2esxc0212
-    rack: PRO_Rack3
-    adapters:
-      - endpoint_ports: [2/1, 2/2]
-        switch_ports: [Ethernet23, Ethernet23]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0212
-        #   mode: active
-        #   short_esi: auto
-      - endpoint_ports: [3/1, 3/2]
-        switch_ports: [Ethernet24, Ethernet24]
-        switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
-        profile: TRUNK_25G_Compute_NG_PRODUCCION
-        # port_channel:
-        #   description: PortChannel_oh1xar2esxc0212
-        #   mode: active
-        #   short_esi: auto
+  # - name: oh1xar2esxc0208
+  #   rack: PRO_Rack3
+  #   adapters:
+  #     - endpoint_ports: [2/1, 2/2]
+  #       switch_ports: [Ethernet15, Ethernet15]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0208
+  #       #   mode: active
+  #       #   short_esi: auto
+  #     - endpoint_ports: [3/1, 3/2]
+  #       switch_ports: [Ethernet16, Ethernet16]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0208
+  #       #   mode: active
+  #       #   short_esi: auto
+  # - name: oh1xar2esxc0209
+  #   rack: PRO_Rack3
+  #   adapters:
+  #     - endpoint_ports: [2/1, 2/2]
+  #       switch_ports: [Ethernet17, Ethernet17]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0209
+  #       #   mode: active
+  #       #   short_esi: auto
+  #     - endpoint_ports: [3/1, 3/2]
+  #       switch_ports: [Ethernet18, Ethernet18]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0209
+  #       #   mode: active
+  #       #   short_esi: auto
+  # - name: oh1xar2esxc0210
+  #   rack: PRO_Rack3
+  #   adapters:
+  #     - endpoint_ports: [2/1, 2/2]
+  #       switch_ports: [Ethernet19, Ethernet19]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0210
+  #       #   mode: active
+  #       #   short_esi: auto
+  #     - endpoint_ports: [3/1, 3/2]
+  #       switch_ports: [Ethernet20, Ethernet20]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0210
+  #       #   mode: active
+  #       #   short_esi: auto
+  # - name: oh1xar2esxc0211
+  #   rack: PRO_Rack3
+  #   adapters:
+  #     - endpoint_ports: [2/1, 2/2]
+  #       switch_ports: [Ethernet21, Ethernet21]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0211
+  #       #   mode: active
+  #       #   short_esi: auto
+  #     - endpoint_ports: [3/1, 3/2]
+  #       switch_ports: [Ethernet22, Ethernet22]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0211
+  #       #   mode: active
+  #       #   short_esi: auto
+  # - name: oh1xar2esxc0212
+  #   rack: PRO_Rack3
+  #   adapters:
+  #     - endpoint_ports: [2/1, 2/2]
+  #       switch_ports: [Ethernet23, Ethernet23]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0212
+  #       #   mode: active
+  #       #   short_esi: auto
+  #     - endpoint_ports: [3/1, 3/2]
+  #       switch_ports: [Ethernet24, Ethernet24]
+  #       switches: [ARI-CL-403-SKY, ARI-CL-404-SKY]
+  #       profile: TRUNK_25G_Compute_NG_PRODUCCION
+  #       # port_channel:
+  #       #   description: PortChannel_oh1xar2esxc0212
+  #       #   mode: active
+  #       #   short_esi: auto

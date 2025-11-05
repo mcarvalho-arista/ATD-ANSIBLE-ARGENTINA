@@ -519,15 +519,33 @@ snmp-server vrf MGMT
 
 #### SFlow Summary
 
-sFlow is disabled.
+| VRF | SFlow Source | SFlow Destination | Port |
+| --- | ------------ | ----------------- | ---- |
+| default | - | 127.0.0.1 | 6343 |
+| default | Loopback0 | - | - |
+
+sFlow Sample Rate: 131072
+
+sFlow is enabled.
 
 sFlow is disabled on all interfaces by default.
+
+#### SFlow Interfaces
+
+| Interface | Ingress Enabled | Egress Enabled |
+| --------- | --------------- | -------------- |
+| Ethernet2 | True | - |
+| Ethernet3 | True | - |
 
 #### SFlow Device Configuration
 
 ```eos
 !
+sflow sample 131072
+sflow destination 127.0.0.1
+sflow source-interface Loopback0
 sflow interface disable default
+sflow run
 ```
 
 ### Link Tracking
@@ -678,30 +696,7 @@ interface defaults
 
 | Interface | Description | Mode | VLANs | Native VLAN | Trunk Group | Channel-Group |
 | --------- | ----------- | ---- | ----- | ----------- | ----------- | ------------- |
-| Ethernet1 | SERVER_oh1xar2esxc0101_2/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet2 | SERVER_oh1xar2esxc0101_3/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet3 | SERVER_oh1xar2esxc0102_2/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet4 | SERVER_oh1xar2esxc0102_3/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet5 | SERVER_oh1xar2esxc0103_2/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet6 | SERVER_oh1xar2esxc0103_3/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet7 | SERVER_oh1xar2esxc0104_2/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet8 | SERVER_oh1xar2esxc0104_3/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet9 | SERVER_oh1xar2esxc0105_2/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet10 | SERVER_oh1xar2esxc0105_3/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet11 | SERVER_oh1xar2esxc0106_2/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet12 | SERVER_oh1xar2esxc0106_3/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet13 | SERVER_oh1xar2esxc0107_2/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet14 | SERVER_oh1xar2esxc0107_3/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet15 | SERVER_oh1xar2esxc0108_2/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet16 | SERVER_oh1xar2esxc0108_3/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet17 | SERVER_oh1xar2esxc0109_2/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet18 | SERVER_oh1xar2esxc0109_3/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet19 | SERVER_oh1xar2esxc0110_2/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet20 | SERVER_oh1xar2esxc0110_3/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet21 | SERVER_oh1xar2esxc0111_2/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet22 | SERVER_oh1xar2esxc0111_3/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet23 | SERVER_oh1xar2esxc0112_2/1 | trunk | 150-183,261-263,1280 | - | - | - |
-| Ethernet24 | SERVER_oh1xar2esxc0112_3/1 | trunk | 150-183,261-263,1280 | - | - | - |
+| Ethernet4 | SERVER_oh1xar2esxc0101_Ethernet1 | trunk | 150,177 | - | - | - |
 
 *Inherited from Port-Channel Interface
 
@@ -709,279 +704,48 @@ interface defaults
 
 | Interface | Group Name | Direction |
 | --------- | ---------- | --------- |
-| Ethernet1 | LT_GROUP1 | downstream |
-| Ethernet2 | LT_GROUP1 | downstream |
-| Ethernet3 | LT_GROUP1 | downstream |
+| Ethernet2 | LT_GROUP1 | upstream |
+| Ethernet3 | LT_GROUP1 | upstream |
 | Ethernet4 | LT_GROUP1 | downstream |
-| Ethernet5 | LT_GROUP1 | downstream |
-| Ethernet6 | LT_GROUP1 | downstream |
-| Ethernet7 | LT_GROUP1 | downstream |
-| Ethernet8 | LT_GROUP1 | downstream |
-| Ethernet9 | LT_GROUP1 | downstream |
-| Ethernet10 | LT_GROUP1 | downstream |
-| Ethernet11 | LT_GROUP1 | downstream |
-| Ethernet12 | LT_GROUP1 | downstream |
-| Ethernet13 | LT_GROUP1 | downstream |
-| Ethernet14 | LT_GROUP1 | downstream |
-| Ethernet15 | LT_GROUP1 | downstream |
-| Ethernet16 | LT_GROUP1 | downstream |
-| Ethernet17 | LT_GROUP1 | downstream |
-| Ethernet18 | LT_GROUP1 | downstream |
-| Ethernet19 | LT_GROUP1 | downstream |
-| Ethernet20 | LT_GROUP1 | downstream |
-| Ethernet21 | LT_GROUP1 | downstream |
-| Ethernet22 | LT_GROUP1 | downstream |
-| Ethernet23 | LT_GROUP1 | downstream |
-| Ethernet24 | LT_GROUP1 | downstream |
 
 ##### IPv4
 
 | Interface | Description | Channel Group | IP Address | VRF |  MTU | Shutdown | ACL In | ACL Out |
 | --------- | ----------- | ------------- | ---------- | ----| ---- | -------- | ------ | ------- |
-| Ethernet2 | SERVER_oh1xar2esxc0101_3/1 | - | 10.111.8.1/31 | default | - | False | - | - |
-| Ethernet3 | SERVER_oh1xar2esxc0102_2/1 | - | 10.111.8.3/31 | default | - | False | - | - |
+| Ethernet2 | P2P_ARI-SP-401-SKY_Ethernet2 | - | 10.111.8.1/31 | default | 9214 | False | - | - |
+| Ethernet3 | P2P_ARI-SP-402-SKY_Ethernet2 | - | 10.111.8.3/31 | default | 9214 | False | - | - |
 
 #### Ethernet Interfaces Device Configuration
 
 ```eos
 !
-interface Ethernet1
-   description SERVER_oh1xar2esxc0101_2/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
 interface Ethernet2
-   description SERVER_oh1xar2esxc0101_3/1
+   description P2P_ARI-SP-401-SKY_Ethernet2
    no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
+   mtu 9214
+   speed forced 100g
+   no switchport
    ip address 10.111.8.1/31
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
+   service-profile santander_trust_dscp
+   sflow enable
+   link tracking group LT_GROUP1 upstream
 !
 interface Ethernet3
-   description SERVER_oh1xar2esxc0102_2/1
+   description P2P_ARI-SP-402-SKY_Ethernet2
    no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
+   mtu 9214
+   speed forced 100g
+   no switchport
    ip address 10.111.8.3/31
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
+   service-profile santander_trust_dscp
+   sflow enable
+   link tracking group LT_GROUP1 upstream
 !
 interface Ethernet4
-   description SERVER_oh1xar2esxc0102_3/1
+   description SERVER_oh1xar2esxc0101_Ethernet1
    no shutdown
    speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
-interface Ethernet5
-   description SERVER_oh1xar2esxc0103_2/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
-interface Ethernet6
-   description SERVER_oh1xar2esxc0103_3/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
-interface Ethernet7
-   description SERVER_oh1xar2esxc0104_2/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
-interface Ethernet8
-   description SERVER_oh1xar2esxc0104_3/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
-interface Ethernet9
-   description SERVER_oh1xar2esxc0105_2/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
-interface Ethernet10
-   description SERVER_oh1xar2esxc0105_3/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
-interface Ethernet11
-   description SERVER_oh1xar2esxc0106_2/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
-interface Ethernet12
-   description SERVER_oh1xar2esxc0106_3/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
-interface Ethernet13
-   description SERVER_oh1xar2esxc0107_2/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
-interface Ethernet14
-   description SERVER_oh1xar2esxc0107_3/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
-interface Ethernet15
-   description SERVER_oh1xar2esxc0108_2/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
-interface Ethernet16
-   description SERVER_oh1xar2esxc0108_3/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
-interface Ethernet17
-   description SERVER_oh1xar2esxc0109_2/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
-interface Ethernet18
-   description SERVER_oh1xar2esxc0109_3/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
-interface Ethernet19
-   description SERVER_oh1xar2esxc0110_2/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
-interface Ethernet20
-   description SERVER_oh1xar2esxc0110_3/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
-interface Ethernet21
-   description SERVER_oh1xar2esxc0111_2/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
-interface Ethernet22
-   description SERVER_oh1xar2esxc0111_3/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
-interface Ethernet23
-   description SERVER_oh1xar2esxc0112_2/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-   switchport mode trunk
-   switchport
-   spanning-tree portfast
-   link tracking group LT_GROUP1 downstream
-!
-interface Ethernet24
-   description SERVER_oh1xar2esxc0112_3/1
-   no shutdown
-   speed 25g
-   switchport trunk allowed vlan 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
+   switchport trunk allowed vlan 150,177
    switchport mode trunk
    switchport
    spanning-tree portfast

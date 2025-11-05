@@ -54,43 +54,41 @@ errdisable:
     interval: 30
 ethernet_interfaces:
 - name: Ethernet2
-  description: SERVER_oh1xar2esxc0101_3/1
+  description: P2P_ARI-SP-401-SKY_Ethernet2
   shutdown: false
-  speed: 25g
+  speed: forced 100g
+  mtu: 9214
   link_tracking_groups:
   - name: LT_GROUP1
-    direction: downstream
+    direction: upstream
   ip_address: 10.111.8.1/31
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0101
-  peer_interface: 3/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
+  service_profile: santander_trust_dscp
+  peer: ARI-SP-401-SKY
+  peer_interface: Ethernet2
+  peer_type: spine
+  sflow:
+    enable: true
   switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
+    enabled: false
 - name: Ethernet3
-  description: SERVER_oh1xar2esxc0102_2/1
+  description: P2P_ARI-SP-402-SKY_Ethernet2
   shutdown: false
-  speed: 25g
+  speed: forced 100g
+  mtu: 9214
   link_tracking_groups:
   - name: LT_GROUP1
-    direction: downstream
+    direction: upstream
   ip_address: 10.111.8.3/31
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0102
-  peer_interface: 2/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
+  service_profile: santander_trust_dscp
+  peer: ARI-SP-402-SKY
+  peer_interface: Ethernet2
+  peer_type: spine
+  sflow:
+    enable: true
   switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet1
-  description: SERVER_oh1xar2esxc0101_2/1
+    enabled: false
+- name: Ethernet4
+  description: SERVER_oh1xar2esxc0101_Ethernet1
   shutdown: false
   speed: 25g
   link_tracking_groups:
@@ -98,371 +96,14 @@ ethernet_interfaces:
     direction: downstream
   spanning_tree_portfast: edge
   peer: oh1xar2esxc0101
-  peer_interface: 2/1
+  peer_interface: Ethernet1
   peer_type: server
   port_profile: TRUNK_25G_Compute_NG_PRODUCCION
   switchport:
     enabled: true
     mode: trunk
     trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet4
-  description: SERVER_oh1xar2esxc0102_3/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0102
-  peer_interface: 3/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet5
-  description: SERVER_oh1xar2esxc0103_2/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0103
-  peer_interface: 2/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet6
-  description: SERVER_oh1xar2esxc0103_3/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0103
-  peer_interface: 3/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet7
-  description: SERVER_oh1xar2esxc0104_2/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0104
-  peer_interface: 2/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet8
-  description: SERVER_oh1xar2esxc0104_3/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0104
-  peer_interface: 3/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet9
-  description: SERVER_oh1xar2esxc0105_2/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0105
-  peer_interface: 2/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet10
-  description: SERVER_oh1xar2esxc0105_3/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0105
-  peer_interface: 3/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet11
-  description: SERVER_oh1xar2esxc0106_2/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0106
-  peer_interface: 2/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet12
-  description: SERVER_oh1xar2esxc0106_3/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0106
-  peer_interface: 3/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet13
-  description: SERVER_oh1xar2esxc0107_2/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0107
-  peer_interface: 2/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet14
-  description: SERVER_oh1xar2esxc0107_3/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0107
-  peer_interface: 3/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet15
-  description: SERVER_oh1xar2esxc0108_2/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0108
-  peer_interface: 2/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet16
-  description: SERVER_oh1xar2esxc0108_3/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0108
-  peer_interface: 3/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet17
-  description: SERVER_oh1xar2esxc0109_2/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0109
-  peer_interface: 2/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet18
-  description: SERVER_oh1xar2esxc0109_3/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0109
-  peer_interface: 3/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet19
-  description: SERVER_oh1xar2esxc0110_2/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0110
-  peer_interface: 2/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet20
-  description: SERVER_oh1xar2esxc0110_3/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0110
-  peer_interface: 3/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet21
-  description: SERVER_oh1xar2esxc0111_2/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0111
-  peer_interface: 2/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet22
-  description: SERVER_oh1xar2esxc0111_3/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0111
-  peer_interface: 3/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet23
-  description: SERVER_oh1xar2esxc0112_2/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0112
-  peer_interface: 2/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
-- name: Ethernet24
-  description: SERVER_oh1xar2esxc0112_3/1
-  shutdown: false
-  speed: 25g
-  link_tracking_groups:
-  - name: LT_GROUP1
-    direction: downstream
-  spanning_tree_portfast: edge
-  peer: oh1xar2esxc0112
-  peer_interface: 3/1
-  peer_type: server
-  port_profile: TRUNK_25G_Compute_NG_PRODUCCION
-  switchport:
-    enabled: true
-    mode: trunk
-    trunk:
-      allowed_vlan: 150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,261,262,263,1280
+      allowed_vlan: 150,177
 hostname: ARI-CL-401-SKY
 interface_defaults:
   ethernet:
@@ -712,9 +353,14 @@ router_bgp:
         enabled: true
 service_routing_protocols_model: multi-agent
 sflow:
+  sample: 131072
+  destinations:
+  - destination: 127.0.0.1
+  source_interface: Loopback0
   interface:
     disable:
       default: true
+  run: true
 snmp_server:
   local_interfaces:
   - name: Management0

@@ -718,14 +718,6 @@ interface defaults
 
 *Inherited from Port-Channel Interface
 
-##### Encapsulation Dot1q Interfaces
-
-| Interface | Description | Vlan ID | Dot1q VLAN Tag | Dot1q Inner VLAN Tag |
-| --------- | ----------- | ------- | -------------- | -------------------- |
-| Port-Channel291.69 | ARI-MG-DL-01-02-MTZ - MLAG51 - Vlan69 | - | 69 | - |
-| Port-Channel291.70 | ARI-MG-DL-01-02-MTZ - MLAG51 - Vlan70 | - | 70 | - |
-| Port-Channel291.888 | ARI-MG-DL-01-02-MTZ - MLAG51 - Vlan888 - TEST NRFU | - | 888 | - |
-
 ##### Link Tracking Groups
 
 | Interface | Group Name | Direction |
@@ -741,16 +733,6 @@ interface defaults
 | Ethernet3 | P2P_ARI-SP-302-MTZ_Ethernet8 | - | 10.110.8.255/31 | default | 9214 | False | - | - |
 | Ethernet33 | P2P_ARI-BL-402-SKY_Ethernet33 | - | 10.110.1.4/31 | default | 9214 | False | - | - |
 | Ethernet34 | P2P_ARI-BL-401-SKY_Ethernet34 | - | 10.110.1.6/31 | default | 9214 | False | - | - |
-| Port-Channel291.69 | ARI-MG-DL-01-02-MTZ - MLAG51 - Vlan69 | - | 10.0.70.2/29 | VRF-NEXTGEN_MGMT | - | False | - | - |
-| Port-Channel291.70 | ARI-MG-DL-01-02-MTZ - MLAG51 - Vlan70 | - | 10.0.70.10/29 | VRF-NEXTGEN_MGMT_DMZ | - | False | - | - |
-| Port-Channel291.888 | ARI-MG-DL-01-02-MTZ - MLAG51 - Vlan888 - TEST NRFU | - | 100.64.88.1/24 | VRF-NEXTGEN_PRODUCCION | - | False | - | - |
-
-##### VRRP Details
-
-| Interface | VRRP-ID | Priority | Advertisement Interval | Preempt | Tracked Object Name(s) | Tracked Object Action(s) | IPv4 Virtual IPs | IPv4 VRRP Version | IPv6 Virtual IPs | Peer Authentication Mode |
-| --------- | ------- | -------- | ---------------------- | --------| ---------------------- | ------------------------ | ---------------- | ----------------- | ---------------- | ------------------------ |
-| Port-Channel291.69 | 69 | 200 | - | Enabled | - | - | 10.0.70.1 | 3 | - | - |
-| Port-Channel291.70 | 70 | 200 | - | Enabled | - | - | 10.0.70.9 | 3 | - | - |
 
 #### Ethernet Interfaces Device Configuration
 
@@ -795,33 +777,6 @@ interface Ethernet34
    ip address 10.110.1.6/31
    service-profile santander_trust_dscp
    sflow enable
-!
-interface Port-Channel291.69
-   description ARI-MG-DL-01-02-MTZ - MLAG51 - Vlan69
-   no shutdown
-   encapsulation dot1q vlan 69
-   vrf VRF-NEXTGEN_MGMT
-   ip address 10.0.70.2/29
-   vrrp 69 priority-level 200
-   vrrp 69 ipv4 10.0.70.1
-   vrrp 69 ipv4 version 3
-!
-interface Port-Channel291.70
-   description ARI-MG-DL-01-02-MTZ - MLAG51 - Vlan70
-   no shutdown
-   encapsulation dot1q vlan 70
-   vrf VRF-NEXTGEN_MGMT_DMZ
-   ip address 10.0.70.10/29
-   vrrp 70 priority-level 200
-   vrrp 70 ipv4 10.0.70.9
-   vrrp 70 ipv4 version 3
-!
-interface Port-Channel291.888
-   description ARI-MG-DL-01-02-MTZ - MLAG51 - Vlan888 - TEST NRFU
-   no shutdown
-   encapsulation dot1q vlan 888
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address 100.64.88.1/24
 ```
 
 ### Loopback Interfaces
@@ -1107,16 +1062,12 @@ ip routing vrf VRF-NEXTGEN_PRODUCCION
 | VRF | Destination Prefix | Next Hop IP | Exit interface | Administrative Distance | Tag | Route Name | Metric |
 | --- | ------------------ | ----------- | -------------- | ----------------------- | --- | ---------- | ------ |
 | MGMT | 0.0.0.0/0 | 192.168.0.1 | - | 1 | - | - | - |
-| VRF-NEXTGEN_MGMT | 0.0.0.0/0 | 10.0.70.4 | Port-Channel291.69 | 1 | - | Default_to_FWINT-VIP | - |
-| VRF-NEXTGEN_MGMT_DMZ | 0.0.0.0/0 | 10.0.70.12 | Port-Channel291.70 | 1 | - | Default_to_FWINT-VIP | - |
 
 #### Static Routes Device Configuration
 
 ```eos
 !
 ip route vrf MGMT 0.0.0.0/0 192.168.0.1
-ip route vrf VRF-NEXTGEN_MGMT 0.0.0.0/0 Port-channel291.69 10.0.70.4 name Default_to_FWINT-VIP
-ip route vrf VRF-NEXTGEN_MGMT_DMZ 0.0.0.0/0 Port-channel291.70 10.0.70.12 name Default_to_FWINT-VIP
 ```
 
 ### ARP
@@ -1422,20 +1373,6 @@ no ip igmp snooping
 | 10 | permit 10.110.5.0/24 eq 32 |
 | 20 | permit 10.110.6.0/24 eq 32 |
 
-##### PL-NEXTGEN_VDC-SVI-IN
-
-| Sequence | Action |
-| -------- | ------ |
-| 10 | permit 10.200.160.247/32 |
-| 20 | permit 10.200.161.247/32 |
-
-##### PL-NEXTGEN_VDC-SVI-OUT
-
-| Sequence | Action |
-| -------- | ------ |
-| 10 | permit 10.201.198.0/25 |
-| 20 | permit 10.201.202.160/27 |
-
 #### Prefix-lists Device Configuration
 
 ```eos
@@ -1443,14 +1380,6 @@ no ip igmp snooping
 ip prefix-list PL-LOOPBACKS-EVPN-OVERLAY
    seq 10 permit 10.110.5.0/24 eq 32
    seq 20 permit 10.110.6.0/24 eq 32
-!
-ip prefix-list PL-NEXTGEN_VDC-SVI-IN
-   seq 10 permit 10.200.160.247/32
-   seq 20 permit 10.200.161.247/32
-!
-ip prefix-list PL-NEXTGEN_VDC-SVI-OUT
-   seq 10 permit 10.201.198.0/25
-   seq 20 permit 10.201.202.160/27
 ```
 
 ### Route-maps
@@ -1463,30 +1392,12 @@ ip prefix-list PL-NEXTGEN_VDC-SVI-OUT
 | -------- | ---- | ----- | --- | ------------- | -------- |
 | 10 | permit | ip address prefix-list PL-LOOPBACKS-EVPN-OVERLAY | - | - | - |
 
-##### RM-NEXTGEN_VDC-SVI-IN
-
-| Sequence | Type | Match | Set | Sub-Route-Map | Continue |
-| -------- | ---- | ----- | --- | ------------- | -------- |
-| 10 | permit | ip address prefix-list PL-NEXTGEN_VDC-SVI-IN | - | - | - |
-
-##### RM-NEXTGEN_VDC-SVI-OUT
-
-| Sequence | Type | Match | Set | Sub-Route-Map | Continue |
-| -------- | ---- | ----- | --- | ------------- | -------- |
-| 10 | permit | ip address prefix-list PL-NEXTGEN_VDC-SVI-OUT | - | - | - |
-
 #### Route-maps Device Configuration
 
 ```eos
 !
 route-map RM-CONN-2-BGP permit 10
    match ip address prefix-list PL-LOOPBACKS-EVPN-OVERLAY
-!
-route-map RM-NEXTGEN_VDC-SVI-IN permit 10
-   match ip address prefix-list PL-NEXTGEN_VDC-SVI-IN
-!
-route-map RM-NEXTGEN_VDC-SVI-OUT permit 10
-   match ip address prefix-list PL-NEXTGEN_VDC-SVI-OUT
 ```
 
 ## ACL
