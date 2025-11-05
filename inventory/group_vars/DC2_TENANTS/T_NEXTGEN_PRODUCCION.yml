@@ -6,12 +6,12 @@ T_NEXTGEN_PRODUCCION:
       - id: 177
         name: NEXTGEN_PRODUCCION_Vl_177
         tags: [PRODUCCION]
-      - id: 178
-        name: NEXTGEN_PRODUCCION_Vl_178
-        tags: [PRODUCCION]
-      - id: 4001
-        name: NEXTGEN_PRODUCCION_Vl_4001_NATIVE
-        tags: [PRODUCCION-BL401-SKY]
+      # - id: 178
+      #   name: NEXTGEN_PRODUCCION_Vl_178
+      #   tags: [PRODUCCION]
+      # - id: 4001
+      #   name: NEXTGEN_PRODUCCION_Vl_4001_NATIVE
+      #   tags: [PRODUCCION-BL401-SKY]
     vrfs:
       - name: VRF-NEXTGEN_PRODUCCION
         vrf_vni: 1001
@@ -24,176 +24,176 @@ T_NEXTGEN_PRODUCCION:
             enabled: false
             tags: [PRODUCCION]
             ip_address_virtual: 10.40.0.1/20
-          - id: 151
-            name: NEXTGEN_PRODUCCION_Vl_151
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.16.1/20
-          - id: 152
-            name: NEXTGEN_PRODUCCION_Vl_152
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.32.1/20
-          - id: 153
-            name: NEXTGEN_PRODUCCION_Vl_153
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.49.1/25
-          - id: 154
-            name: NEXTGEN_PRODUCCION_Vl_154
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.49.129/25
-          - id: 155
-            name: NEXTGEN_PRODUCCION_Vl_155
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.51.1/24
-          - id: 156
-            name: NEXTGEN_PRODUCCION_Vl_156
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.57.1/26
-          - id: 157
-            name: NEXTGEN_PRODUCCION_Vl_157
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.57.65/27
-          - id: 158
-            name: NEXTGEN_PRODUCCION_Vl_158
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.57.97/27
-          - id: 159
-            name: NEXTGEN_PRODUCCION_Vl_159
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.65.1/24
-          - id: 160
-            name: NEXTGEN_PRODUCCION_Vl_160
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.48.1/24
-          - id: 161
-            name: NEXTGEN_PRODUCCION_Vl_161
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.50.1/25
-          - id: 162
-            name: NEXTGEN_PRODUCCION_Vl_162
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.50.129/25
-          - id: 163
-            name: NEXTGEN_PRODUCCION_Vl_163
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.52.1/24
-          - id: 164
-            name: NEXTGEN_PRODUCCION_Vl_164
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.53.1/24
-          - id: 165
-            name: NEXTGEN_PRODUCCION_Vl_165
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.54.1/25
-          - id: 166
-            name: NEXTGEN_PRODUCCION_Vl_166
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.55.1/24
-          - id: 167
-            name: NEXTGEN_PRODUCCION_Vl_167
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.56.1/24
-          - id: 168
-            name: NEXTGEN_PRODUCCION_Vl_168
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.58.1/24
-            ip_helpers:
-              - ip_helper: 180.166.34.37
-              - ip_helper: 180.166.34.91
-          - id: 169
-            name: NEXTGEN_PRODUCCION_Vl_169
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.59.1/24
-            ip_helpers:
-              - ip_helper: 180.166.34.37
-              - ip_helper: 180.166.34.91
-          - id: 170
-            name: NEXTGEN_PRODUCCION_Vl_170
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.60.1/24
-            ip_helpers:
-              - ip_helper: 180.166.34.37
-              - ip_helper: 180.166.34.91
-          - id: 171
-            name: NEXTGEN_PRODUCCION_Vl_171
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.61.1/24
-            ip_helpers:
-              - ip_helper: 180.166.34.37
-              - ip_helper: 180.166.34.91
-          - id: 172
-            name: NEXTGEN_PRODUCCION_Vl_172
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.62.1/24
-            ip_helpers:
-              - ip_helper: 180.166.34.37
-              - ip_helper: 180.166.34.91
-          - id: 173
-            name: NEXTGEN_PRODUCCION_Vl_173
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.63.1/24
-          - id: 174
-            name: NEXTGEN_PRODUCCION_Vl_174
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.110.64.1/25
-          - id: 175
-            name: NEXTGEN_PRODUCCION_Vl_175
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.110.64.129/25
-          - id: 176
-            name: NEXTGEN_PRODUCCION_Vl_176
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.110.100.1/24
-          - id: 179
-            name: NEXTGEN_PRODUCCION_Vl_179
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.64.1/27
-          - id: 180
-            name: NEXTGEN_PRODUCCION_Vl_180
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.66.1/25
-          - id: 181
-            name: NEXTGEN_PRODUCCION_Vl_181
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.66.129/25
-          - id: 182
-            name: NEXTGEN_PRODUCCION_Vl_182
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.67.1/25
-          - id: 183
-            name: NEXTGEN_PRODUCCION_Vl_183
-            enabled: false
-            tags: [PRODUCCION]
-            ip_address_virtual: 10.40.67.129/25
+          # - id: 151
+          #   name: NEXTGEN_PRODUCCION_Vl_151
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.16.1/20
+          # - id: 152
+          #   name: NEXTGEN_PRODUCCION_Vl_152
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.32.1/20
+          # - id: 153
+          #   name: NEXTGEN_PRODUCCION_Vl_153
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.49.1/25
+          # - id: 154
+          #   name: NEXTGEN_PRODUCCION_Vl_154
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.49.129/25
+          # - id: 155
+          #   name: NEXTGEN_PRODUCCION_Vl_155
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.51.1/24
+          # - id: 156
+          #   name: NEXTGEN_PRODUCCION_Vl_156
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.57.1/26
+          # - id: 157
+          #   name: NEXTGEN_PRODUCCION_Vl_157
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.57.65/27
+          # - id: 158
+          #   name: NEXTGEN_PRODUCCION_Vl_158
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.57.97/27
+          # - id: 159
+          #   name: NEXTGEN_PRODUCCION_Vl_159
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.65.1/24
+          # - id: 160
+          #   name: NEXTGEN_PRODUCCION_Vl_160
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.48.1/24
+          # - id: 161
+          #   name: NEXTGEN_PRODUCCION_Vl_161
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.50.1/25
+          # - id: 162
+          #   name: NEXTGEN_PRODUCCION_Vl_162
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.50.129/25
+          # - id: 163
+          #   name: NEXTGEN_PRODUCCION_Vl_163
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.52.1/24
+          # - id: 164
+          #   name: NEXTGEN_PRODUCCION_Vl_164
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.53.1/24
+          # - id: 165
+          #   name: NEXTGEN_PRODUCCION_Vl_165
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.54.1/25
+          # - id: 166
+          #   name: NEXTGEN_PRODUCCION_Vl_166
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.55.1/24
+          # - id: 167
+          #   name: NEXTGEN_PRODUCCION_Vl_167
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.56.1/24
+          # - id: 168
+          #   name: NEXTGEN_PRODUCCION_Vl_168
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.58.1/24
+          #   ip_helpers:
+          #     - ip_helper: 180.166.34.37
+          #     - ip_helper: 180.166.34.91
+          # - id: 169
+          #   name: NEXTGEN_PRODUCCION_Vl_169
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.59.1/24
+          #   ip_helpers:
+          #     - ip_helper: 180.166.34.37
+          #     - ip_helper: 180.166.34.91
+          # - id: 170
+          #   name: NEXTGEN_PRODUCCION_Vl_170
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.60.1/24
+          #   ip_helpers:
+          #     - ip_helper: 180.166.34.37
+          #     - ip_helper: 180.166.34.91
+          # - id: 171
+          #   name: NEXTGEN_PRODUCCION_Vl_171
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.61.1/24
+          #   ip_helpers:
+          #     - ip_helper: 180.166.34.37
+          #     - ip_helper: 180.166.34.91
+          # - id: 172
+          #   name: NEXTGEN_PRODUCCION_Vl_172
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.62.1/24
+          #   ip_helpers:
+          #     - ip_helper: 180.166.34.37
+          #     - ip_helper: 180.166.34.91
+          # - id: 173
+          #   name: NEXTGEN_PRODUCCION_Vl_173
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.63.1/24
+          # - id: 174
+          #   name: NEXTGEN_PRODUCCION_Vl_174
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.110.64.1/25
+          # - id: 175
+          #   name: NEXTGEN_PRODUCCION_Vl_175
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.110.64.129/25
+          # - id: 176
+          #   name: NEXTGEN_PRODUCCION_Vl_176
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.110.100.1/24
+          # - id: 179
+          #   name: NEXTGEN_PRODUCCION_Vl_179
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.64.1/27
+          # - id: 180
+          #   name: NEXTGEN_PRODUCCION_Vl_180
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.66.1/25
+          # - id: 181
+          #   name: NEXTGEN_PRODUCCION_Vl_181
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.66.129/25
+          # - id: 182
+          #   name: NEXTGEN_PRODUCCION_Vl_182
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.67.1/25
+          # - id: 183
+          #   name: NEXTGEN_PRODUCCION_Vl_183
+          #   enabled: false
+          #   tags: [PRODUCCION]
+          #   ip_address_virtual: 10.40.67.129/25
           ##
           ## Pruebas L3 NRFU
           - id: 777

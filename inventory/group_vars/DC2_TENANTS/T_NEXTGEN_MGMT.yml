@@ -6,72 +6,72 @@ T_NEXTGEN_MGMT:
       - id: 11
         name: NEXTGEN_MGMT_Vl_11 
         tags: [MGMT]
-      - id: 12
-        name: NEXTGEN_MGMT_Vl_12 
-        tags: [MGMT]
-      - id: 13
-        name: NEXTGEN_MGMT_Vl_13 
-        tags: [MGMT]
-      - id: 16
-        name: NEXTGEN_MGMT_Vl_16 
-        tags: [MGMT]
-      - id: 18
-        name: NEXTGEN_MGMT_Vl_18 
-        tags: [MGMT]
-      - id: 19
-        name: NEXTGEN_MGMT_Vl_19 
-        tags: [MGMT]
-      ## New VLAN20 - Test MH-SA
-      - id: 20
-        name: NEXTGEN_MGMT_Vl_20
-        tags: [MGMT]
-      - id: 21
-        name: NEXTGEN_MGMT_Vl_21 
-        tags: [MGMT]
-      - id: 45
-        name: NEXTGEN_MGMT_Vl_45 
-        tags: [MGMT]
-      - id: 200
-        name: NEXTGEN_MGMT_Vl_200
-        tags: [MGMT]
-      - id: 205
-        name: NEXTGEN_MGMT_Vl_205
-        tags: [MGMT]
-      - id: 232
-        name: NEXTGEN_MGMT_Vl_232
-        tags: [MGMT]
-      - id: 233
-        name: NEXTGEN_MGMT_Vl_233
-        tags: [MGMT]
-      - id: 600        
-        name: NEXTGEN_MGMT_Vl_600
-        tags: [MGMT]
-      - id: 601
-        name: NEXTGEN_MGMT_Vl_601
-        tags: [MGMT]
-      - id: 620
-        name: NEXTGEN_MGMT_Vl_620
-        tags: [MGMT]
-      #
-      - id: 640
-        name: NEXTGEN_MGMT_DMZ_Vl_640
-        tags: [MGMT_DMZ]
-      #
-      - id: 641
-        name: NEXTGEN_MGMT_Vl_641
-        tags: [MGMT]
-      - id: 642
-        name: NEXTGEN_MGMT_Vl_642
-        tags: [MGMT]
-      - id: 643
-        name: NEXTGEN_MGMT_Vl_643
-        tags: [MGMT]
-      - id: 1280
-        name: NEXTGEN_MGMT_Vl_1280
-        tags: [MGMT_PROD, MGMT]
-      - id: 1400
-        name: NEXTGEN_MGMT_Vl_1400
-        tags: [MGMT_DMZ]
+      # - id: 12
+      #   name: NEXTGEN_MGMT_Vl_12 
+      #   tags: [MGMT]
+      # - id: 13
+      #   name: NEXTGEN_MGMT_Vl_13 
+      #   tags: [MGMT]
+      # - id: 16
+      #   name: NEXTGEN_MGMT_Vl_16 
+      #   tags: [MGMT]
+      # - id: 18
+      #   name: NEXTGEN_MGMT_Vl_18 
+      #   tags: [MGMT]
+      # - id: 19
+      #   name: NEXTGEN_MGMT_Vl_19 
+      #   tags: [MGMT]
+      # ## New VLAN20 - Test MH-SA
+      # - id: 20
+      #   name: NEXTGEN_MGMT_Vl_20
+      #   tags: [MGMT]
+      # - id: 21
+      #   name: NEXTGEN_MGMT_Vl_21 
+      #   tags: [MGMT]
+      # - id: 45
+      #   name: NEXTGEN_MGMT_Vl_45 
+      #   tags: [MGMT]
+      # - id: 200
+      #   name: NEXTGEN_MGMT_Vl_200
+      #   tags: [MGMT]
+      # - id: 205
+      #   name: NEXTGEN_MGMT_Vl_205
+      #   tags: [MGMT]
+      # - id: 232
+      #   name: NEXTGEN_MGMT_Vl_232
+      #   tags: [MGMT]
+      # - id: 233
+      #   name: NEXTGEN_MGMT_Vl_233
+      #   tags: [MGMT]
+      # - id: 600        
+      #   name: NEXTGEN_MGMT_Vl_600
+      #   tags: [MGMT]
+      # - id: 601
+      #   name: NEXTGEN_MGMT_Vl_601
+      #   tags: [MGMT]
+      # - id: 620
+      #   name: NEXTGEN_MGMT_Vl_620
+      #   tags: [MGMT]
+      # #
+      # - id: 640
+      #   name: NEXTGEN_MGMT_DMZ_Vl_640
+      #   tags: [MGMT_DMZ]
+      # #
+      # - id: 641
+      #   name: NEXTGEN_MGMT_Vl_641
+      #   tags: [MGMT]
+      # - id: 642
+      #   name: NEXTGEN_MGMT_Vl_642
+      #   tags: [MGMT]
+      # - id: 643
+      #   name: NEXTGEN_MGMT_Vl_643
+      #   tags: [MGMT]
+      # - id: 1280
+      #   name: NEXTGEN_MGMT_Vl_1280
+      #   tags: [MGMT_PROD, MGMT]
+      # - id: 1400
+      #   name: NEXTGEN_MGMT_Vl_1400
+      #   tags: [MGMT_DMZ]
     vrfs:
       - name: VRF-NEXTGEN_MGMT
         vrf_vni: 1005
@@ -84,46 +84,46 @@ T_NEXTGEN_MGMT:
             enabled: true
             tags: [MGMT]
             ip_address_virtual: 10.114.0.1/23
-          - id: 253
-            name: NEXTGEN_MGMT_Vl_253
-            enabled: true
-            tags: [MGMT]
-            ip_address_virtual: 10.114.8.1/23
-          - id: 254
-            name: NEXTGEN_MGMT_Vl_254
-            enabled: true
-            tags: [MGMT]
-            ip_address_virtual: 10.114.10.1/24
-          - id: 258
-            name: NEXTGEN_MGMT_Vl_258
-            enabled: true
-            tags: [MGMT]
-            ip_address_virtual: 10.114.12.1/24
-          - id: 259
-            name: NEXTGEN_MGMT_Vl_259
-            enabled: true
-            tags: [MGMT]
-            ip_address_virtual: 10.114.13.129/26
-          - id: 260
-            name: NEXTGEN_MGMT_Vl_260
-            enabled: true
-            tags: [MGMT]
-            ip_address_virtual: 10.114.13.193/26
-          - id: 261
-            name: NEXTGEN_MGMT_Vl_261
-            enabled: true
-            tags: [MGMT_PROD]
-            ip_address_virtual: 10.114.2.1/23
-          - id: 262
-            name: NEXTGEN_MGMT_Vl_262
-            enabled: true
-            tags: [MGMT_PROD]
-            ip_address_virtual: 10.114.14.1/23
-          - id: 263
-            name: NEXTGEN_MGMT_Vl_263
-            enabled: true
-            tags: [MGMT_PROD]
-            ip_address_virtual: 10.114.16.1/23
+          # - id: 253
+          #   name: NEXTGEN_MGMT_Vl_253
+          #   enabled: true
+          #   tags: [MGMT]
+          #   ip_address_virtual: 10.114.8.1/23
+          # - id: 254
+          #   name: NEXTGEN_MGMT_Vl_254
+          #   enabled: true
+          #   tags: [MGMT]
+          #   ip_address_virtual: 10.114.10.1/24
+          # - id: 258
+          #   name: NEXTGEN_MGMT_Vl_258
+          #   enabled: true
+          #   tags: [MGMT]
+          #   ip_address_virtual: 10.114.12.1/24
+          # - id: 259
+          #   name: NEXTGEN_MGMT_Vl_259
+          #   enabled: true
+          #   tags: [MGMT]
+          #   ip_address_virtual: 10.114.13.129/26
+          # - id: 260
+          #   name: NEXTGEN_MGMT_Vl_260
+          #   enabled: true
+          #   tags: [MGMT]
+          #   ip_address_virtual: 10.114.13.193/26
+          # - id: 261
+          #   name: NEXTGEN_MGMT_Vl_261
+          #   enabled: true
+          #   tags: [MGMT_PROD]
+          #   ip_address_virtual: 10.114.2.1/23
+          # - id: 262
+          #   name: NEXTGEN_MGMT_Vl_262
+          #   enabled: true
+          #   tags: [MGMT_PROD]
+          #   ip_address_virtual: 10.114.14.1/23
+          # - id: 263
+          #   name: NEXTGEN_MGMT_Vl_263
+          #   enabled: true
+          #   tags: [MGMT_PROD]
+          #   ip_address_virtual: 10.114.16.1/23
       - name: VRF-NEXTGEN_MGMT_DMZ
         vrf_vni: 1006
         vtep_diagnostic:
@@ -135,13 +135,13 @@ T_NEXTGEN_MGMT:
             enabled: true
             tags: [MGMT_DMZ]
             ip_address_virtual: 10.114.6.1/23
-          - id: 268
-            name: NEXTGEN_MGMT_DMZ_Vl_268
-            enabled: true
-            tags: [MGMT_DMZ]
-            ip_address_virtual: 10.114.22.1/23
-          - id: 269
-            name: NEXTGEN_MGMT_DMZ_Vl_269
-            enabled: true
-            tags: [MGMT_DMZ]
-            ip_address_virtual: 10.114.24.1/23
+          # - id: 268
+          #   name: NEXTGEN_MGMT_DMZ_Vl_268
+          #   enabled: true
+          #   tags: [MGMT_DMZ]
+          #   ip_address_virtual: 10.114.22.1/23
+          # - id: 269
+          #   name: NEXTGEN_MGMT_DMZ_Vl_269
+          #   enabled: true
+          #   tags: [MGMT_DMZ]
+          #   ip_address_virtual: 10.114.24.1/23

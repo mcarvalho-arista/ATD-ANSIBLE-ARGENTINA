@@ -611,43 +611,7 @@ vlan internal order ascending range 3800 4000
 | VLAN ID | Name | Trunk Groups |
 | ------- | ---- | ------------ |
 | 150 | NEXTGEN_PRODUCCION_Vl_150 | - |
-| 151 | NEXTGEN_PRODUCCION_Vl_151 | - |
-| 152 | NEXTGEN_PRODUCCION_Vl_152 | - |
-| 153 | NEXTGEN_PRODUCCION_Vl_153 | - |
-| 154 | NEXTGEN_PRODUCCION_Vl_154 | - |
-| 155 | NEXTGEN_PRODUCCION_Vl_155 | - |
-| 156 | NEXTGEN_PRODUCCION_Vl_156 | - |
-| 157 | NEXTGEN_PRODUCCION_Vl_157 | - |
-| 158 | NEXTGEN_PRODUCCION_Vl_158 | - |
-| 159 | NEXTGEN_PRODUCCION_Vl_159 | - |
-| 160 | NEXTGEN_PRODUCCION_Vl_160 | - |
-| 161 | NEXTGEN_PRODUCCION_Vl_161 | - |
-| 162 | NEXTGEN_PRODUCCION_Vl_162 | - |
-| 163 | NEXTGEN_PRODUCCION_Vl_163 | - |
-| 164 | NEXTGEN_PRODUCCION_Vl_164 | - |
-| 165 | NEXTGEN_PRODUCCION_Vl_165 | - |
-| 166 | NEXTGEN_PRODUCCION_Vl_166 | - |
-| 167 | NEXTGEN_PRODUCCION_Vl_167 | - |
-| 168 | NEXTGEN_PRODUCCION_Vl_168 | - |
-| 169 | NEXTGEN_PRODUCCION_Vl_169 | - |
-| 170 | NEXTGEN_PRODUCCION_Vl_170 | - |
-| 171 | NEXTGEN_PRODUCCION_Vl_171 | - |
-| 172 | NEXTGEN_PRODUCCION_Vl_172 | - |
-| 173 | NEXTGEN_PRODUCCION_Vl_173 | - |
-| 174 | NEXTGEN_PRODUCCION_Vl_174 | - |
-| 175 | NEXTGEN_PRODUCCION_Vl_175 | - |
-| 176 | NEXTGEN_PRODUCCION_Vl_176 | - |
 | 177 | NEXTGEN_PRODUCCION_Vl_177 | - |
-| 178 | NEXTGEN_PRODUCCION_Vl_178 | - |
-| 179 | NEXTGEN_PRODUCCION_Vl_179 | - |
-| 180 | NEXTGEN_PRODUCCION_Vl_180 | - |
-| 181 | NEXTGEN_PRODUCCION_Vl_181 | - |
-| 182 | NEXTGEN_PRODUCCION_Vl_182 | - |
-| 183 | NEXTGEN_PRODUCCION_Vl_183 | - |
-| 261 | NEXTGEN_MGMT_Vl_261 | - |
-| 262 | NEXTGEN_MGMT_Vl_262 | - |
-| 263 | NEXTGEN_MGMT_Vl_263 | - |
-| 1280 | NEXTGEN_MGMT_Vl_1280 | - |
 
 ### VLANs Device Configuration
 
@@ -656,116 +620,8 @@ vlan internal order ascending range 3800 4000
 vlan 150
    name NEXTGEN_PRODUCCION_Vl_150
 !
-vlan 151
-   name NEXTGEN_PRODUCCION_Vl_151
-!
-vlan 152
-   name NEXTGEN_PRODUCCION_Vl_152
-!
-vlan 153
-   name NEXTGEN_PRODUCCION_Vl_153
-!
-vlan 154
-   name NEXTGEN_PRODUCCION_Vl_154
-!
-vlan 155
-   name NEXTGEN_PRODUCCION_Vl_155
-!
-vlan 156
-   name NEXTGEN_PRODUCCION_Vl_156
-!
-vlan 157
-   name NEXTGEN_PRODUCCION_Vl_157
-!
-vlan 158
-   name NEXTGEN_PRODUCCION_Vl_158
-!
-vlan 159
-   name NEXTGEN_PRODUCCION_Vl_159
-!
-vlan 160
-   name NEXTGEN_PRODUCCION_Vl_160
-!
-vlan 161
-   name NEXTGEN_PRODUCCION_Vl_161
-!
-vlan 162
-   name NEXTGEN_PRODUCCION_Vl_162
-!
-vlan 163
-   name NEXTGEN_PRODUCCION_Vl_163
-!
-vlan 164
-   name NEXTGEN_PRODUCCION_Vl_164
-!
-vlan 165
-   name NEXTGEN_PRODUCCION_Vl_165
-!
-vlan 166
-   name NEXTGEN_PRODUCCION_Vl_166
-!
-vlan 167
-   name NEXTGEN_PRODUCCION_Vl_167
-!
-vlan 168
-   name NEXTGEN_PRODUCCION_Vl_168
-!
-vlan 169
-   name NEXTGEN_PRODUCCION_Vl_169
-!
-vlan 170
-   name NEXTGEN_PRODUCCION_Vl_170
-!
-vlan 171
-   name NEXTGEN_PRODUCCION_Vl_171
-!
-vlan 172
-   name NEXTGEN_PRODUCCION_Vl_172
-!
-vlan 173
-   name NEXTGEN_PRODUCCION_Vl_173
-!
-vlan 174
-   name NEXTGEN_PRODUCCION_Vl_174
-!
-vlan 175
-   name NEXTGEN_PRODUCCION_Vl_175
-!
-vlan 176
-   name NEXTGEN_PRODUCCION_Vl_176
-!
 vlan 177
    name NEXTGEN_PRODUCCION_Vl_177
-!
-vlan 178
-   name NEXTGEN_PRODUCCION_Vl_178
-!
-vlan 179
-   name NEXTGEN_PRODUCCION_Vl_179
-!
-vlan 180
-   name NEXTGEN_PRODUCCION_Vl_180
-!
-vlan 181
-   name NEXTGEN_PRODUCCION_Vl_181
-!
-vlan 182
-   name NEXTGEN_PRODUCCION_Vl_182
-!
-vlan 183
-   name NEXTGEN_PRODUCCION_Vl_183
-!
-vlan 261
-   name NEXTGEN_MGMT_Vl_261
-!
-vlan 262
-   name NEXTGEN_MGMT_Vl_262
-!
-vlan 263
-   name NEXTGEN_MGMT_Vl_263
-!
-vlan 1280
-   name NEXTGEN_MGMT_Vl_1280
 ```
 
 ## MAC Address Table
@@ -1143,7 +999,6 @@ interface Ethernet24
 | Loopback0 | ROUTER_ID | default | 10.110.5.8/32 |
 | Loopback1 | VXLAN_TUNNEL_SOURCE | default | 10.110.6.8/32 |
 | Loopback1001 | DIAG_VRF_VRF-NEXTGEN_PRODUCCION | VRF-NEXTGEN_PRODUCCION | 10.110.7.8/32 |
-| Loopback1005 | DIAG_VRF_VRF-NEXTGEN_MGMT | VRF-NEXTGEN_MGMT | 10.110.7.8/32 |
 
 ##### IPv6
 
@@ -1152,7 +1007,6 @@ interface Ethernet24
 | Loopback0 | ROUTER_ID | default | - |
 | Loopback1 | VXLAN_TUNNEL_SOURCE | default | - |
 | Loopback1001 | DIAG_VRF_VRF-NEXTGEN_PRODUCCION | VRF-NEXTGEN_PRODUCCION | - |
-| Loopback1005 | DIAG_VRF_VRF-NEXTGEN_MGMT | VRF-NEXTGEN_MGMT | - |
 
 #### Loopback Interfaces Device Configuration
 
@@ -1173,12 +1027,6 @@ interface Loopback1001
    no shutdown
    vrf VRF-NEXTGEN_PRODUCCION
    ip address 10.110.7.8/32
-!
-interface Loopback1005
-   description DIAG_VRF_VRF-NEXTGEN_MGMT
-   no shutdown
-   vrf VRF-NEXTGEN_MGMT
-   ip address 10.110.7.8/32
 ```
 
 ### VLAN Interfaces
@@ -1188,80 +1036,12 @@ interface Loopback1005
 | Interface | Description | VRF |  MTU | Shutdown |
 | --------- | ----------- | --- | ---- | -------- |
 | Vlan150 | NEXTGEN_PRODUCCION_Vl_150 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan151 | NEXTGEN_PRODUCCION_Vl_151 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan152 | NEXTGEN_PRODUCCION_Vl_152 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan153 | NEXTGEN_PRODUCCION_Vl_153 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan154 | NEXTGEN_PRODUCCION_Vl_154 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan155 | NEXTGEN_PRODUCCION_Vl_155 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan156 | NEXTGEN_PRODUCCION_Vl_156 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan157 | NEXTGEN_PRODUCCION_Vl_157 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan158 | NEXTGEN_PRODUCCION_Vl_158 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan159 | NEXTGEN_PRODUCCION_Vl_159 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan160 | NEXTGEN_PRODUCCION_Vl_160 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan161 | NEXTGEN_PRODUCCION_Vl_161 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan162 | NEXTGEN_PRODUCCION_Vl_162 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan163 | NEXTGEN_PRODUCCION_Vl_163 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan164 | NEXTGEN_PRODUCCION_Vl_164 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan165 | NEXTGEN_PRODUCCION_Vl_165 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan166 | NEXTGEN_PRODUCCION_Vl_166 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan167 | NEXTGEN_PRODUCCION_Vl_167 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan168 | NEXTGEN_PRODUCCION_Vl_168 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan169 | NEXTGEN_PRODUCCION_Vl_169 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan170 | NEXTGEN_PRODUCCION_Vl_170 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan171 | NEXTGEN_PRODUCCION_Vl_171 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan172 | NEXTGEN_PRODUCCION_Vl_172 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan173 | NEXTGEN_PRODUCCION_Vl_173 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan174 | NEXTGEN_PRODUCCION_Vl_174 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan175 | NEXTGEN_PRODUCCION_Vl_175 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan176 | NEXTGEN_PRODUCCION_Vl_176 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan179 | NEXTGEN_PRODUCCION_Vl_179 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan180 | NEXTGEN_PRODUCCION_Vl_180 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan181 | NEXTGEN_PRODUCCION_Vl_181 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan182 | NEXTGEN_PRODUCCION_Vl_182 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan183 | NEXTGEN_PRODUCCION_Vl_183 | VRF-NEXTGEN_PRODUCCION | - | True |
-| Vlan261 | NEXTGEN_MGMT_Vl_261 | VRF-NEXTGEN_MGMT | - | False |
-| Vlan262 | NEXTGEN_MGMT_Vl_262 | VRF-NEXTGEN_MGMT | - | False |
-| Vlan263 | NEXTGEN_MGMT_Vl_263 | VRF-NEXTGEN_MGMT | - | False |
 
 ##### IPv4
 
 | Interface | VRF | IP Address | IP Address Virtual | IP Router Virtual Address | ACL In | ACL Out |
 | --------- | --- | ---------- | ------------------ | ------------------------- | ------ | ------- |
 | Vlan150 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.0.1/20  |  -  |  -  |  -  |
-| Vlan151 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.16.1/20  |  -  |  -  |  -  |
-| Vlan152 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.32.1/20  |  -  |  -  |  -  |
-| Vlan153 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.49.1/25  |  -  |  -  |  -  |
-| Vlan154 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.49.129/25  |  -  |  -  |  -  |
-| Vlan155 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.51.1/24  |  -  |  -  |  -  |
-| Vlan156 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.57.1/26  |  -  |  -  |  -  |
-| Vlan157 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.57.65/27  |  -  |  -  |  -  |
-| Vlan158 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.57.97/27  |  -  |  -  |  -  |
-| Vlan159 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.65.1/24  |  -  |  -  |  -  |
-| Vlan160 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.48.1/24  |  -  |  -  |  -  |
-| Vlan161 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.50.1/25  |  -  |  -  |  -  |
-| Vlan162 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.50.129/25  |  -  |  -  |  -  |
-| Vlan163 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.52.1/24  |  -  |  -  |  -  |
-| Vlan164 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.53.1/24  |  -  |  -  |  -  |
-| Vlan165 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.54.1/25  |  -  |  -  |  -  |
-| Vlan166 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.55.1/24  |  -  |  -  |  -  |
-| Vlan167 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.56.1/24  |  -  |  -  |  -  |
-| Vlan168 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.58.1/24  |  -  |  -  |  -  |
-| Vlan169 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.59.1/24  |  -  |  -  |  -  |
-| Vlan170 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.60.1/24  |  -  |  -  |  -  |
-| Vlan171 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.61.1/24  |  -  |  -  |  -  |
-| Vlan172 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.62.1/24  |  -  |  -  |  -  |
-| Vlan173 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.63.1/24  |  -  |  -  |  -  |
-| Vlan174 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.110.64.1/25  |  -  |  -  |  -  |
-| Vlan175 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.110.64.129/25  |  -  |  -  |  -  |
-| Vlan176 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.110.100.1/24  |  -  |  -  |  -  |
-| Vlan179 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.64.1/27  |  -  |  -  |  -  |
-| Vlan180 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.66.1/25  |  -  |  -  |  -  |
-| Vlan181 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.66.129/25  |  -  |  -  |  -  |
-| Vlan182 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.67.1/25  |  -  |  -  |  -  |
-| Vlan183 |  VRF-NEXTGEN_PRODUCCION  |  -  |  10.40.67.129/25  |  -  |  -  |  -  |
-| Vlan261 |  VRF-NEXTGEN_MGMT  |  -  |  10.114.2.1/23  |  -  |  -  |  -  |
-| Vlan262 |  VRF-NEXTGEN_MGMT  |  -  |  10.114.14.1/23  |  -  |  -  |  -  |
-| Vlan263 |  VRF-NEXTGEN_MGMT  |  -  |  10.114.16.1/23  |  -  |  -  |  -  |
 
 #### VLAN Interfaces Device Configuration
 
@@ -1272,220 +1052,6 @@ interface Vlan150
    shutdown
    vrf VRF-NEXTGEN_PRODUCCION
    ip address virtual 10.40.0.1/20
-!
-interface Vlan151
-   description NEXTGEN_PRODUCCION_Vl_151
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.16.1/20
-!
-interface Vlan152
-   description NEXTGEN_PRODUCCION_Vl_152
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.32.1/20
-!
-interface Vlan153
-   description NEXTGEN_PRODUCCION_Vl_153
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.49.1/25
-!
-interface Vlan154
-   description NEXTGEN_PRODUCCION_Vl_154
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.49.129/25
-!
-interface Vlan155
-   description NEXTGEN_PRODUCCION_Vl_155
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.51.1/24
-!
-interface Vlan156
-   description NEXTGEN_PRODUCCION_Vl_156
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.57.1/26
-!
-interface Vlan157
-   description NEXTGEN_PRODUCCION_Vl_157
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.57.65/27
-!
-interface Vlan158
-   description NEXTGEN_PRODUCCION_Vl_158
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.57.97/27
-!
-interface Vlan159
-   description NEXTGEN_PRODUCCION_Vl_159
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.65.1/24
-!
-interface Vlan160
-   description NEXTGEN_PRODUCCION_Vl_160
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.48.1/24
-!
-interface Vlan161
-   description NEXTGEN_PRODUCCION_Vl_161
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.50.1/25
-!
-interface Vlan162
-   description NEXTGEN_PRODUCCION_Vl_162
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.50.129/25
-!
-interface Vlan163
-   description NEXTGEN_PRODUCCION_Vl_163
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.52.1/24
-!
-interface Vlan164
-   description NEXTGEN_PRODUCCION_Vl_164
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.53.1/24
-!
-interface Vlan165
-   description NEXTGEN_PRODUCCION_Vl_165
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.54.1/25
-!
-interface Vlan166
-   description NEXTGEN_PRODUCCION_Vl_166
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.55.1/24
-!
-interface Vlan167
-   description NEXTGEN_PRODUCCION_Vl_167
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.56.1/24
-!
-interface Vlan168
-   description NEXTGEN_PRODUCCION_Vl_168
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip helper-address 180.166.34.37
-   ip helper-address 180.166.34.91
-   ip address virtual 10.40.58.1/24
-!
-interface Vlan169
-   description NEXTGEN_PRODUCCION_Vl_169
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip helper-address 180.166.34.37
-   ip helper-address 180.166.34.91
-   ip address virtual 10.40.59.1/24
-!
-interface Vlan170
-   description NEXTGEN_PRODUCCION_Vl_170
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip helper-address 180.166.34.37
-   ip helper-address 180.166.34.91
-   ip address virtual 10.40.60.1/24
-!
-interface Vlan171
-   description NEXTGEN_PRODUCCION_Vl_171
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip helper-address 180.166.34.37
-   ip helper-address 180.166.34.91
-   ip address virtual 10.40.61.1/24
-!
-interface Vlan172
-   description NEXTGEN_PRODUCCION_Vl_172
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip helper-address 180.166.34.37
-   ip helper-address 180.166.34.91
-   ip address virtual 10.40.62.1/24
-!
-interface Vlan173
-   description NEXTGEN_PRODUCCION_Vl_173
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.63.1/24
-!
-interface Vlan174
-   description NEXTGEN_PRODUCCION_Vl_174
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.110.64.1/25
-!
-interface Vlan175
-   description NEXTGEN_PRODUCCION_Vl_175
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.110.64.129/25
-!
-interface Vlan176
-   description NEXTGEN_PRODUCCION_Vl_176
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.110.100.1/24
-!
-interface Vlan179
-   description NEXTGEN_PRODUCCION_Vl_179
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.64.1/27
-!
-interface Vlan180
-   description NEXTGEN_PRODUCCION_Vl_180
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.66.1/25
-!
-interface Vlan181
-   description NEXTGEN_PRODUCCION_Vl_181
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.66.129/25
-!
-interface Vlan182
-   description NEXTGEN_PRODUCCION_Vl_182
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.67.1/25
-!
-interface Vlan183
-   description NEXTGEN_PRODUCCION_Vl_183
-   shutdown
-   vrf VRF-NEXTGEN_PRODUCCION
-   ip address virtual 10.40.67.129/25
-!
-interface Vlan261
-   description NEXTGEN_MGMT_Vl_261
-   no shutdown
-   vrf VRF-NEXTGEN_MGMT
-   ip address virtual 10.114.2.1/23
-!
-interface Vlan262
-   description NEXTGEN_MGMT_Vl_262
-   no shutdown
-   vrf VRF-NEXTGEN_MGMT
-   ip address virtual 10.114.14.1/23
-!
-interface Vlan263
-   description NEXTGEN_MGMT_Vl_263
-   no shutdown
-   vrf VRF-NEXTGEN_MGMT
-   ip address virtual 10.114.16.1/23
 ```
 
 ### VXLAN Interface
@@ -1502,49 +1068,12 @@ interface Vlan263
 | VLAN | VNI | Flood List | Multicast Group |
 | ---- | --- | ---------- | --------------- |
 | 150 | 10150 | - | - |
-| 151 | 10151 | - | - |
-| 152 | 10152 | - | - |
-| 153 | 10153 | - | - |
-| 154 | 10154 | - | - |
-| 155 | 10155 | - | - |
-| 156 | 10156 | - | - |
-| 157 | 10157 | - | - |
-| 158 | 10158 | - | - |
-| 159 | 10159 | - | - |
-| 160 | 10160 | - | - |
-| 161 | 10161 | - | - |
-| 162 | 10162 | - | - |
-| 163 | 10163 | - | - |
-| 164 | 10164 | - | - |
-| 165 | 10165 | - | - |
-| 166 | 10166 | - | - |
-| 167 | 10167 | - | - |
-| 168 | 10168 | - | - |
-| 169 | 10169 | - | - |
-| 170 | 10170 | - | - |
-| 171 | 10171 | - | - |
-| 172 | 10172 | - | - |
-| 173 | 10173 | - | - |
-| 174 | 10174 | - | - |
-| 175 | 10175 | - | - |
-| 176 | 10176 | - | - |
 | 177 | 10177 | - | - |
-| 178 | 10178 | - | - |
-| 179 | 10179 | - | - |
-| 180 | 10180 | - | - |
-| 181 | 10181 | - | - |
-| 182 | 10182 | - | - |
-| 183 | 10183 | - | - |
-| 261 | 10261 | - | - |
-| 262 | 10262 | - | - |
-| 263 | 10263 | - | - |
-| 1280 | 11280 | - | - |
 
 ##### VRF to VNI and Multicast Group Mappings
 
 | VRF | VNI | Overlay Multicast Group to Encap Mappings |
 | --- | --- | ----------------------------------------- |
-| VRF-NEXTGEN_MGMT | 1005 | - |
 | VRF-NEXTGEN_PRODUCCION | 1001 | - |
 
 #### VXLAN Interface Device Configuration
@@ -1556,44 +1085,7 @@ interface Vxlan1
    vxlan source-interface Loopback1
    vxlan udp-port 4789
    vxlan vlan 150 vni 10150
-   vxlan vlan 151 vni 10151
-   vxlan vlan 152 vni 10152
-   vxlan vlan 153 vni 10153
-   vxlan vlan 154 vni 10154
-   vxlan vlan 155 vni 10155
-   vxlan vlan 156 vni 10156
-   vxlan vlan 157 vni 10157
-   vxlan vlan 158 vni 10158
-   vxlan vlan 159 vni 10159
-   vxlan vlan 160 vni 10160
-   vxlan vlan 161 vni 10161
-   vxlan vlan 162 vni 10162
-   vxlan vlan 163 vni 10163
-   vxlan vlan 164 vni 10164
-   vxlan vlan 165 vni 10165
-   vxlan vlan 166 vni 10166
-   vxlan vlan 167 vni 10167
-   vxlan vlan 168 vni 10168
-   vxlan vlan 169 vni 10169
-   vxlan vlan 170 vni 10170
-   vxlan vlan 171 vni 10171
-   vxlan vlan 172 vni 10172
-   vxlan vlan 173 vni 10173
-   vxlan vlan 174 vni 10174
-   vxlan vlan 175 vni 10175
-   vxlan vlan 176 vni 10176
    vxlan vlan 177 vni 10177
-   vxlan vlan 178 vni 10178
-   vxlan vlan 179 vni 10179
-   vxlan vlan 180 vni 10180
-   vxlan vlan 181 vni 10181
-   vxlan vlan 182 vni 10182
-   vxlan vlan 183 vni 10183
-   vxlan vlan 261 vni 10261
-   vxlan vlan 262 vni 10262
-   vxlan vlan 263 vni 10263
-   vxlan vlan 1280 vni 11280
-   vxlan vrf VRF-NEXTGEN_MGMT vni 1005
    vxlan vrf VRF-NEXTGEN_PRODUCCION vni 1001
 ```
 
@@ -1629,7 +1121,6 @@ ip virtual-router mac-address 00:1c:73:ca:fe:66
 | --- | --------------- |
 | default | True |
 | MGMT | False |
-| VRF-NEXTGEN_MGMT | True |
 | VRF-NEXTGEN_PRODUCCION | True |
 
 #### IP Routing Device Configuration
@@ -1639,7 +1130,6 @@ ip virtual-router mac-address 00:1c:73:ca:fe:66
 ip routing
 no ip icmp redirect
 no ip routing vrf MGMT
-ip routing vrf VRF-NEXTGEN_MGMT
 ip routing vrf VRF-NEXTGEN_PRODUCCION
 ```
 
@@ -1651,7 +1141,6 @@ ip routing vrf VRF-NEXTGEN_PRODUCCION
 | --- | --------------- |
 | default | False |
 | MGMT | false |
-| VRF-NEXTGEN_MGMT | false |
 | VRF-NEXTGEN_PRODUCCION | false |
 
 ### Static Routes
@@ -1747,49 +1236,12 @@ ASN Notation: asplain
 | VLAN | Route-Distinguisher | Both Route-Target | Import Route Target | Export Route-Target | Redistribute |
 | ---- | ------------------- | ----------------- | ------------------- | ------------------- | ------------ |
 | 150 | 10.110.5.8:10150 | 10150:10150 | - | - | learned |
-| 151 | 10.110.5.8:10151 | 10151:10151 | - | - | learned |
-| 152 | 10.110.5.8:10152 | 10152:10152 | - | - | learned |
-| 153 | 10.110.5.8:10153 | 10153:10153 | - | - | learned |
-| 154 | 10.110.5.8:10154 | 10154:10154 | - | - | learned |
-| 155 | 10.110.5.8:10155 | 10155:10155 | - | - | learned |
-| 156 | 10.110.5.8:10156 | 10156:10156 | - | - | learned |
-| 157 | 10.110.5.8:10157 | 10157:10157 | - | - | learned |
-| 158 | 10.110.5.8:10158 | 10158:10158 | - | - | learned |
-| 159 | 10.110.5.8:10159 | 10159:10159 | - | - | learned |
-| 160 | 10.110.5.8:10160 | 10160:10160 | - | - | learned |
-| 161 | 10.110.5.8:10161 | 10161:10161 | - | - | learned |
-| 162 | 10.110.5.8:10162 | 10162:10162 | - | - | learned |
-| 163 | 10.110.5.8:10163 | 10163:10163 | - | - | learned |
-| 164 | 10.110.5.8:10164 | 10164:10164 | - | - | learned |
-| 165 | 10.110.5.8:10165 | 10165:10165 | - | - | learned |
-| 166 | 10.110.5.8:10166 | 10166:10166 | - | - | learned |
-| 167 | 10.110.5.8:10167 | 10167:10167 | - | - | learned |
-| 168 | 10.110.5.8:10168 | 10168:10168 | - | - | learned |
-| 169 | 10.110.5.8:10169 | 10169:10169 | - | - | learned |
-| 170 | 10.110.5.8:10170 | 10170:10170 | - | - | learned |
-| 171 | 10.110.5.8:10171 | 10171:10171 | - | - | learned |
-| 172 | 10.110.5.8:10172 | 10172:10172 | - | - | learned |
-| 173 | 10.110.5.8:10173 | 10173:10173 | - | - | learned |
-| 174 | 10.110.5.8:10174 | 10174:10174 | - | - | learned |
-| 175 | 10.110.5.8:10175 | 10175:10175 | - | - | learned |
-| 176 | 10.110.5.8:10176 | 10176:10176 | - | - | learned |
 | 177 | 10.110.5.8:10177 | 10177:10177 | - | - | learned |
-| 178 | 10.110.5.8:10178 | 10178:10178 | - | - | learned |
-| 179 | 10.110.5.8:10179 | 10179:10179 | - | - | learned |
-| 180 | 10.110.5.8:10180 | 10180:10180 | - | - | learned |
-| 181 | 10.110.5.8:10181 | 10181:10181 | - | - | learned |
-| 182 | 10.110.5.8:10182 | 10182:10182 | - | - | learned |
-| 183 | 10.110.5.8:10183 | 10183:10183 | - | - | learned |
-| 261 | 10.110.5.8:10261 | 10261:10261 | - | - | learned |
-| 262 | 10.110.5.8:10262 | 10262:10262 | - | - | learned |
-| 263 | 10.110.5.8:10263 | 10263:10263 | - | - | learned |
-| 1280 | 10.110.5.8:11280 | 11280:11280 | - | - | learned |
 
 #### Router BGP VRFs
 
 | VRF | Route-Distinguisher | Redistribute | Graceful Restart |
 | --- | ------------------- | ------------ | ---------------- |
-| VRF-NEXTGEN_MGMT | 10.110.5.8:1005 | connected | - |
 | VRF-NEXTGEN_PRODUCCION | 10.110.5.8:1001 | connected | - |
 
 #### Router BGP Device Configuration
@@ -1837,189 +1289,9 @@ router bgp 65045
       route-target both 10150:10150
       redistribute learned
    !
-   vlan 151
-      rd 10.110.5.8:10151
-      route-target both 10151:10151
-      redistribute learned
-   !
-   vlan 152
-      rd 10.110.5.8:10152
-      route-target both 10152:10152
-      redistribute learned
-   !
-   vlan 153
-      rd 10.110.5.8:10153
-      route-target both 10153:10153
-      redistribute learned
-   !
-   vlan 154
-      rd 10.110.5.8:10154
-      route-target both 10154:10154
-      redistribute learned
-   !
-   vlan 155
-      rd 10.110.5.8:10155
-      route-target both 10155:10155
-      redistribute learned
-   !
-   vlan 156
-      rd 10.110.5.8:10156
-      route-target both 10156:10156
-      redistribute learned
-   !
-   vlan 157
-      rd 10.110.5.8:10157
-      route-target both 10157:10157
-      redistribute learned
-   !
-   vlan 158
-      rd 10.110.5.8:10158
-      route-target both 10158:10158
-      redistribute learned
-   !
-   vlan 159
-      rd 10.110.5.8:10159
-      route-target both 10159:10159
-      redistribute learned
-   !
-   vlan 160
-      rd 10.110.5.8:10160
-      route-target both 10160:10160
-      redistribute learned
-   !
-   vlan 161
-      rd 10.110.5.8:10161
-      route-target both 10161:10161
-      redistribute learned
-   !
-   vlan 162
-      rd 10.110.5.8:10162
-      route-target both 10162:10162
-      redistribute learned
-   !
-   vlan 163
-      rd 10.110.5.8:10163
-      route-target both 10163:10163
-      redistribute learned
-   !
-   vlan 164
-      rd 10.110.5.8:10164
-      route-target both 10164:10164
-      redistribute learned
-   !
-   vlan 165
-      rd 10.110.5.8:10165
-      route-target both 10165:10165
-      redistribute learned
-   !
-   vlan 166
-      rd 10.110.5.8:10166
-      route-target both 10166:10166
-      redistribute learned
-   !
-   vlan 167
-      rd 10.110.5.8:10167
-      route-target both 10167:10167
-      redistribute learned
-   !
-   vlan 168
-      rd 10.110.5.8:10168
-      route-target both 10168:10168
-      redistribute learned
-   !
-   vlan 169
-      rd 10.110.5.8:10169
-      route-target both 10169:10169
-      redistribute learned
-   !
-   vlan 170
-      rd 10.110.5.8:10170
-      route-target both 10170:10170
-      redistribute learned
-   !
-   vlan 171
-      rd 10.110.5.8:10171
-      route-target both 10171:10171
-      redistribute learned
-   !
-   vlan 172
-      rd 10.110.5.8:10172
-      route-target both 10172:10172
-      redistribute learned
-   !
-   vlan 173
-      rd 10.110.5.8:10173
-      route-target both 10173:10173
-      redistribute learned
-   !
-   vlan 174
-      rd 10.110.5.8:10174
-      route-target both 10174:10174
-      redistribute learned
-   !
-   vlan 175
-      rd 10.110.5.8:10175
-      route-target both 10175:10175
-      redistribute learned
-   !
-   vlan 176
-      rd 10.110.5.8:10176
-      route-target both 10176:10176
-      redistribute learned
-   !
    vlan 177
       rd 10.110.5.8:10177
       route-target both 10177:10177
-      redistribute learned
-   !
-   vlan 178
-      rd 10.110.5.8:10178
-      route-target both 10178:10178
-      redistribute learned
-   !
-   vlan 179
-      rd 10.110.5.8:10179
-      route-target both 10179:10179
-      redistribute learned
-   !
-   vlan 180
-      rd 10.110.5.8:10180
-      route-target both 10180:10180
-      redistribute learned
-   !
-   vlan 181
-      rd 10.110.5.8:10181
-      route-target both 10181:10181
-      redistribute learned
-   !
-   vlan 182
-      rd 10.110.5.8:10182
-      route-target both 10182:10182
-      redistribute learned
-   !
-   vlan 183
-      rd 10.110.5.8:10183
-      route-target both 10183:10183
-      redistribute learned
-   !
-   vlan 261
-      rd 10.110.5.8:10261
-      route-target both 10261:10261
-      redistribute learned
-   !
-   vlan 262
-      rd 10.110.5.8:10262
-      route-target both 10262:10262
-      redistribute learned
-   !
-   vlan 263
-      rd 10.110.5.8:10263
-      route-target both 10263:10263
-      redistribute learned
-   !
-   vlan 1280
-      rd 10.110.5.8:11280
-      route-target both 11280:11280
       redistribute learned
    !
    address-family evpn
@@ -2032,13 +1304,6 @@ router bgp 65045
    !
    address-family rt-membership
       neighbor EVPN-OVERLAY-PEERS activate
-   !
-   vrf VRF-NEXTGEN_MGMT
-      rd 10.110.5.8:1005
-      route-target import evpn 1005:1005
-      route-target export evpn 1005:1005
-      router-id 10.110.5.8
-      redistribute connected
    !
    vrf VRF-NEXTGEN_PRODUCCION
       rd 10.110.5.8:1001
@@ -2159,7 +1424,6 @@ ip access-list standard MGMT-ACL
 | VRF Name | IP Routing |
 | -------- | ---------- |
 | MGMT | disabled |
-| VRF-NEXTGEN_MGMT | enabled |
 | VRF-NEXTGEN_PRODUCCION | enabled |
 
 ### VRF Instances Device Configuration
@@ -2167,8 +1431,6 @@ ip access-list standard MGMT-ACL
 ```eos
 !
 vrf instance MGMT
-!
-vrf instance VRF-NEXTGEN_MGMT
 !
 vrf instance VRF-NEXTGEN_PRODUCCION
 ```
@@ -2179,14 +1441,12 @@ vrf instance VRF-NEXTGEN_PRODUCCION
 
 | Source NAT VRF | Source NAT IPv4 Address | Source NAT IPv6 Address |
 | -------------- | ----------------------- | ----------------------- |
-| VRF-NEXTGEN_MGMT | 10.110.7.8 | - |
 | VRF-NEXTGEN_PRODUCCION | 10.110.7.8 | - |
 
 ### Virtual Source NAT Configuration
 
 ```eos
 !
-ip address virtual source-nat vrf VRF-NEXTGEN_MGMT address 10.110.7.8
 ip address virtual source-nat vrf VRF-NEXTGEN_PRODUCCION address 10.110.7.8
 ```
 

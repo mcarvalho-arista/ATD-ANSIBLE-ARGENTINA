@@ -14,13 +14,13 @@ T_NEXTGEN_DMZ_FRONT:
             enabled: false
             tags: [DMZ_FRONT]
             ip_address_virtual: 10.30.0.1/20
-          - id: 471
-            name: NEXTGEN_DMZ_FRONT_Vl_471
-            enabled: false
-            tags: [DMZ_FRONT]
-            ip_address_virtual: 10.30.32.1/24
-          - id: 472
-            name: NEXTGEN_DMZ_FRONT_Vl_472
-            enabled: false
-            tags: [DMZ_FRONT]
-            ip_address_virtual: 10.30.72.1/24
+          # - id: 471
+          #   name: NEXTGEN_DMZ_FRONT_Vl_471
+          #   enabled: false
+          #   tags: [DMZ_FRONT]
+          #   ip_address_virtual: 10.30.32.1/24
+          # - id: 472
+          #   name: NEXTGEN_DMZ_FRONT_Vl_472
+          #   enabled: false
+          #   tags: [DMZ_FRONT]
+          #   ip_address_virtual: 10.30.72.1/24
