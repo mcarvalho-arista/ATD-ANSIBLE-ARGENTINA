@@ -1,5 +1,8 @@
 ---
 
+# overlay_routing_protocol: her
+# overlay_her_flood_list_per_vni: true
+
 mgmt_interface_vrf: MGMT
 # Cloud Vision server information
 # daemon_terminattr:
